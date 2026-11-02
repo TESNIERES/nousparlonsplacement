@@ -1,0 +1,59 @@
+---
+import Base from '../../layouts/Base.astro';
+import { termes, terme, parHref } from '../../lib/content';
+import { SITE, categorie, formatDate, AVERTISSEMENT } from '../../lib/site';
+
+export function getStaticPaths() {
+  return termes.map((t) => ({ params: { slug: t.slug }, props: { t } }));
+}
+const { t } = Astro.props;
+const fm = t.frontmatter;
+const cat = categorie(fm.categorie);
+const voir = (fm.voirAussi || []).map(terme).filter(Boolean);
+const guide = fm.guide ? parHref(fm.guide) : undefined;
+const url = `${SITE.url}${t.href}`;
+const titre = fm.nomComplet ? `${fm.terme} (${fm.nomComplet}) : définition` : `${fm.terme} : définition`;
+const jsonld = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'DefinedTerm',
+    name: fm.terme,
+    alternateName: fm.nomComplet,
+    description: fm.definition,
+    url,
+    inDefinedTermSet: { '@type': 'DefinedTermSet', name: 'Lexique Parlons Placement', url: `${SITE.url}/lexique/` },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Accueil', item: `${SITE.url}/` },
+      { '@type': 'ListItem', position: 2, name: 'Lexique', item: `${SITE.url}/lexique/` },
+      { '@type': 'ListItem', position: 3, name: fm.terme, item: url },
+    ],
+  },
+];
+---
+<Base title={titre} description={fm.description} jsonld={jsonld} misAJour={fm.misAJour}>
+  <div class="cadre">
+    <nav class="fil" aria-label="Fil d'Ariane"><a href="/">Accueil</a><span aria-hidden="true">/</span><a href="/lexique/">Lexique</a></nav>
+    <div class="colonne-texte" style="padding-top:18px">
+      <p class="rubrique" style="margin:0">Lexique{cat && <> · <a class="rubrique" href={`/${cat.id}/`}>{cat.nom}</a></>}</p>
+      <h1>{fm.terme}</h1>
+      {fm.nomComplet && <p class="serif" style="font-size:26px;margin:6px 0 0;color:var(--doux)"><em>{fm.nomComplet}</em></p>}
+      <p class="chapo" style="border-left:3px solid var(--sapin);padding-left:18px;margin-top:26px"><strong style="font-weight:600">Définition.</strong> {fm.definition}</p>
+      <div class="prose" style="margin-top:28px"><t.Content /></div>
+      {guide && (
+        <p style="margin-top:36px;padding:18px 0;border-top:1px solid var(--encre);border-bottom:1px solid var(--filet)">
+          <span class="rubrique">Pour aller plus loin</span><br />
+          <a href={guide.href} class="serif" style="font-size:26px;line-height:1.2;text-decoration:none">{guide.frontmatter.title} →</a>
+        </p>
+      )}
+      {voir.length > 0 && (
+        <p style="margin-top:28px;font-size:15.5px"><span class="rubrique">Voir aussi</span><br />{voir.map((v, i) => <>{i > 0 && ' · '}<a href={v!.href}>{v!.frontmatter.terme}</a></>)}</p>
+      )}
+      <p class="meta" style="margin-top:28px">Mis à jour le {formatDate(fm.misAJour)} · <a href="/methode/">Notre méthode</a></p>
+      <div class="avertissement" role="note"><b>À lire</b><p>{AVERTISSEMENT}</p></div>
+    </div>
+  </div>
+</Base>

@@ -1,0 +1,446 @@
+{
+  "miseAJour": "2026-11-02",
+  "evenements": [
+    {
+      "id": "journees-economie-2026",
+      "nom": "Journées de l'économie (Jéco)",
+      "categorie": "economie",
+      "public": "Grand public",
+      "debut": "2026-11-03",
+      "fin": "2026-11-05",
+      "datesTexte": "3 au 5 novembre 2026",
+      "ville": "Lyon",
+      "pays": "France",
+      "lieu": "Plusieurs lieux",
+      "langue": "Français",
+      "description": "Cycle de conférences et de débats sur l'économie, gratuit et ouvert à tous sur inscription. Les sessions sont aussi diffusées en direct.",
+      "site": "https://www.journeeseconomie.org/",
+      "source": {
+        "titre": "accueil | jeco",
+        "url": "https://www.journeeseconomie.org/",
+        "date": "page consultée le 2 novembre 2026"
+      },
+      "verifie": true
+    },
+    {
+      "id": "bitcoin-amsterdam-2026",
+      "nom": "Bitcoin Amsterdam",
+      "categorie": "crypto",
+      "public": "Professionnels",
+      "debut": "2026-11-05",
+      "fin": "2026-11-06",
+      "datesTexte": "5 et 6 novembre 2026",
+      "ville": "Amsterdam",
+      "pays": "Pays-Bas",
+      "lieu": "SugarFactory",
+      "langue": "Anglais",
+      "description": "Conférence consacrée à Bitcoin. Elle s'adresse aux investisseurs institutionnels, aux fondateurs, aux développeurs et aux législateurs.",
+      "site": "https://www.bitcoin.amsterdam/",
+      "source": {
+        "titre": "Bitcoin Amsterdam 2026 | Nov 5-6, SugarFactory, Amsterdam",
+        "url": "https://www.bitcoin.amsterdam/",
+        "date": "page consultée le 2 novembre 2026"
+      },
+      "verifie": true
+    },
+    {
+      "id": "web-summit-2026",
+      "nom": "Web Summit",
+      "categorie": "fintech",
+      "public": "Professionnels",
+      "debut": "2026-11-09",
+      "fin": "2026-11-12",
+      "datesTexte": "9 au 12 novembre 2026",
+      "ville": "Lisbonne",
+      "pays": "Portugal",
+      "lieu": "MEO Arena",
+      "langue": "Anglais",
+      "description": "Conférence technologique qui réunit startups, investisseurs, entreprises et médias. Le programme est organisé en parcours thématiques couvrant plusieurs secteurs.",
+      "site": "https://websummit.com/",
+      "source": {
+        "titre": "We'll return to Lisbon for Web Summit 2026 | November 9-12, 2026",
+        "url": "https://websummit.com/web-summit-2026/",
+        "date": "page consultée le 2 novembre 2026"
+      },
+      "verifie": true
+    },
+    {
+      "id": "slush-2026",
+      "nom": "Slush",
+      "categorie": "capital-investissement",
+      "public": "Professionnels",
+      "debut": "2026-11-18",
+      "fin": "2026-11-19",
+      "datesTexte": "18 et 19 novembre 2026",
+      "ville": "Helsinki",
+      "pays": "Finlande",
+      "lieu": "Messukeskus, centre des expositions et des congrès d'Helsinki",
+      "langue": "Anglais",
+      "description": "Rendez-vous des fondateurs de startups et des investisseurs en capital-risque. Une journée réservée aux investisseurs a lieu la veille, le 17 novembre.",
+      "site": "https://slush.org/",
+      "source": {
+        "titre": "Event Info",
+        "url": "https://slush.org/event-info",
+        "date": "page consultée le 2 novembre 2026"
+      },
+      "verifie": true
+    },
+    {
+      "id": "forum-economique-mondial-davos-2027",
+      "nom": "Forum économique mondial (réunion annuelle de Davos)",
+      "categorie": "economie",
+      "public": "Professionnels",
+      "debut": "2027-01-18",
+      "fin": "2027-01-22",
+      "datesTexte": "18 au 22 janvier 2027",
+      "ville": "Davos",
+      "pays": "Suisse",
+      "lieu": "Centre des congrès de Davos",
+      "langue": "Anglais",
+      "description": "Réunion annuelle du Forum économique mondial, sur invitation, qui rassemble chefs d'État, dirigeants d'entreprise et représentants de la société civile. Une partie des sessions est diffusée en direct.",
+      "site": "https://www.weforum.org/",
+      "source": {
+        "titre": "World Economic Forum Annual Meeting 2027 (Destination Davos Klosters)",
+        "url": "https://www.davos.ch/en/experience/events/world-economic-forum-annual-meeting-2027",
+        "date": "page consultée le 2 novembre 2026"
+      },
+      "verifie": false
+    },
+    {
+      "id": "paris-investor-week-2027",
+      "nom": "Paris Investor Week",
+      "categorie": "investissement",
+      "public": "Mixte",
+      "debut": "2027-03-25",
+      "fin": "2027-03-25",
+      "datesTexte": "25 mars 2027",
+      "ville": "Paris",
+      "pays": "France",
+      "lieu": "Plenitude Arena, Paris La Défense",
+      "langue": "Français",
+      "description": "Salon de l'investissement et de l'épargne, avec un parcours d'exposition, des conférences, des tables rondes, des masterclasses et des ateliers. Il s'adresse aux investisseurs particuliers, aux conseillers en gestion de patrimoine et aux institutionnels.",
+      "site": "https://parisinvestorweek.com",
+      "source": {
+        "titre": "Paris Investor Week | La Plenitude Arena | 25 mars 2027",
+        "url": "https://parisinvestorweek.com",
+        "date": "page consultée le 2 novembre 2026"
+      },
+      "verifie": true
+    },
+    {
+      "id": "fintech-revolution-2027",
+      "nom": "Fintech R:Evolution",
+      "categorie": "fintech",
+      "public": "Professionnels",
+      "debut": "2027-03-31",
+      "fin": "2027-03-31",
+      "datesTexte": "31 mars 2027",
+      "ville": "Paris",
+      "pays": "France",
+      "lieu": "Station F",
+      "langue": "Français",
+      "description": "Événement annuel de France FinTech, l'association qui représente les entrepreneurs de la fintech en France.",
+      "site": "https://francefintech.org/",
+      "source": {
+        "titre": "Fintech R:Evolution 2027 (agenda LiquidityFinder)",
+        "url": "https://liquidityfinder.com/events/fintech-r-evolution-2027",
+        "date": "page consultée le 2 novembre 2026"
+      },
+      "verifie": false
+    },
+    {
+      "id": "ethcc-2027",
+      "nom": "EthCC (Ethereum Community Conference)",
+      "categorie": "crypto",
+      "public": "Mixte",
+      "debut": "2027-04-12",
+      "fin": "2027-04-15",
+      "datesTexte": "12 au 15 avril 2027",
+      "ville": "Cannes",
+      "pays": "France",
+      "lieu": "Palais des Festivals et des Congrès",
+      "langue": "Anglais",
+      "description": "Conférence annuelle de la communauté Ethereum, avec des conférences et des ateliers. Elle réunit développeurs, investisseurs, régulateurs, institutions et utilisateurs.",
+      "site": "https://ethcc.io/",
+      "source": {
+        "titre": "EthCC[10] - April 12 to April 15, 2027",
+        "url": "https://ethcc.io/",
+        "date": "page consultée le 2 novembre 2026"
+      },
+      "verifie": true
+    },
+    {
+      "id": "eurofi-high-level-seminar-2027",
+      "nom": "Eurofi High Level Seminar",
+      "categorie": "banque",
+      "public": "Professionnels",
+      "debut": "2027-04-21",
+      "fin": "2027-04-23",
+      "datesTexte": "21 au 23 avril 2027",
+      "ville": "Vilnius",
+      "pays": "Lituanie",
+      "lieu": null,
+      "langue": "Anglais",
+      "description": "Séminaire du think tank européen Eurofi consacré aux services financiers, organisé avec la présidence lituanienne du Conseil de l'Union européenne. La participation se fait sur invitation.",
+      "site": "https://www.eurofi.net/",
+      "source": {
+        "titre": "Welcome to Eurofi | The European think tank for financial services",
+        "url": "https://www.eurofi.net/",
+        "date": "page consultée le 2 novembre 2026"
+      },
+      "verifie": true
+    },
+    {
+      "id": "btc-prague-2027",
+      "nom": "BTC Prague",
+      "categorie": "crypto",
+      "public": "Mixte",
+      "debut": "2027-05-06",
+      "fin": "2027-05-08",
+      "datesTexte": "6 au 8 mai 2027",
+      "ville": "Prague",
+      "pays": "République tchèque",
+      "lieu": null,
+      "langue": "Anglais",
+      "description": "Conférence consacrée à Bitcoin, avec une exposition et des conférences. Elle s'adresse aux particuliers comme aux entreprises. Le lieu 2027 n'est pas encore annoncé.",
+      "site": "https://btcprague.com/",
+      "source": {
+        "titre": "BTC Prague - The biggest bitcoin event in Europe",
+        "url": "https://btcprague.com/",
+        "date": "page consultée le 2 novembre 2026"
+      },
+      "verifie": true
+    },
+    {
+      "id": "proof-of-talk-2027",
+      "nom": "Proof of Talk",
+      "categorie": "crypto",
+      "public": "Professionnels",
+      "debut": "2027-06-02",
+      "fin": "2027-06-03",
+      "datesTexte": "2 et 3 juin 2027",
+      "ville": "Paris",
+      "pays": "France",
+      "lieu": "Palais du Louvre",
+      "langue": "Anglais",
+      "description": "Sommet annuel consacré aux actifs numériques, au nombre de places restreint, qui réunit des dirigeants d'entreprise.",
+      "site": "https://proofoftalk.io/",
+      "source": {
+        "titre": "The Proof of Talk Editions",
+        "url": "https://proofoftalk.io/events/",
+        "date": "page consultée le 2 novembre 2026"
+      },
+      "verifie": true
+    },
+    {
+      "id": "superreturn-international-2027",
+      "nom": "SuperReturn International",
+      "categorie": "capital-investissement",
+      "public": "Professionnels",
+      "debut": "2027-06-07",
+      "fin": "2027-06-11",
+      "datesTexte": "7 au 11 juin 2027",
+      "ville": "Berlin",
+      "pays": "Allemagne",
+      "lieu": "InterContinental Berlin",
+      "langue": "Anglais",
+      "description": "Conférence internationale consacrée au capital-investissement et aux marchés privés, destinée aux professionnels du secteur.",
+      "site": "https://informaconnect.com/superreturn-international/",
+      "source": {
+        "titre": "Schedule | SuperReturn International",
+        "url": "https://informaconnect.com/superreturn-international/event-schedule/",
+        "date": "page consultée le 2 novembre 2026"
+      },
+      "verifie": true
+    },
+    {
+      "id": "money2020-europe-2027",
+      "nom": "Money20/20 Europe",
+      "categorie": "fintech",
+      "public": "Professionnels",
+      "debut": "2027-06-08",
+      "fin": "2027-06-10",
+      "datesTexte": "8 au 10 juin 2027",
+      "ville": "Amsterdam",
+      "pays": "Pays-Bas",
+      "lieu": "RAI Amsterdam",
+      "langue": "Anglais",
+      "description": "Rendez-vous européen des paiements et des services financiers numériques. Il réunit banques, acteurs du paiement, fintechs, startups et entreprises technologiques.",
+      "site": "https://europe.money2020.com/",
+      "source": {
+        "titre": "Money20/20 Europe in Amsterdam | 8 - 10 June 2027",
+        "url": "https://europe.money2020.com/",
+        "date": "page consultée le 2 novembre 2026"
+      },
+      "verifie": true
+    },
+    {
+      "id": "vivatech-2027",
+      "nom": "VivaTech",
+      "categorie": "fintech",
+      "public": "Mixte",
+      "debut": "2027-06-16",
+      "fin": "2027-06-19",
+      "datesTexte": "16 au 19 juin 2027",
+      "ville": "Paris",
+      "pays": "France",
+      "lieu": "Paris Expo Porte de Versailles",
+      "langue": "Anglais et français",
+      "description": "Salon de l'innovation technologique et des startups, qui réunit grandes entreprises, startups et investisseurs. Plusieurs banques y présentent un programme. L'édition 2026 comprenait une journée ouverte au grand public.",
+      "site": "https://vivatechnology.com/",
+      "source": {
+        "titre": "VivaTech 2026 celebrates its 10th anniversary with a record edition surpassing 200,000 visitors (communiqué de VivaTech diffusé par PR Newswire)",
+        "url": "https://www.aap.com.au/aapreleases/cision20260620ae83465/",
+        "date": "communiqué du 21 juin 2026, page consultée le 2 novembre 2026"
+      },
+      "verifie": true
+    },
+    {
+      "id": "signal-week-2027",
+      "nom": "Signal Week (anciennement Paris Blockchain Week)",
+      "categorie": "crypto",
+      "public": "Professionnels",
+      "debut": "2027-07-06",
+      "fin": "2027-07-07",
+      "datesTexte": "6 et 7 juillet 2027",
+      "ville": "Paris",
+      "pays": "France",
+      "lieu": "Palais des Congrès de Paris",
+      "langue": "Anglais",
+      "description": "Sommet consacré aux actifs numériques et destiné aux acteurs institutionnels, qui succède à la Paris Blockchain Week. Il réunit fondateurs, investisseurs et dirigeants d'entreprise.",
+      "site": "https://www.parisblockchainweek.com/",
+      "source": {
+        "titre": "Paris Blockchain Week Is Now Signal Week | 6-7 July 2027",
+        "url": "https://www.parisblockchainweek.com/",
+        "date": "page consultée le 2 novembre 2026"
+      },
+      "verifie": true
+    },
+    {
+      "id": "ipem-global-2027",
+      "nom": "IPEM Global",
+      "categorie": "capital-investissement",
+      "public": "Professionnels",
+      "debut": "2027-09-07",
+      "fin": "2027-09-09",
+      "datesTexte": "7 au 9 septembre 2027",
+      "ville": "Paris",
+      "pays": "France",
+      "lieu": "Palais des Congrès de Paris",
+      "langue": "Anglais",
+      "description": "Rendez-vous international des marchés privés, qui réunit décideurs et investisseurs du capital-investissement.",
+      "site": "https://www.ipem-market.com/",
+      "source": {
+        "titre": "IPEM International Events",
+        "url": "https://www.ipem-market.com/international-events/",
+        "date": "page consultée le 2 novembre 2026"
+      },
+      "verifie": true
+    },
+    {
+      "id": "european-blockchain-convention-2027",
+      "nom": "European Blockchain Convention",
+      "categorie": "crypto",
+      "public": "Professionnels",
+      "debut": "2027-09-23",
+      "fin": "2027-09-24",
+      "datesTexte": "23 et 24 septembre 2027",
+      "ville": "Barcelone",
+      "pays": "Espagne",
+      "lieu": null,
+      "langue": "Anglais",
+      "description": "Conférence sur la blockchain et les actifs numériques, qui réunit des acteurs de la finance et du Web3.",
+      "site": "https://eblockchainconvention.com/",
+      "source": {
+        "titre": "European Blockchain Convention | 23 - 24 SEPT 2027 | Barcelona",
+        "url": "https://eblockchainconvention.com/",
+        "date": "page consultée le 2 novembre 2026"
+      },
+      "verifie": true
+    },
+    {
+      "id": "semaine-education-financiere-2027",
+      "nom": "Semaine de l'éducation financière",
+      "categorie": "investissement",
+      "public": "Grand public",
+      "debut": null,
+      "fin": null,
+      "datesTexte": "Dates 2027 non annoncées (dernière édition : 16 au 22 mars 2026)",
+      "ville": "Toute la France",
+      "pays": "France",
+      "lieu": "Animations dans toute la France",
+      "langue": "Français",
+      "description": "Semaine nationale portée par la Banque de France, avec des animations organisées dans tout le pays pour renforcer les compétences budgétaires et financières des jeunes et des adultes.",
+      "site": "https://www.banque-france.fr/fr/evenements/participez-la-semaine-de-leducation-financiere",
+      "source": {
+        "titre": "Participez à la Semaine de l'Éducation Financière",
+        "url": "https://www.banque-france.fr/fr/evenements/participez-la-semaine-de-leducation-financiere",
+        "date": "mise en ligne le 26 février 2026, page consultée le 2 novembre 2026"
+      },
+      "verifie": true
+    },
+    {
+      "id": "paris-finance-forum-2027",
+      "nom": "Paris Finance Forum (Paris Europlace)",
+      "categorie": "banque",
+      "public": "Professionnels",
+      "debut": null,
+      "fin": null,
+      "datesTexte": "Dates 2027 non annoncées (dernière édition : 9 juin 2026)",
+      "ville": "Paris",
+      "pays": "France",
+      "lieu": null,
+      "langue": "Français et anglais",
+      "description": "Forum annuel de la place financière de Paris, organisé par Paris Europlace. Il réunit acteurs de la place, décideurs publics et experts.",
+      "site": "https://parisfinanceforum.com/",
+      "source": {
+        "titre": "Accueil | Paris Finance Forum",
+        "url": "https://parisfinanceforum.com/",
+        "date": "page consultée le 2 novembre 2026"
+      },
+      "verifie": true
+    },
+    {
+      "id": "forum-bce-banques-centrales-2027",
+      "nom": "Forum de la BCE sur les banques centrales (ECB Forum on Central Banking)",
+      "categorie": "banque",
+      "public": "Professionnels",
+      "debut": null,
+      "fin": null,
+      "datesTexte": "Dates 2027 non annoncées (dernière édition : 29 juin au 1er juillet 2026)",
+      "ville": "Sintra",
+      "pays": "Portugal",
+      "lieu": null,
+      "langue": "Anglais",
+      "description": "Conférence annuelle de la Banque centrale européenne. Elle réunit sur invitation banquiers centraux, universitaires et économistes, et elle est retransmise en direct sur le site de la BCE.",
+      "site": "https://www.ecb.europa.eu/press/conferences/ecbforum/html/index.fr.html",
+      "source": {
+        "titre": "ECB Forum on Central Banking",
+        "url": "https://www.ecb.europa.eu/press/conferences/ecbforum/html/index.fr.html",
+        "date": "page consultée le 2 novembre 2026"
+      },
+      "verifie": true
+    },
+    {
+      "id": "rencontres-economiques-aix-2027",
+      "nom": "Rencontres économiques d'Aix-en-Provence",
+      "categorie": "economie",
+      "public": "Grand public",
+      "debut": null,
+      "fin": null,
+      "datesTexte": "Dates 2027 non annoncées (dernière édition : 2 au 4 juillet 2026)",
+      "ville": "Aix-en-Provence",
+      "pays": "France",
+      "lieu": null,
+      "langue": "Français",
+      "description": "Forum de débats économiques créé par le Cercle des économistes, ouvert à tous et gratuit sur inscription. Les débats sont aussi retransmis en ligne.",
+      "site": "https://www.lesrencontreseconomiques.fr/",
+      "source": {
+        "titre": "Register - Les Rencontres Économiques",
+        "url": "https://www.lesrencontreseconomiques.fr/en/register/",
+        "date": "page consultée le 2 novembre 2026"
+      },
+      "verifie": true
+    }
+  ]
+}

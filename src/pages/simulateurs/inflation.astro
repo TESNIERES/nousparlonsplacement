@@ -1,0 +1,69 @@
+---
+import Outil from '../../layouts/Outil.astro';
+---
+<Outil
+  type="Simulateur"
+  chemin="/simulateurs/inflation/"
+  misAJour="2026-11-01"
+  title="Simulateur d'inflation et de pouvoir d'achat"
+  seoTitle="Simulateur d'inflation : ce que vaudra ton argent demain"
+  description="Calcule ce que vaudra une somme dans 5, 10 ou 20 ans selon l'inflation, et le rendement nécessaire pour préserver ton pouvoir d'achat. Simulateur gratuit, chiffres Insee."
+  chapo="L'inflation ne fait pas baisser le chiffre sur ton compte. Elle fait baisser ce qu'il permet d'acheter. Saisis une somme, une durée et une inflation annuelle supposée pour voir son pouvoir d'achat futur."
+>
+  <form slot="formulaire" class="formulaire" id="f" novalidate>
+    <div class="champ"><label for="somme">Somme d'aujourd'hui</label><div class="saisie"><input id="somme" name="somme" inputmode="decimal" value="10000" /><span class="unite">€</span></div></div>
+    <div class="champ"><label for="annees">Durée</label><div class="saisie"><input id="annees" name="annees" inputmode="numeric" value="10" /><span class="unite">ans</span></div><input type="range" min="1" max="40" step="1" value="10" aria-label="Durée en années" data-lie="annees" /></div>
+    <div class="champ"><label for="inflation">Inflation annuelle moyenne supposée <span class="aide">Pour repère, les prix ont augmenté de 3,1 % sur un an en septembre 2026 selon l'Insee.</span></label><div class="saisie"><input id="inflation" name="inflation" inputmode="decimal" value="2" /><span class="unite">% / an</span></div></div>
+    <div class="champ"><label for="taux">Rendement de ton épargne <span class="aide">Facultatif. Net de frais et d'impôts, pour voir si ton épargne suit les prix.</span></label><div class="saisie"><input id="taux" name="taux" inputmode="decimal" value="0" /><span class="unite">% / an</span></div></div>
+  </form>
+  <div slot="resultat" class="resultat" aria-live="polite">
+    <div class="chiffres">
+      <div><p class="l">Pouvoir d'achat de la somme à la fin</p><p class="v fort" id="r-pa">-</p></div>
+      <div><p class="l">Perte de pouvoir d'achat</p><p class="v alerte" id="r-perte">-</p></div>
+      <div><p class="l">Somme nécessaire pour acheter autant</p><p class="v" id="r-besoin">-</p></div>
+    </div>
+    <p class="note-outil" id="r-phrase"></p>
+    <div class="graphique" id="g"></div>
+    <p class="note-outil">Calcul : pouvoir d'achat = somme × ((1 + rendement) / (1 + inflation))<sup>années</sup>, en euros d'aujourd'hui.</p>
+  </div>
+
+  <h2>Qu'est-ce que l'inflation, concrètement ?</h2>
+  <p>L'inflation est la hausse générale des prix. L'Insee la mesure chaque mois avec l'indice des prix à la consommation, calculé sur un panier de biens et de services représentatif des dépenses des ménages. En septembre 2026, cet indice était en hausse de 3,1 % sur un an<sup><a href="#n1" id="r1">1</a></sup>.</p>
+  <p>Avec 2 % d'inflation par an, les prix augmentent d'environ 22 % en dix ans. 10 000 € gardés sur un compte courant n'achèteront alors plus que l'équivalent d'environ 8 200 € d'aujourd'hui.</p>
+  <blockquote><p><strong>Idée reçue.</strong> « Mon argent ne perd rien sur mon compte courant. » Le montant ne bouge pas, c'est vrai. Mais ce qu'il permet d'acheter diminue chaque année où les prix montent.</p></blockquote>
+
+  <h2>Taux nominal et taux réel</h2>
+  <p>Le taux affiché d'un placement est un taux nominal. Ce qui compte pour ton pouvoir d'achat, c'est le taux réel : le rendement après inflation. Une épargne qui rapporte 1,5 % net quand les prix montent de 2 % perd du pouvoir d'achat. Saisis le rendement de ton épargne dans le simulateur pour le voir.</p>
+  <p>Pour connaître les taux des livrets réglementés en vigueur, lis notre guide <a href="/epargne/livret-a-ldds-lep/">Livret A, LDDS, LEP</a>. Pour voir l'effet du temps sur une épargne placée, utilise le <a href="/simulateurs/interets-composes/">simulateur d'intérêts composés</a>.</p>
+
+  <h2>Les limites de ce calcul</h2>
+  <p>L'inflation réelle varie d'une année à l'autre et d'un ménage à l'autre : elle dépend de ce que tu consommes (loyer, énergie, alimentation, transports). Le simulateur applique une inflation constante, c'est une hypothèse de travail, pas une prévision.</p>
+  <section data-footnotes class="footnotes"><h2 id="footnote-label">Sources et notes</h2><ol><li id="n1"><a href="https://www.insee.fr/fr/statistiques/9080209">En septembre 2026, les prix à la consommation augmentent de 3,1 % sur un an</a>, Insee, Informations rapides n° 247, 15 octobre 2026. <a href="#r1" aria-label="Retour au texte">↩</a></li></ol></section>
+</Outil>
+
+<script>
+  import { lire, ecrire, euros, graphique, brancher, pct } from '../../scripts/outils';
+  const form = document.getElementById('f') as HTMLFormElement;
+  document.querySelectorAll<HTMLInputElement>('input[data-lie]').forEach((r) => {
+    const cible = document.getElementById(r.dataset.lie!) as HTMLInputElement;
+    r.addEventListener('input', () => { cible.value = r.value; form.dispatchEvent(new Event('input')); });
+    cible.addEventListener('input', () => { r.value = cible.value; });
+  });
+  brancher(form, () => {
+    const s = Math.max(0, lire(form, 'somme'));
+    const n = Math.min(60, Math.max(1, Math.round(lire(form, 'annees'))));
+    const i = lire(form, 'inflation') / 100;
+    const t = lire(form, 'taux') / 100;
+    const pa: number[] = [], nominal: number[] = [];
+    for (let k = 0; k <= n; k++) { pa.push(s * Math.pow((1 + t) / (1 + i), k)); nominal.push(s * Math.pow(1 + t, k)); }
+    const fin = pa[n];
+    ecrire('r-pa', euros(fin));
+    ecrire('r-perte', fin <= s ? `-${pct((1 - fin / s) * 100, 1)}` : `+${pct((fin / s - 1) * 100, 1)}`);
+    ecrire('r-besoin', euros(s * Math.pow(1 + i, n)));
+    ecrire('r-phrase', `Dans ${n} ans, il faudra ${euros(s * Math.pow(1 + i, n))} pour acheter ce que ${euros(s)} achètent aujourd'hui, si les prix montent de ${pct(i * 100, 2)} par an.`);
+    graphique(document.getElementById('g')!, [
+      { nom: 'Montant sur le compte', valeurs: nominal, couleur: '#8DB8A0', pointille: true },
+      { nom: "Pouvoir d'achat, en euros d'aujourd'hui", valeurs: pa, couleur: '#0F3D2E' },
+    ], pa.map((_, k) => (k === 0 ? "Aujourd'hui" : `${k} an${k > 1 ? 's' : ''}`)), "Pouvoir d'achat dans le temps");
+  });
+</script>

@@ -1,0 +1,29 @@
+---
+import Page from '../layouts/Page.astro';
+import { SITE } from '../lib/site';
+const jsonld = [{
+  '@context': 'https://schema.org', '@type': 'AboutPage', url: `${SITE.url}/a-propos/`, name: 'Qui sommes-nous',
+  about: { '@id': `${SITE.url}/#organisation` },
+}];
+---
+<Page title="Qui sommes-nous" h1="Qui sommes-nous" rubrique="Parlons Placement" description="Parlons Placement est un média d'éducation financière : des guides sourcés, des comparateurs neutres et des simulateurs pour comprendre l'argent, sans conseil personnalisé." chapo="Parlons Placement est un média d'éducation financière. Notre conviction : on décide mieux quand on comprend. Alors on explique, avec les chiffres officiels, et on te laisse décider.">
+  <h2>Pourquoi ce média</h2>
+  <p>L'argent occupe une place énorme dans nos vies et presque aucune dans ce qu'on nous apprend. Résultat : on garde tout sur un compte courant par peur de se tromper, on signe un contrat sans en comprendre les frais, ou on suit le conseil d'un inconnu sur les réseaux sociaux.</p>
+  <p>Parlons Placement est né sur Instagram, sur le compte <a href={SITE.instagram}>{SITE.instagramHandle}</a>, avec une idée simple : parler d'argent comme on parle d'une décision de vie, avec des faits, des exemples concrets et des sources. Ce site prolonge ce travail avec des guides complets, un lexique, des comparateurs et des simulateurs.</p>
+
+  <h2>Ce que nous faisons, et ce que nous ne faisons pas</h2>
+  <ul>
+    <li>Nous expliquons comment fonctionnent l'épargne, la bourse, l'immobilier, la retraite, les impôts et le crédit.</li>
+    <li>Nous citons nos sources pour chaque chiffre et chaque règle, et nous datons chaque mise à jour.</li>
+    <li>Nous comparons les frais des acteurs à partir de leurs documents officiels, sans affiliation.</li>
+    <li>Nous ne donnons jamais de conseil en investissement personnalisé et nous ne vendons aucun produit financier.</li>
+  </ul>
+
+  <h2>La rédaction</h2>
+  <p>Les guides et les articles sont signés « La rédaction Parlons Placement ». Ils suivent une charte éditoriale publique : sources primaires uniquement, risques toujours mentionnés, aucune recommandation. Notre façon de travailler est détaillée dans <a href="/methode/">notre méthode</a>.</p>
+  <p><strong>Directeur de la publication : {SITE.directeurPublication}.</strong></p>
+
+  <h2>Nous écrire</h2>
+  <p>Une question, une erreur repérée, un sujet que tu aimerais voir traité ? Écris-nous sur <a href={SITE.instagram}>Instagram</a>. Nous lisons tout, nous corrigeons toute erreur avérée et nous indiquons la date de la correction sur la page concernée.</p>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonld[0])} />
+</Page>

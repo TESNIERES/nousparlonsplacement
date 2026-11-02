@@ -1,0 +1,33 @@
+---
+import Page from '../layouts/Page.astro';
+import { SITE } from '../lib/site';
+// À COMPLÉTER avant la mise en ligne publique : raison sociale, forme, capital, siège, immatriculation, contact.
+const editeur = {
+  raisonSociale: 'À compléter',
+  forme: 'À compléter',
+  siege: 'À compléter',
+  immatriculation: 'À compléter',
+  contact: 'Par message sur Instagram, ' + SITE.instagramHandle,
+};
+---
+<Page title="Mentions légales" rubrique="Informations" description="Mentions légales du site nousparlonsplacement.com : éditeur, directeur de la publication, hébergeur, propriété intellectuelle.">
+  <h2>Éditeur du site</h2>
+  <p>Le site nousparlonsplacement.com est édité par :<br />
+  {editeur.raisonSociale}, {editeur.forme}<br />
+  Siège : {editeur.siege}<br />
+  Immatriculation : {editeur.immatriculation}<br />
+  Contact : {editeur.contact}</p>
+  <p>Directeur de la publication : {SITE.directeurPublication}.</p>
+
+  <h2>Hébergement</h2>
+  <p>Le site est hébergé par GitHub, Inc. (service GitHub Pages), 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis, <a href="https://github.com">github.com</a>.</p>
+
+  <h2>Propriété intellectuelle</h2>
+  <p>Les textes, visuels, logos et outils du site sont la propriété de l'éditeur, sauf mention contraire. Toute reproduction substantielle sans autorisation est interdite. Les courtes citations sont autorisées avec un lien vers la page d'origine. Les polices Instrument Serif et Inter sont utilisées sous licence SIL Open Font License.</p>
+
+  <h2>Contenus</h2>
+  <p>Les contenus du site sont pédagogiques et ne constituent pas un conseil en investissement personnalisé. Voir l'<a href="/avertissement/">avertissement</a> et <a href="/methode/">notre méthode</a>.</p>
+
+  <h2>Données personnelles</h2>
+  <p>Voir notre <a href="/confidentialite/">politique de confidentialité</a>.</p>
+</Page>

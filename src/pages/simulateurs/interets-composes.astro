@@ -1,0 +1,69 @@
+---
+import Outil from '../../layouts/Outil.astro';
+---
+<Outil
+  type="Simulateur"
+  chemin="/simulateurs/interets-composes/"
+  misAJour="2026-11-01"
+  title="Simulateur d'intérêts composés"
+  seoTitle="Simulateur d'intérêts composés avec versements mensuels"
+  description="Calcule ce que deviennent un capital et des versements mensuels avec les intérêts composés, selon la durée et le rendement que tu supposes. Gratuit, sans inscription."
+  chapo="Les intérêts produisent à leur tour des intérêts : c'est l'effet boule de neige. Saisis un capital de départ, un versement mensuel, une durée et un rendement annuel supposé, et regarde la part qui vient de tes versements et celle qui vient du temps."
+>
+  <form slot="formulaire" class="formulaire" id="f" novalidate>
+    <div class="champ"><label for="initial">Capital de départ</label><div class="saisie"><input id="initial" name="initial" inputmode="decimal" value="1000" /><span class="unite">€</span></div></div>
+    <div class="champ"><label for="mensuel">Versement chaque mois</label><div class="saisie"><input id="mensuel" name="mensuel" inputmode="decimal" value="100" /><span class="unite">€</span></div></div>
+    <div class="champ"><label for="annees">Durée <span class="aide">En années, de 1 à 50.</span></label><div class="saisie"><input id="annees" name="annees" inputmode="numeric" value="20" /><span class="unite">ans</span></div><input type="range" min="1" max="50" step="1" value="20" aria-label="Durée en années" data-lie="annees" /></div>
+    <div class="champ"><label for="rendement">Rendement annuel supposé <span class="aide">Une hypothèse, nette de frais. Le rendement futur d'un placement risqué n'est jamais connu à l'avance.</span></label><div class="saisie"><input id="rendement" name="rendement" inputmode="decimal" value="4" /><span class="unite">% / an</span></div></div>
+  </form>
+  <div slot="resultat" class="resultat" aria-live="polite">
+    <div class="chiffres">
+      <div><p class="l">Capital au bout de la durée</p><p class="v fort" id="r-final">-</p></div>
+      <div><p class="l">Total de tes versements</p><p class="v" id="r-verse">-</p></div>
+      <div><p class="l">Gains liés aux intérêts</p><p class="v" id="r-gains">-</p></div>
+    </div>
+    <p class="note-outil" id="r-phrase"></p>
+    <div class="graphique" id="g"></div>
+    <p class="note-outil">Calcul : versements en début de mois, rendement annuel converti en taux mensuel équivalent, intérêts capitalisés chaque mois. Avant impôts et prélèvements sociaux.</p>
+  </div>
+
+  <h2>Comment fonctionnent les intérêts composés ?</h2>
+  <p>Avec des intérêts simples, tu touches chaque année un pourcentage de ton capital de départ. Avec des intérêts composés, les intérêts gagnés s'ajoutent au capital et rapportent à leur tour. La première année, la différence est minuscule. Sur vingt ou trente ans, elle devient l'essentiel du résultat.</p>
+  <blockquote><p><strong>Exemple.</strong> 10 000 € placés à 4 % par an. En intérêts simples, ils rapportent 400 € par an, soit 8 000 € en vingt ans. En intérêts composés, le capital atteint environ 21 900 € : près de 11 900 € de gains, dont 3 900 € viennent uniquement des intérêts sur les intérêts.</p></blockquote>
+  <p>La formule est simple : capital final = capital × (1 + taux)<sup>années</sup>. Avec des versements réguliers, le simulateur fait le calcul mois par mois.</p>
+
+  <h2>Ce qui fait vraiment varier le résultat</h2>
+  <ul>
+    <li><strong>La durée.</strong> C'est le paramètre le plus puissant. Passe de 20 à 30 ans dans le simulateur : l'écart dépasse souvent tout ce que tu as versé pendant les dix années supplémentaires.</li>
+    <li><strong>Le rendement.</strong> Un point de plus ou de moins change beaucoup le résultat final, dans les deux sens. Un rendement espéré élevé va de pair avec un risque élevé, sans aucune garantie : sur les actions, les années de baisse font partie du chemin.</li>
+    <li><strong>Les frais.</strong> Ils jouent comme un rendement négatif, composé lui aussi. Le <a href="/simulateurs/impact-des-frais/">simulateur d'impact des frais</a> montre ce qu'ils coûtent sur la durée.</li>
+    <li><strong>L'inflation.</strong> 20 000 € dans vingt ans n'achèteront pas ce qu'achètent 20 000 € aujourd'hui. Le <a href="/simulateurs/inflation/">simulateur d'inflation</a> convertit le résultat en pouvoir d'achat.</li>
+  </ul>
+
+  <h2>Les limites de ce calcul</h2>
+  <p>Le simulateur applique le même rendement chaque année. La réalité n'est jamais aussi régulière : un placement en actions peut perdre 20 % une année et en gagner 25 % la suivante. Il ne tient pas compte non plus de l'impôt et des prélèvements sociaux, qui dépendent de l'enveloppe utilisée (voir la <a href="/fiscalite/fiscalite-des-placements/">fiscalité des placements</a>).</p>
+  <p>Utilise-le pour comprendre un mécanisme et comparer des hypothèses, jamais comme une promesse. Pour aller plus loin : <a href="/bourse/investir-en-bourse/">investir en bourse, comprendre avant de commencer</a> et la définition des <a href="/lexique/interets-composes/">intérêts composés</a>.</p>
+</Outil>
+
+<script>
+  import { lire, ecrire, euros, graphique, brancher, projection, pct } from '../../scripts/outils';
+  const form = document.getElementById('f') as HTMLFormElement;
+  document.querySelectorAll<HTMLInputElement>('input[data-lie]').forEach((r) => {
+    const cible = document.getElementById(r.dataset.lie!) as HTMLInputElement;
+    r.addEventListener('input', () => { cible.value = r.value; form.dispatchEvent(new Event('input')); });
+    cible.addEventListener('input', () => { r.value = cible.value; });
+  });
+  brancher(form, () => {
+    const annees = Math.min(50, Math.max(1, Math.round(lire(form, 'annees'))));
+    const p = projection({ initial: Math.max(0, lire(form, 'initial')), mensuel: Math.max(0, lire(form, 'mensuel')), annees, rendement: lire(form, 'rendement') });
+    const gains = p.final - p.verse;
+    ecrire('r-final', euros(p.final));
+    ecrire('r-verse', euros(p.verse));
+    ecrire('r-gains', euros(gains));
+    ecrire('r-phrase', p.final > 0 ? `Sur ${annees} ans, ${pct((gains / p.final) * 100, 0)} du capital final vient des intérêts, ${pct((p.verse / p.final) * 100, 0)} de tes versements.` : '');
+    graphique(document.getElementById('g')!, [
+      { nom: 'Capital avec intérêts', valeurs: p.valeurs, couleur: '#0F3D2E', aire: true },
+      { nom: 'Total versé', valeurs: p.verses, couleur: '#8DB8A0', aire: true },
+    ], p.valeurs.map((_, i) => (i === 0 ? 'Départ' : `${i} an${i > 1 ? 's' : ''}`)), 'Évolution du capital et des versements');
+  });
+</script>

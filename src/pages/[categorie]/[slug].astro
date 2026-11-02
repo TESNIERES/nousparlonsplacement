@@ -1,0 +1,132 @@
+---
+import Base from '../../layouts/Base.astro';
+import { articles, parHref, tempsLecture } from '../../lib/content';
+import { SITE, categorie, formatDate, AVERTISSEMENT } from '../../lib/site';
+import { existsSync } from 'node:fs';
+
+export function getStaticPaths() {
+  return articles.map((a) => ({ params: { categorie: a.frontmatter.categorie, slug: a.slug }, props: { article: a } }));
+}
+const { article } = Astro.props;
+const fm = article.frontmatter;
+const cat = categorie(fm.categorie)!;
+const titres = article.getHeadings().filter((h) => h.depth === 2 && h.slug !== 'footnote-label');
+const url = `${SITE.url}${article.href}`;
+const liens = (fm.liens || []).map(parHref).filter(Boolean);
+const autres = articles.filter((a) => a.frontmatter.categorie === fm.categorie && a.href !== article.href && !liens.includes(a)).slice(0, 3 - Math.min(3, liens.length));
+const aLire = [...liens, ...autres].slice(0, 3);
+const partenariat = fm.type === 'partenariat';
+const ogFichier = `/og/${fm.categorie}-${article.slug}.png`;
+const image = existsSync(`public${ogFichier}`) ? ogFichier : '/img/og-parlons-placement.png';
+
+const jsonld: object[] = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: fm.title,
+    description: fm.description,
+    inLanguage: 'fr-FR',
+    datePublished: fm.publie,
+    dateModified: fm.misAJour,
+    mainEntityOfPage: url,
+    url,
+    wordCount: article.mots,
+    articleSection: cat.nom,
+    keywords: fm.motCle,
+    author: { '@type': 'Organization', name: 'La rédaction Parlons Placement', url: `${SITE.url}/a-propos/` },
+    publisher: { '@id': `${SITE.url}/#organisation` },
+    image: `${SITE.url}${image}`,
+    isAccessibleForFree: true,
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Accueil', item: `${SITE.url}/` },
+      { '@type': 'ListItem', position: 2, name: cat.nom, item: `${SITE.url}/${cat.id}/` },
+      { '@type': 'ListItem', position: 3, name: fm.title, item: url },
+    ],
+  },
+];
+if (fm.faq?.length) {
+  jsonld.push({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: fm.faq.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.r } })),
+  });
+}
+---
+<Base title={fm.seoTitle || fm.title} description={fm.description} type="article" image={image} jsonld={jsonld} publie={fm.publie} misAJour={fm.misAJour}>
+  <div class="cadre">
+    <nav class="fil" aria-label="Fil d'Ariane"><a href="/">Accueil</a><span aria-hidden="true">/</span><a href={`/${cat.id}/`}>{cat.nom}</a></nav>
+    <header class={`entete${fm.chiffre ? ' avec-chiffre' : ''}`}>
+      <div class="entete-texte">
+      <p style="margin:18px 0 0"><a class="rubrique" href={`/${cat.id}/`}>{partenariat ? 'Partenariat' : cat.nom}{fm.type === 'guide' && ' · Le guide'}</a></p>
+      <h1>{fm.title}</h1>
+      <p class="meta">
+        <span>Par <b><a href="/a-propos/">la rédaction</a></b></span>
+        <span>Mis à jour le <time datetime={fm.misAJour}>{formatDate(fm.misAJour!)}</time></span>
+        <span>{tempsLecture(article.mots)} min de lecture</span>
+        <span><a href="/methode/">Comment nous vérifions</a></span>
+      </p>
+      </div>
+      {fm.chiffre && (
+        <div class="chiffre-cle viz" aria-label="Le chiffre clé">
+          <span class="rubrique">Le chiffre clé</span>
+          <span class="v" data-compte>{fm.chiffre.valeur}</span>
+          <span class="l">{fm.chiffre.legende}</span>
+        </div>
+      )}
+    </header>
+    <div class="page-article">
+      {titres.length > 2 && (
+        <aside class="sommaire" aria-label="Sommaire">
+          <div class="collant bureau">
+            <p class="rubrique">Au sommaire</p>
+            <ol>{titres.map((h) => <li><a href={`#${h.slug}`}>{h.text}</a></li>)}</ol>
+          </div>
+          <details class="mobile">
+            <summary>Au sommaire</summary>
+            <ol>{titres.map((h) => <li><a href={`#${h.slug}`}>{h.text}</a></li>)}</ol>
+          </details>
+        </aside>
+      )}
+      <article class="colonne">
+        {fm.essentiel?.length && (
+          <section class="essentiel" aria-label="L'essentiel">
+            <p class="rubrique">L'essentiel</p>
+            <ol>{fm.essentiel.map((e) => <li><span>{e}</span></li>)}</ol>
+          </section>
+        )}
+        <div class="prose"><article.Content /></div>
+        {fm.faq?.length && (
+          <section class="faq" aria-labelledby="faq">
+            <h2 id="faq">Questions fréquentes</h2>
+            {fm.faq.map((f) => (<details><summary>{f.q}</summary><p>{f.r}</p></details>))}
+          </section>
+        )}
+        <div class="avertissement" role="note"><b>À lire</b><p>{AVERTISSEMENT} Ce guide décrit des règles générales : pour une décision qui dépend de ta situation, adresse-toi à un professionnel habilité (conseiller en investissements financiers, notaire, expert-comptable). <a href="/avertissement/">En savoir plus</a></p></div>
+        <div class="signature">
+          <img src="/img/pp-monogramme-sapin.svg" alt="" width="44" height="44" loading="lazy" />
+          <span><b>La rédaction Parlons Placement.</b> Chaque chiffre est relevé sur une source officielle, indiquée en note. Une erreur ? Écris-nous sur <a href={SITE.instagram}>Instagram</a>, nous corrigeons et datons la correction.</span>
+        </div>
+      </article>
+    </div>
+  </div>
+  {aLire.length > 0 && (
+    <section class="section" style="border-top:1px solid var(--encre)">
+      <div class="cadre">
+        <div class="section-tete"><div><p class="rubrique">À lire aussi</p></div></div>
+        <div class="grille">
+          {aLire.map((a) => (
+            <div>
+              <a class="rubrique" href={`/${a!.frontmatter.categorie}/`}>{categorie(a!.frontmatter.categorie)?.nom}</a>
+              <h3><a href={a!.href}>{a!.frontmatter.title}</a></h3>
+              <p>{a!.frontmatter.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+</Base>

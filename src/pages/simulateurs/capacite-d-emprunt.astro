@@ -1,0 +1,81 @@
+---
+import Outil from '../../layouts/Outil.astro';
+---
+<Outil
+  type="Simulateur"
+  chemin="/simulateurs/capacite-d-emprunt/"
+  misAJour="2026-11-01"
+  title="Simulateur de capacité d'emprunt"
+  seoTitle="Capacité d'emprunt : simulateur avec la règle des 35 %"
+  description="Calcule combien tu peux emprunter selon tes revenus, tes crédits en cours, le taux et la durée, avec les règles du HCSF : taux d'effort de 35 % et durée de 25 ans."
+  chapo="Depuis 2022, les banques doivent respecter deux règles fixées par le Haut Conseil de stabilité financière : des remboursements limités à 35 % des revenus, assurance comprise, et une durée de 25 ans au plus. Ce simulateur applique ces règles à tes chiffres."
+>
+  <form slot="formulaire" class="formulaire" id="f" novalidate>
+    <div class="champ"><label for="revenus">Revenus nets mensuels du foyer <span class="aide">Avant impôt sur le revenu, primes régulières comprises.</span></label><div class="saisie"><input id="revenus" name="revenus" inputmode="decimal" value="4000" /><span class="unite">€ / mois</span></div></div>
+    <div class="champ"><label for="charges">Crédits déjà en cours <span class="aide">Mensualités des autres crédits qui continueront.</span></label><div class="saisie"><input id="charges" name="charges" inputmode="decimal" value="0" /><span class="unite">€ / mois</span></div></div>
+    <div class="champ"><label for="duree">Durée du prêt</label><div class="saisie"><input id="duree" name="duree" inputmode="numeric" value="25" /><span class="unite">ans</span></div><input type="range" min="5" max="25" step="1" value="25" aria-label="Durée en années" data-lie="duree" /></div>
+    <div class="champ"><label for="taux">Taux nominal du prêt <span class="aide">Hors assurance. Demande le taux en vigueur à ta banque ou à un courtier.</span></label><div class="saisie"><input id="taux" name="taux" inputmode="decimal" value="3.4" /><span class="unite">% / an</span></div></div>
+    <div class="champ"><label for="assurance">Taux de l'assurance emprunteur <span class="aide">En % du capital emprunté par an. Il varie surtout avec l'âge et la santé.</span></label><div class="saisie"><input id="assurance" name="assurance" inputmode="decimal" value="0.3" /><span class="unite">% / an</span></div></div>
+    <div class="champ"><label for="apport">Apport personnel</label><div class="saisie"><input id="apport" name="apport" inputmode="decimal" value="30000" /><span class="unite">€</span></div></div>
+  </form>
+  <div slot="resultat" class="resultat" aria-live="polite">
+    <div class="chiffres">
+      <div><p class="l">Montant empruntable</p><p class="v fort" id="r-capital">-</p></div>
+      <div><p class="l">Mensualité, assurance comprise</p><p class="v" id="r-mens">-</p></div>
+      <div><p class="l">Budget avec ton apport</p><p class="v" id="r-budget">-</p></div>
+    </div>
+    <p class="note-outil" id="r-phrase"></p>
+    <div class="graphique" id="g"></div>
+    <p class="note-outil">Calcul : mensualité maximale = 35 % des revenus moins les crédits en cours. Le capital est celui dont la mensualité (prêt amortissable à taux fixe) plus l'assurance, calculée sur le capital initial, égale cette mensualité maximale. Ce budget doit aussi couvrir les frais de notaire et de garantie.</p>
+  </div>
+
+  <h2>Les deux règles du HCSF</h2>
+  <p>Le Haut Conseil de stabilité financière a rendu obligatoires, à partir du 1er janvier 2022, deux critères pour l'octroi des crédits immobiliers<sup><a href="#n1" id="r1">1</a></sup> :</p>
+  <ul>
+    <li><strong>Le taux d'effort</strong>, c'est-à-dire la part des revenus consacrée au remboursement des crédits, ne doit pas dépasser 35 %, assurance emprunteur comprise.</li>
+    <li><strong>La durée du crédit</strong> ne doit pas dépasser 25 ans. Elle peut atteindre 27 ans lorsque l'entrée dans le logement est décalée par rapport au déblocage du prêt, par exemple pour un achat sur plan.</li>
+  </ul>
+  <p>Les banques peuvent déroger à ces règles pour une petite partie de leurs nouveaux crédits chaque trimestre, en priorité pour l'achat de la résidence principale. Ces dérogations restent l'exception.</p>
+  <blockquote><p><strong>Exemple.</strong> Un couple gagne 4 000 € nets par mois, sans autre crédit. Sa mensualité maximale est de 1 400 € (35 % de 4 000 €), assurance comprise. Sur 25 ans à 3,4 % avec une assurance à 0,3 %, cela correspond à près de 270 000 € empruntés.</p></blockquote>
+
+  <h2>Pourquoi la banque peut te prêter moins</h2>
+  <p>Respecter les 35 % ne garantit pas d'obtenir le prêt. La banque regarde aussi ton reste à vivre (ce qu'il te reste chaque mois après les mensualités), la stabilité de tes revenus, ta gestion de compte et ton apport, qui sert souvent à payer les frais d'achat. Pour un investissement locatif, les loyers attendus ne sont généralement retenus qu'en partie dans les revenus.</p>
+  <p>Avant de fixer un budget, compte les frais d'acquisition : lis notre guide sur les <a href="/immobilier/frais-de-notaire/">frais de notaire</a>. Pour comparer le coût réel de plusieurs offres, c'est le <a href="/lexique/taeg/">TAEG</a> qui fait foi.</p>
+
+  <h2>Les limites de ce calcul</h2>
+  <p>Le simulateur suppose un prêt à taux fixe, sans différé, avec une assurance calculée sur le capital initial. Il ne remplace pas l'étude d'une banque ou d'un courtier, qui seule peut te dire ce que tu peux réellement emprunter. Pour comprendre les autres façons d'investir dans la pierre : <a href="/immobilier/investir-dans-l-immobilier/">investir dans l'immobilier</a>.</p>
+  <section data-footnotes class="footnotes"><h2 id="footnote-label">Sources et notes</h2><ol><li id="n1"><a href="https://www.economie.gouv.fr/hcsf/mesures/mesure-relative-loctroi-de-credits-immobiliers">Mesure relative à l'octroi de crédits immobiliers</a>, Haut Conseil de stabilité financière, economie.gouv.fr (décision D-HCSF-2021-7 du 29 septembre 2021 modifiée), page consultée le 1er novembre 2026. <a href="#r1" aria-label="Retour au texte">↩</a></li></ol></section>
+</Outil>
+
+<script>
+  import { lire, ecrire, euros, graphique, brancher, pct } from '../../scripts/outils';
+  const form = document.getElementById('f') as HTMLFormElement;
+  document.querySelectorAll<HTMLInputElement>('input[data-lie]').forEach((r) => {
+    const cible = document.getElementById(r.dataset.lie!) as HTMLInputElement;
+    r.addEventListener('input', () => { cible.value = r.value; form.dispatchEvent(new Event('input')); });
+    cible.addEventListener('input', () => { r.value = cible.value; });
+  });
+  brancher(form, () => {
+    const revenus = Math.max(0, lire(form, 'revenus'));
+    const charges = Math.max(0, lire(form, 'charges'));
+    const ans = Math.min(25, Math.max(1, Math.round(lire(form, 'duree'))));
+    const n = ans * 12;
+    const r = lire(form, 'taux') / 100 / 12;
+    const ta = lire(form, 'assurance') / 100 / 12;
+    const apport = Math.max(0, lire(form, 'apport'));
+    const mmax = Math.max(0, revenus * 0.35 - charges);
+    const facteur = (r > 0 ? r / (1 - Math.pow(1 + r, -n)) : 1 / n) + ta;
+    const capital = mmax / facteur;
+    const interets = (capital * (facteur - ta)) * n - capital;
+    const assurance = capital * ta * n;
+    ecrire('r-capital', euros(capital));
+    ecrire('r-mens', euros(mmax));
+    ecrire('r-budget', euros(capital + apport));
+    ecrire('r-phrase', capital > 0 ? `Coût du crédit sur ${ans} ans : ${euros(interets)} d'intérêts et ${euros(assurance)} d'assurance. Taux d'effort retenu : ${pct(35, 0)}${charges > 0 ? ', crédits en cours compris' : ''}.` : 'Tes crédits en cours atteignent déjà 35 % de tes revenus.');
+    const durees = [10, 15, 20, 25];
+    const caps = durees.map((d) => { const k = d * 12; return mmax / ((r > 0 ? r / (1 - Math.pow(1 + r, -k)) : 1 / k) + ta); });
+    graphique(document.getElementById('g')!, [
+      { nom: 'Montant empruntable selon la durée', valeurs: caps, couleur: '#0F3D2E', aire: true },
+    ], durees.map((d) => `${d} ans`), "Montant empruntable selon la durée du prêt");
+  });
+</script>

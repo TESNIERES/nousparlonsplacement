@@ -1,0 +1,42 @@
+---
+import Base from '../../layouts/Base.astro';
+import { termes } from '../../lib/content';
+import { SITE } from '../../lib/site';
+
+const lettre = (s: string) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').charAt(0).toUpperCase();
+const groupes = new Map<string, typeof termes>();
+for (const t of termes) {
+  const l = lettre(t.frontmatter.terme);
+  groupes.set(l, [...(groupes.get(l) || []), t]);
+}
+const jsonld = [{
+  '@context': 'https://schema.org',
+  '@type': 'DefinedTermSet',
+  name: 'Lexique Parlons Placement',
+  url: `${SITE.url}/lexique/`,
+  hasDefinedTerm: termes.map((t) => ({ '@type': 'DefinedTerm', name: t.frontmatter.terme, description: t.frontmatter.definition, url: `${SITE.url}${t.href}` })),
+}];
+---
+<Base title="Lexique de la finance et de l'épargne : les définitions simples" description="PEA, ETF, fonds euros, TAEG, SCPI, PFU, démembrement : les mots de l'épargne et de l'investissement définis simplement, avec les chiffres officiels." jsonld={jsonld}>
+  <div class="cadre">
+    <nav class="fil" aria-label="Fil d'Ariane"><a href="/">Accueil</a><span aria-hidden="true">/</span><span>Lexique</span></nav>
+    <header class="lettrine-page intro-rubrique">
+      <p class="rubrique" style="margin:18px 0 0">Lexique</p>
+      <h1>Les mots de l'argent, <em>définis simplement</em></h1>
+      <p class="chapo">Une définition courte, un exemple, ce qu'il faut savoir. Chaque chiffre renvoie à sa source officielle.</p>
+      <p style="margin:22px 0 0;font-size:15px;letter-spacing:.04em">{[...groupes.keys()].map((l) => <a href={`#${l}`} style="margin-right:12px;text-decoration:none;font-weight:600">{l}</a>)}</p>
+    </header>
+    <div style="padding:20px 0 72px">
+      {[...groupes.entries()].map(([l, liste]) => (
+        <section id={l} style="display:grid;grid-template-columns:90px 1fr;gap:0 24px;border-bottom:1px solid var(--filet);padding:22px 0">
+          <p class="serif" style="font-size:64px;line-height:.9;margin:0;color:var(--sapin)">{l}</p>
+          <ul class="index" style="border-top:0">
+            {liste.map((t) => (
+              <li><a href={t.href}><span class="t">{t.frontmatter.terme}{t.frontmatter.nomComplet && <span style="color:var(--doux);font-size:.75em"> · {t.frontmatter.nomComplet}</span>}</span><span class="d">{t.frontmatter.definition}</span></a></li>
+            ))}
+          </ul>
+        </section>
+      ))}
+    </div>
+  </div>
+</Base>

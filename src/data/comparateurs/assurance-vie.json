@@ -1,0 +1,389 @@
+{
+  "miseAJour": "2026-11-01",
+  "contrats": [
+    {
+      "id": "linxea-spirit-2",
+      "nom": "Linxea Spirit 2",
+      "distributeur": "Linxea",
+      "assureur": "Spirica",
+      "fraisVersementPct": 0,
+      "fraisGestionUCPct": 0.5,
+      "fraisGestionFondsEurosPct": 2,
+      "fondsEuros": "Fonds Euro Nouvelle Génération ; Fonds Euro Objectif Climat",
+      "rendementFondsEuros2025Pct": 3.08,
+      "conditionRendement": "Taux du fonds Euro Nouvelle Génération, sans condition de part d'UC ni bonus. Fonds Euro Objectif Climat : 3,26 % net en 2025, accessible uniquement par versement (pas par arbitrage).",
+      "nbSupportsUC": 1100,
+      "etf": true,
+      "immobilier": true,
+      "gestionPilotee": true,
+      "fraisGestionPilotee": "OTEA Capital : 0,20 % par an en plus des frais du contrat ; Yomoni : 0,70 % par an en plus. La fiche des frais au 1er août 2025 mentionne aussi une gestion pilotée profilée à 0,50 % supplémentaire.",
+      "versementMin": 500,
+      "fraisArbitrage": "0 % en ligne (hors SCPI, SCI, ETF, FCPR et actions) ; par courrier, 15 € avec 2 arbitrages gratuits par an selon la fiche des frais.",
+      "contrainteUC": "Aucune : fonds euros accessibles jusqu'à 100 %, dans la limite de 5 millions d'euros.",
+      "remarques": "Frais de gestion des fonds euros : « 2 % maximum » par an (garantie du capital à 98 %) ; valeur retenue : ce maximum, le taux servi est net de ces frais. nbSupportsUC est un plancher : la page indique « plus de 1 100 ». Frais de transaction ETF/ETC : 0,06 % sur la page du contrat, mais 0,10 % sur la fiche « Les frais de l'assurance-vie » mise à jour le 1er août 2025 (https://www.linxea.com/assets/uploads/2025/10/2025_4445_FTF.pdf) ; actions en direct : 0,60 % ; SCPI : pénalité de 3 % en cas de désinvestissement dans les 3 ans. Bonus en cours sur Nouvelle Génération (jusqu'à +1,80 % net sur 2027 et 2028 pour un versement d'au moins 100 000 €, sans condition d'UC), sans effet sur le taux 2025. Page sans date affichée (métadonnées : 29 octobre 2026).",
+      "source": {
+        "titre": "Linxea Spirit 2 : assurance-vie en ligne et sans frais d'entrée - Linxea",
+        "url": "https://www.linxea.com/assurance-vie/linxea-spirit-2",
+        "date": null
+      },
+      "sourceRendement": {
+        "titre": "Linxea Spirit 2 : assurance-vie en ligne et sans frais d'entrée - Linxea",
+        "url": "https://www.linxea.com/assurance-vie/linxea-spirit-2",
+        "date": null
+      },
+      "verifie": true
+    },
+    {
+      "id": "linxea-avenir-2-plus",
+      "nom": "Linxea Avenir 2+",
+      "distributeur": "Linxea",
+      "assureur": "Suravenir",
+      "fraisVersementPct": 0,
+      "fraisGestionUCPct": 0.6,
+      "fraisGestionFondsEurosPct": 3,
+      "fondsEuros": "Suravenir Opportunités 2 ; Suravenir Rendement 2",
+      "rendementFondsEuros2025Pct": 3.0,
+      "conditionRendement": "Taux de Suravenir Opportunités 2, sans condition de part d'UC ni bonus. Suravenir Rendement 2 : 2,10 % net en 2025.",
+      "nbSupportsUC": 750,
+      "etf": true,
+      "immobilier": true,
+      "gestionPilotee": true,
+      "fraisGestionPilotee": "OTEA Capital : 0,2 % par an en plus ; Amundi (gestion sous mandat 100 % ETF) : 0,39 % par an en plus, soit un coût total maximal de 0,99 % par an sur la part en UC.",
+      "versementMin": 100,
+      "fraisArbitrage": "0 % en ligne (hors SCPI, SCI, ETF, FCPR).",
+      "contrainteUC": "Suravenir Opportunités 2 : accessible à 100 % sans UC, mais pas par arbitrage entrant. Suravenir Rendement 2 : 70 % maximum, le solde en UC (30 % minimum).",
+      "remarques": "Successeur de Linxea Avenir 2 : la page présente Linxea Avenir 2+ comme le contrat ouvert à la souscription, Linxea Avenir 2 « continue de fonctionner aux mêmes conditions » pour les clients existants. Frais de gestion de Suravenir Opportunités 2 : « 0,6 % à 3 % » par an (garantie du capital à 97 %) ; Suravenir Rendement 2 : 0,6 % (garantie à 99,4 %) ; valeur retenue : le maximum, le taux servi est net de ces frais. nbSupportsUC est un plancher : « plus de 750 supports ». Frais de transaction ETF : 0,1 %. Offre en cours du 15/09/2026 au 31/12/2026 (versement d'au moins 20 000 € en gestion libre) : +1,00 % net en 2026 et 2027 avec 30 % d'UC, +1,50 % avec 50 % d'UC, sans effet sur le taux 2025. Pages sans date affichée (métadonnées de la page contrat : 29 octobre 2026).",
+      "source": {
+        "titre": "Linxea Avenir 2+ : assurance-vie en ligne et sans frais d'entrée - Linxea",
+        "url": "https://www.linxea.com/assurance-vie/linxea-avenir-2/",
+        "date": null
+      },
+      "sourceRendement": {
+        "titre": "Les fonds en euros du contrat Linxea Avenir 2 / Avenir 2+ - Linxea",
+        "url": "https://www.linxea.com/assurance-vie/linxea-avenir2/supports-disponibles-sur-linxea-avenir-2/fonds-euro/",
+        "date": null
+      },
+      "verifie": true
+    },
+    {
+      "id": "lucya-cardif",
+      "nom": "Lucya Cardif",
+      "distributeur": "Lucya (ex-Assurancevie.com)",
+      "assureur": "Cardif Assurance Vie",
+      "fraisVersementPct": 0,
+      "fraisGestionUCPct": 0.5,
+      "fraisGestionFondsEurosPct": 0.7,
+      "fondsEuros": "Fonds général Cardif Assurance Vie ; Euro Private Strategies (sous conditions)",
+      "rendementFondsEuros2025Pct": 2.75,
+      "conditionRendement": "Taux net servi en 2025 sur le fonds général selon la notice de l'assureur ; aucune condition de part d'UC ni bonus mentionnés pour ce taux. Aucun taux 2025 lu pour Euro Private Strategies.",
+      "nbSupportsUC": null,
+      "etf": true,
+      "immobilier": true,
+      "gestionPilotee": true,
+      "fraisGestionPilotee": "Gestion Profilée Vie : « Frais de gestion pilotée ou standardisée : 0,50 % maximum » selon la fiche des frais ; la fiche ne précise pas si ces frais s'ajoutent aux 0,50 % sur UC (la notice indique des frais de gestion du contrat de 0,50 % en gestion profilée).",
+      "versementMin": 500,
+      "fraisArbitrage": "0 %",
+      "contrainteUC": null,
+      "remarques": "Toutes les URL de assurancevie.com redirigent vers lucya.com, page non consultable (accès refusé) : les valeurs proviennent des documents de l'assureur. Frais d'adhésion à l'association : 10 €. Euro Private Strategies : frais de gestion de 3 % maximum, accès « sous conditions » non détaillées. Frais sur opérations ETF et actions en direct : 0,10 % maximum ; SCPI : pénalité de 3 % en cas de sortie dans les 3 ans. Nombre d'UC et conditions d'accès au fonds général non indiqués dans les documents lus. La notice cite aussi un « taux de rendement brut de l'actif du Fonds général » de 3,18 %, à ne pas confondre avec le taux servi.",
+      "source": {
+        "titre": "Les frais de l'assurance-vie - Contrat LUCYA CARDIF",
+        "url": "https://document-information-cle.cardif.fr/documents/18841382/18862686/Lucya%20Cardif/1a51042c-c193-ac25-1e7f-a81984c03716",
+        "date": "2026-10"
+      },
+      "sourceRendement": {
+        "titre": "LUCYA CARDIF - Notice - Liste des supports",
+        "url": "https://document-information-cle.cardif.fr/documents/18841382/27294638/LUCYA%20CARDIF/37aaae66-b5ea-ffe3-043a-0cc2d81a60a3",
+        "date": "2026-02-01"
+      },
+      "verifie": true
+    },
+    {
+      "id": "placement-direct-vie",
+      "nom": "Placement-direct Vie",
+      "distributeur": "Placement-direct",
+      "assureur": "SwissLife Assurance et Patrimoine",
+      "fraisVersementPct": 0,
+      "fraisGestionUCPct": 0.5,
+      "fraisGestionFondsEurosPct": 0.6,
+      "fondsEuros": "Fonds en euros adossé à l'actif général de SwissLife Assurance et Patrimoine",
+      "rendementFondsEuros2025Pct": null,
+      "conditionRendement": "La page annonce « jusqu'à 3,45 % » net en 2025 « en fonction de la part d'unités de compte et de l'encours du contrat » (seuil de 250 000 €) ; la grille par palier ne s'affiche pas, le taux sans condition n'est donc pas lisible.",
+      "nbSupportsUC": 1300,
+      "etf": true,
+      "immobilier": null,
+      "gestionPilotee": true,
+      "fraisGestionPilotee": "Allocation déléguée : 0,4 % par an en plus des frais annuels de gestion du contrat (0,7 % pour « Opportunités 100% Trackers »).",
+      "versementMin": 500,
+      "fraisArbitrage": "0 %",
+      "contrainteUC": null,
+      "remarques": "Frais de gestion UC : 0,5 % (0,8 % sur les actions en direct). Frais par opération : 0,05 % sur ETF, 0,45 % sur actions en direct. nbSupportsUC est un plancher : « plus de 1 300 supports d'investissement ». SCPI et SCI non mentionnées sur la page. Contrainte d'accès au fonds euros non précisée. Ni le communiqué SwissLife du 27 janvier 2026 ni le tableau « Performances 2025 des contrats » de SwissLife Assurance et Patrimoine ne mentionnent ce contrat. La page affiche « Dernière mise à jour le 14/01/2025 » alors qu'elle contient des données de 2026 ; fiche synthétique des frais datée d'avril 2026 (https://static.placement-direct.fr/documents/fiche-synthetique-des-frais-placement-direct-vie.pdf), illisible en extraction.",
+      "source": {
+        "titre": "Placement-direct Vie, contrat d'assurance vie en ligne",
+        "url": "https://www.placement-direct.fr/assurance-vie/placement-direct-vie",
+        "date": "2025-01-14"
+      },
+      "sourceRendement": {
+        "titre": "Placement-direct Vie, contrat d'assurance vie en ligne",
+        "url": "https://www.placement-direct.fr/assurance-vie/placement-direct-vie",
+        "date": "2025-01-14"
+      },
+      "verifie": true
+    },
+    {
+      "id": "placement-direct-essentiel",
+      "nom": "Placement-direct Essentiel",
+      "distributeur": "Placement-direct",
+      "assureur": "Generali Vie",
+      "fraisVersementPct": 0,
+      "fraisGestionUCPct": 0.6,
+      "fraisGestionFondsEurosPct": 0.75,
+      "fondsEuros": "Netissima ; Eurossima",
+      "rendementFondsEuros2025Pct": 3.0,
+      "conditionRendement": "Taux de Netissima, sans condition de part d'UC ni bonus. Taux 2025 d'Eurossima non affiché sur la page.",
+      "nbSupportsUC": 800,
+      "etf": true,
+      "immobilier": null,
+      "gestionPilotee": true,
+      "fraisGestionPilotee": "9 solutions de gestion pilotée : 0,25 % par an en plus des frais de gestion du contrat sur les UC concernées.",
+      "versementMin": 1000,
+      "fraisArbitrage": "0 % (montant minimum 50 €)",
+      "contrainteUC": "Aucune part minimale d'UC indiquée pour Netissima (30 % d'UC exigés seulement pour le bonus). Eurossima : versements limités à 50 000 € l'année de l'adhésion, puis 25 000 € par année civile.",
+      "remarques": "Versement minimum : 1 000 €, ou 100 € avec versements libres programmés. Frais de gestion UC : 0,60 %, portés à 0,75 % sur les ETF, le fonds croissance et les actions en direct. Bonus en cours sur Netissima : +2,00 % net en 2026 et 2027 pour une adhésion ou un versement libre du 1er novembre au 31 décembre 2026 investi à 30 % minimum en UC, dans la limite de 500 000 €, sans effet sur le taux 2025. Generali Vie publie pour le produit « Placement direct » / Netissima un rendement moyen servi 2025 de 3,04 % : c'est une moyenne, pas le taux de base. nbSupportsUC est un plancher : « plus de 800 supports d'investissement ». SCPI et SCI non mentionnées. La page affiche « Dernière mise à jour le 14/01/2025 » malgré des contenus de 2026.",
+      "source": {
+        "titre": "Placement-direct Essentiel, contrat d'assurance vie en ligne",
+        "url": "https://www.placement-direct.fr/assurance-vie/placement-direct-essentiel",
+        "date": "2025-01-14"
+      },
+      "sourceRendement": {
+        "titre": "Placement-direct Essentiel, contrat d'assurance vie en ligne",
+        "url": "https://www.placement-direct.fr/assurance-vie/placement-direct-essentiel",
+        "date": "2025-01-14"
+      },
+      "verifie": true
+    },
+    {
+      "id": "boursovie",
+      "nom": "BoursoVie",
+      "distributeur": "BoursoBank",
+      "assureur": "Generali Vie",
+      "fraisVersementPct": 0,
+      "fraisGestionUCPct": 0.75,
+      "fraisGestionFondsEurosPct": 0.75,
+      "fondsEuros": "Euro Exclusif",
+      "rendementFondsEuros2025Pct": 3.0,
+      "conditionRendement": "Taux de base d'Euro Exclusif, hors boost. BoursoBank mentionne un boost de +1,60 % net sur les versements de 2025, avec une part d'UC variable selon la période (50 % du 28/01 au 31/05/2025, aucune du 01/06 au 31/07/2025, 30 % du 01/08 au 31/12/2025), « portant le rendement potentiel de celui-ci à +4,60 % nets de frais en 2026 ».",
+      "nbSupportsUC": 600,
+      "etf": true,
+      "immobilier": true,
+      "gestionPilotee": true,
+      "fraisGestionPilotee": "Gestion pilotée (8 mandats, déléguée à Generali) : « 0 € de frais supplémentaires », seuls les frais de gestion du contrat (0,75 % par an) s'appliquent.",
+      "versementMin": 300,
+      "fraisArbitrage": "0 €",
+      "contrainteUC": "Aucune part minimale d'UC indiquée pour l'accès à Euro Exclusif ; 30 % d'UC exigés seulement pour les boosts.",
+      "remarques": "Nom commercial actuel : BoursoVie (BoursoBank, ex-Boursorama Banque). Frais de gestion : 0,75 % maximum par an sur fonds euros et UC (fiche des frais de Generali Vie : https://www.generali.fr/sites/default/files-d8/2026-08/Bourso-Vie.pdf). La page du contrat présente un seul fonds en euros, Euro Exclusif ; la page d'aide sur les frais cite aussi Eurossima et Netissima, et Generali Vie publie une ligne BoursoVie / Eurossima (rendement moyen servi 2025 : 1,67 %). Generali Vie publie pour BoursoVie / Euro Exclusif un « rendement moyen servi » 2025 de 3,21 % : c'est une moyenne, pas le taux de base. Boost 2026 en cours : +1,50 % sous condition de 30 % d'UC, versements jusqu'à 500 000 €. nbSupportsUC est un plancher : « + de 600 supports d'investissements », fonds en euros compris. 8 fonds d'ETF BoursoBank ; SCPI, SCI, OPCI en gestion libre.",
+      "source": {
+        "titre": "Assurance Vie : fiscalité, avantages - frais entrée 0 € | BoursoBank (ex-Boursorama Banque)",
+        "url": "https://www.boursobank.com/epargne/assurance-vie",
+        "date": null
+      },
+      "sourceRendement": {
+        "titre": "Assurance-vie : une année 2025 record pour BoursoVie",
+        "url": "https://www.boursorama.com/epargne/assurance-vie/actualites/assurance-vie-une-annee-2025-record-pour-boursovie-221c64e777bfbaa841683b58dff22313",
+        "date": "2026-01-30"
+      },
+      "verifie": true
+    },
+    {
+      "id": "fortuneo-vie",
+      "nom": "Fortuneo Vie",
+      "distributeur": "Fortuneo",
+      "assureur": "Suravenir",
+      "fraisVersementPct": 0,
+      "fraisGestionUCPct": 0.75,
+      "fraisGestionFondsEurosPct": 3,
+      "fondsEuros": "Suravenir Opportunités 2 ; Suravenir Rendement 2",
+      "rendementFondsEuros2025Pct": 3.0,
+      "conditionRendement": "Taux de Suravenir Opportunités 2 pour un encours moyen en UC inférieur à 30 % sur 2025. Il passe à 3,50 % (30 à 50 % d'UC), 4,00 % (50 à 70 %) et 4,50 % (plus de 70 %), et jusqu'à 6,50 % avec les bonus sur versements 2025. Suravenir Rendement 2 : 2,10 %.",
+      "nbSupportsUC": 200,
+      "etf": true,
+      "immobilier": true,
+      "gestionPilotee": true,
+      "fraisGestionPilotee": "Gestion sous mandat (3 formules, dès 300 €) : frais de gestion de 0,85 % par an sur les UC au lieu de 0,75 % en gestion libre ; aucun autre frais de mandat indiqué.",
+      "versementMin": 100,
+      "fraisArbitrage": "0 €",
+      "contrainteUC": "Suravenir Opportunités 2 : « actuellement » accessible à 100 % sans condition d'UC en gestion libre. Suravenir Rendement 2 : chaque versement doit être investi à 30 % minimum en UC.",
+      "remarques": "Frais de gestion de Suravenir Opportunités 2 : 3 % maximum par an (garantie du capital à 97 %) ; Suravenir Rendement 2 : 0,60 % (garantie à 99,4 %) ; valeur retenue : le maximum, le taux servi est net de ces frais. L'accès à 100 % à Opportunités 2 sans UC est présenté comme une situation actuelle, pas comme une règle du contrat. Bonus sur versements 2025 : +2 % (janvier 2025, 30 % d'UC) ou +1 % (février à juin 2025 avec 30 % d'UC, juillet à décembre 2025 avec 50 % d'UC). Frais nuls hors frais propres aux SCPI, SCI, OPCI et ETF. nbSupportsUC est un plancher : la page indique « plus de 200 », le communiqué du 23 janvier 2026 indiquait 271 UC au 1er septembre 2025. Versement minimum : 100 € en gestion libre, 300 € en gestion sous mandat.",
+      "source": {
+        "titre": "Souscrire au contrat d'assurance vie en ligne de Fortuneo",
+        "url": "https://www.fortuneo.fr/assurance-vie",
+        "date": null
+      },
+      "sourceRendement": {
+        "titre": "Fortuneo annonce des taux de rendement jusqu'à 4,50% net en 2025 pour son contrat Fortuneo Vie",
+        "url": "https://www.fortuneo.fr/files/cp-taux-2025-fortuneo-vie.pdf",
+        "date": "2026-01-23"
+      },
+      "verifie": true
+    },
+    {
+      "id": "altaprofits-vie",
+      "nom": "Altaprofits Vie",
+      "distributeur": "Altaprofits",
+      "assureur": "Generali Vie",
+      "fraisVersementPct": 0,
+      "fraisGestionUCPct": 0.6,
+      "fraisGestionFondsEurosPct": 0.75,
+      "fondsEuros": "Netissima ; Eurossima",
+      "rendementFondsEuros2025Pct": 3.0,
+      "conditionRendement": "Taux de base de Netissima, hors bonus. Bonus 2025 de +1,60 % sur les versements initiaux ou libres selon la période (50 % d'UC du 28/01 au 31/05/2025, aucune condition du 01/06 au 31/07/2025, 30 % d'UC du 01/08 au 31/12/2025), dans la limite d'un taux global de 4,60 %. Eurossima : 1,67 % (contrats souscrits à compter du 3 janvier 2017), 1,82 % (contrats antérieurs).",
+      "nbSupportsUC": null,
+      "etf": true,
+      "immobilier": true,
+      "gestionPilotee": true,
+      "fraisGestionPilotee": "Profils Lazard Frères Gestion et Generali Wealth Solutions : 0,30 % par an de frais complémentaires de mandat.",
+      "versementMin": 300,
+      "fraisArbitrage": "0 € (montant minimum 75 €)",
+      "contrainteUC": "Aucune : 100 % des versements possibles sur Netissima ; 30 % d'UC exigés seulement pour la bonification.",
+      "remarques": "Frais de gestion UC : 0,60 % par an sous 300 000 € d'encours, 0,45 % au-delà ; +0,10 % par an sur les actions en direct. Nombre d'UC donné comme « près de 500 » (données au 27/01/2026), non retenu car approximatif. 83 ETF, 8 supports immobiliers. Bonus 2026 en cours : +1,50 % pour les versements jusqu'au 31/12/2026, 30 % d'UC minimum, limite 500 000 €. Generali Vie publie pour Altaprofits Vie / Netissima un « rendement moyen servi » 2025 de 3,44 % : c'est une moyenne, pas le taux de base. La page annonce 12 profils de gestion pilotée dans le texte et 8 dans sa description.",
+      "source": {
+        "titre": "Altaprofits Vie, l'assurance vie la moins chère | Altaprofits",
+        "url": "https://www.altaprofits.com/assurance-vie/assurance-vie-generali",
+        "date": null
+      },
+      "sourceRendement": {
+        "titre": "Taux de participation aux bénéfices 2025 des fonds en euros Eurossima et Netissima et performance du fonds croissance Générations Croiss@nce durable des contrats assurés par Generali Vie",
+        "url": "https://www.altaprofits.com/documentation/pdf/ESPACEPRESSE/RENDEMENTS-2025-FONDS-EN-EUROS-ASSUREUR-GENERALI-27-01-2026.pdf",
+        "date": "2026-01-27"
+      },
+      "verifie": true
+    },
+    {
+      "id": "digital-vie-prime",
+      "nom": "Digital Vie Prime",
+      "distributeur": "Altaprofits",
+      "assureur": "Suravenir",
+      "fraisVersementPct": 0,
+      "fraisGestionUCPct": 0.6,
+      "fraisGestionFondsEurosPct": 3,
+      "fondsEuros": "Suravenir Opportunités 2 ; Suravenir Rendement 2",
+      "rendementFondsEuros2025Pct": 3.0,
+      "conditionRendement": "Taux de Suravenir Opportunités 2 en gestion libre, hors bonification. Bonification 2025 de 2,00 % sur les versements (sans condition d'UC du 01/01 au 30/06/2025, 50 % d'UC du 01/07 au 31/12/2025), sans désinvestissement en 2025 : taux de 5,00 %. Suravenir Rendement 2 : 2,10 % en gestion libre, 2,50 % en gestion pilotée.",
+      "nbSupportsUC": 300,
+      "etf": true,
+      "immobilier": true,
+      "gestionPilotee": true,
+      "fraisGestionPilotee": "Amundi (100 % ETF) : 0,70 % par an de frais de mandat en plus, soit jusqu'à 1,30 % par an sur les UC ; Lazard Frères Gestion : 0,24 % par an en plus.",
+      "versementMin": 100,
+      "fraisArbitrage": "0 € (montant minimum 25 €)",
+      "contrainteUC": null,
+      "remarques": "Frais de gestion des fonds euros : la page affiche 0,60 % par an pour les deux fonds et précise 3 % maximum dans les conditions générales pour Suravenir Opportunités 2 (garantie du capital à 97 % par an, brute de frais) ; valeur retenue : le maximum. Conditions d'accès aux fonds euros non précisées sur la page. Supports au 27/01/2026 : 236 OPCVM, 86 ETF, 16 supports immobiliers, plus des fonds de private equity et des fonds structurés ; nbSupportsUC est un plancher (« plus de 300 »). Frais complémentaires ETF : 0,10 % par opération. Versement minimum : 100 € en gestion libre, 300 € en gestion pilotée. Offre en cours du 15/09/2026 au 31/12/2026 (versement d'au moins 20 000 €) : +1,00 % avec 30 % d'UC, +1,50 % avec 50 % d'UC sur Opportunités 2, sans effet sur le taux 2025.",
+      "source": {
+        "titre": "Digital Vie Prime, l'assurance vie accessible dès 100 € | Altaprofits",
+        "url": "https://www.altaprofits.com/assurance-vie/suravenir-assurance-vie",
+        "date": null
+      },
+      "sourceRendement": {
+        "titre": "Taux de rendement 2025 des fonds en euros dans les contrats d'Altaprofits, assurés par Suravenir",
+        "url": "https://www.altaprofits.com/documentation/pdf/ESPACEPRESSE/RENDEMENT-2025-FONDS-EN-EUROS-ASSUREUR-SURAVENIR-26-01-2026.pdf",
+        "date": "2026-01-26"
+      },
+      "verifie": true
+    },
+    {
+      "id": "meilleurtaux-liberte-vie",
+      "nom": "Meilleurtaux Liberté Vie",
+      "distributeur": "Meilleurtaux Placement",
+      "assureur": "Spirica",
+      "fraisVersementPct": 0,
+      "fraisGestionUCPct": 0.5,
+      "fraisGestionFondsEurosPct": 2,
+      "fondsEuros": "Fonds Euro Nouvelle Génération ; Fonds Euro Objectif Climat",
+      "rendementFondsEuros2025Pct": 3.08,
+      "conditionRendement": "Taux du fonds Euro Nouvelle Génération, sans condition de part d'UC ni bonus. Fonds Euro Objectif Climat : 3,26 % net en 2025, accessible par versements uniquement (pas d'arbitrage).",
+      "nbSupportsUC": 1040,
+      "etf": true,
+      "immobilier": true,
+      "gestionPilotee": true,
+      "fraisGestionPilotee": "« Frais additionnels sur la Gestion pilotée » : 0,40 % par an (profils Prudent, Équilibré, Dynamique), 0,50 % par an (profil Audacieux).",
+      "versementMin": 500,
+      "fraisArbitrage": "0 % par internet ; par courrier, 2 arbitrages gratuits par an puis 15 € ; minimum 500 € ou la totalité du support.",
+      "contrainteUC": "Aucune : Nouvelle Génération accessible jusqu'à 100 % (plafond cumulé de 5 millions d'euros sur les fonds euros) ; Objectif Climat jusqu'à 100 % par versements, sans arbitrage.",
+      "remarques": "Frais de gestion du fonds Euro Nouvelle Génération : « 2 % maximum / an » (garantie annuelle du capital de 98 %) ; valeur retenue : ce maximum, le taux servi est net de ces frais. Frais d'Objectif Climat non indiqués sur la page du contrat. Frais ETF : 0,06 % à l'investissement et au désinvestissement, plus frais locaux éventuels (taxe sur les transactions financières). SCPI : pénalité de 3 % en cas de rachat dans les 3 ans. nbSupportsUC est un plancher : « plus de 1 040 supports ». Bonus en cours sur Nouvelle Génération : +1,80 % en 2027 et 2028 pour un versement d'au moins 100 000 €, sans effet sur le taux 2025. Versement minimum 500 € (50 € par support). Page sans date de publication.",
+      "source": {
+        "titre": "Meilleurtaux Liberté Vie : Spirica Assurance Vie - Meilleurtaux Placement",
+        "url": "https://placement.meilleurtaux.com/assurance-vie/meilleure-assurance-vie/meilleurtaux-liberte-vie.html",
+        "date": null
+      },
+      "sourceRendement": {
+        "titre": "Fonds en euros : les taux de participation aux bénéfices (rendements) 2025 des contrats assurés par Spirica",
+        "url": "https://placement.meilleurtaux.com/assurance-vie/actualites/2026-janvier/fonds-en-euros-les-taux-de-participation-aux-benefices-rendements-2025-des-contrats-assures-par-spirica.html",
+        "date": "2026-01-28"
+      },
+      "verifie": true
+    },
+    {
+      "id": "nalo-patrimoine",
+      "nom": "Nalo Patrimoine",
+      "distributeur": "Nalo",
+      "assureur": "Generali Vie",
+      "fraisVersementPct": null,
+      "fraisGestionUCPct": null,
+      "fraisGestionFondsEurosPct": null,
+      "fondsEuros": "Netissima ; Eurossima",
+      "rendementFondsEuros2025Pct": null,
+      "conditionRendement": null,
+      "nbSupportsUC": null,
+      "etf": null,
+      "immobilier": null,
+      "gestionPilotee": null,
+      "fraisGestionPilotee": null,
+      "versementMin": null,
+      "fraisArbitrage": null,
+      "contrainteUC": null,
+      "remarques": "Non vérifié : aucune page ni document du distributeur n'a pu être consulté. Seule source officielle lue : le tableau des taux de rendement moyens 2025 de Generali Vie, qui liste Nalo Patrimoine avec Netissima (taux moyen de frais de gestion 0,85 %, rendement moyen servi 3,30 %) et Eurossima (0,85 %, 1,57 %). Ce sont des moyennes publiées par l'assureur, pas les frais contractuels ni le taux de base : elles ne sont pas reprises dans les champs chiffrés.",
+      "source": {
+        "titre": "Taux de rendement moyens des contrats d'assurance vie, de capitalisation et retraite pour l'exercice 2025",
+        "url": "https://www.generali.fr/sites/default/files-d8/2026-03/Taux-rendement-moyens-contrats-assurance-vie-capitalisation-retraite-2025.pdf",
+        "date": null
+      },
+      "sourceRendement": {
+        "titre": "Taux de rendement moyens des contrats d'assurance vie, de capitalisation et retraite pour l'exercice 2025",
+        "url": "https://www.generali.fr/sites/default/files-d8/2026-03/Taux-rendement-moyens-contrats-assurance-vie-capitalisation-retraite-2025.pdf",
+        "date": null
+      },
+      "verifie": false
+    },
+    {
+      "id": "ramify-vie",
+      "nom": "Ramify Vie",
+      "distributeur": "Ramify",
+      "assureur": "Generali Vie",
+      "fraisVersementPct": null,
+      "fraisGestionUCPct": null,
+      "fraisGestionFondsEurosPct": null,
+      "fondsEuros": "Netissima",
+      "rendementFondsEuros2025Pct": null,
+      "conditionRendement": null,
+      "nbSupportsUC": null,
+      "etf": null,
+      "immobilier": null,
+      "gestionPilotee": null,
+      "fraisGestionPilotee": null,
+      "versementMin": null,
+      "fraisArbitrage": null,
+      "contrainteUC": null,
+      "remarques": "Non vérifié : aucune page ni document du distributeur n'a pu être consulté, le nom commercial « Ramify Vie » n'est donc pas confirmé. Seule source officielle lue : le tableau des taux de rendement moyens 2025 de Generali Vie, qui liste un produit « RAMIFY » avec Netissima (taux moyen de frais de gestion 0,90 %, rendement moyen servi 3,31 %). Ce sont des moyennes publiées par l'assureur, pas les frais contractuels ni le taux de base : elles ne sont pas reprises dans les champs chiffrés.",
+      "source": {
+        "titre": "Taux de rendement moyens des contrats d'assurance vie, de capitalisation et retraite pour l'exercice 2025",
+        "url": "https://www.generali.fr/sites/default/files-d8/2026-03/Taux-rendement-moyens-contrats-assurance-vie-capitalisation-retraite-2025.pdf",
+        "date": null
+      },
+      "sourceRendement": {
+        "titre": "Taux de rendement moyens des contrats d'assurance vie, de capitalisation et retraite pour l'exercice 2025",
+        "url": "https://www.generali.fr/sites/default/files-d8/2026-03/Taux-rendement-moyens-contrats-assurance-vie-capitalisation-retraite-2025.pdf",
+        "date": null
+      },
+      "verifie": false
+    }
+  ]
+}

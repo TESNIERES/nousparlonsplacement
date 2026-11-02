@@ -1,0 +1,141 @@
+---
+import { formatDate } from '../../lib/site';
+import Outil from '../../layouts/Outil.astro';
+
+type Src = { titre?: string; url?: string; date?: string };
+type Contrat = {
+  id: string; nom: string; distributeur?: string; assureur?: string;
+  fraisVersementPct?: number | null; fraisGestionUCPct?: number | null; fraisGestionFondsEurosPct?: number | null;
+  fondsEuros?: string | null; rendementFondsEuros2025Pct?: number | null; conditionRendement?: string | null;
+  nbSupportsUC?: number | null; etf?: boolean | null; immobilier?: boolean | null;
+  gestionPilotee?: boolean | null; fraisGestionPilotee?: string | null; versementMin?: number | null;
+  fraisArbitrage?: string | null; contrainteUC?: string | null; remarques?: string;
+  source?: Src; sourceRendement?: Src; verifie?: boolean;
+};
+const fichiers = import.meta.glob<{ default: { miseAJour: string; contrats: Contrat[] } }>('/src/data/comparateurs/assurance-vie.json', { eager: true });
+const data = Object.values(fichiers)[0]?.default ?? { miseAJour: '2026-11-01', contrats: [] };
+const contrats = (data.contrats || []).filter((c) => c.verifie !== false);
+const enAttente = (data.contrats || []).filter((c) => c.verifie === false).map((c) => c.nom);
+const p = (v?: number | null, d = 2) => (v === null || v === undefined || !Number.isFinite(v) ? null : `${new Intl.NumberFormat('fr-FR', { maximumFractionDigits: d }).format(v)} %`);
+const eur = (v?: number | null) => (v === null || v === undefined ? null : new Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(v));
+const oui = (b?: boolean | null) => (b === true ? 'Oui' : b === false ? 'Non' : 'n. c.');
+const date = formatDate(data.miseAJour);
+const nc = '<span class="nd">n. c.</span>';
+---
+<Outil
+  type="Comparateur"
+  chemin="/comparateurs/assurance-vie-en-ligne/"
+  misAJour={data.miseAJour}
+  pleineLargeur
+  title="Comparateur des contrats d'assurance-vie en ligne"
+  seoTitle="Comparatif assurance-vie en ligne : frais et fonds euros 2025"
+  description="Frais sur versement, frais de gestion, rendement 2025 des fonds euros, ETF, gestion pilotée : les contrats d'assurance-vie en ligne relevés sur leurs documents officiels. Sans affiliation."
+  chapo={`Deux contrats d'assurance-vie peuvent se ressembler et coûter très différemment sur vingt ans. Voici les frais et les caractéristiques des principaux contrats distribués en ligne, relevés le ${date} sur les documents officiels des distributeurs et des assureurs. Aucun acteur ne paie pour figurer ici.`}
+>
+  <div slot="outil">
+    {contrats.length === 0 ? <p>Les données sont en cours de relevé.</p> : (
+      <>
+        <div class="filtres" role="group" aria-label="Filtres">
+          <label><input type="checkbox" id="f-etf" /> ETF disponibles</label>
+          <label><input type="checkbox" id="f-immo" /> Supports immobiliers (SCPI, SCI)</label>
+          <label><input type="checkbox" id="f-gp" /> Gestion pilotée</label>
+          <label><input type="checkbox" id="f-v0" /> Sans frais sur versement</label>
+        </div>
+        <div class="defile">
+          <table class="tableau-comp" id="t">
+            <thead><tr>
+              <th scope="col"><button type="button" data-tri="nom" aria-sort="none">Contrat</button></th>
+              <th scope="col"><button type="button" data-tri="fv" aria-sort="none">Frais sur versement</button></th>
+              <th scope="col"><button type="button" data-tri="fuc" aria-sort="ascending">Frais de gestion UC</button></th>
+              <th scope="col"><button type="button" data-tri="feur" aria-sort="none">Frais fonds euros</button></th>
+              <th scope="col"><button type="button" data-tri="rend" aria-sort="none">Fonds euros 2025</button></th>
+              <th scope="col"><button type="button" data-tri="nb" aria-sort="none">Supports UC</button></th>
+              <th scope="col">ETF</th>
+              <th scope="col">Gestion pilotée</th>
+              <th scope="col"><button type="button" data-tri="min" aria-sort="none">Ouverture dès</button></th>
+            </tr></thead>
+            <tbody>
+              {contrats.map((c) => (
+                <tr data-nom={c.nom} data-fv={c.fraisVersementPct ?? ''} data-fuc={c.fraisGestionUCPct ?? ''} data-feur={c.fraisGestionFondsEurosPct ?? ''}
+                    data-rend={c.rendementFondsEuros2025Pct ?? ''} data-nb={c.nbSupportsUC ?? ''} data-min={c.versementMin ?? ''}
+                    data-etf={c.etf ? '1' : '0'} data-immo={c.immobilier ? '1' : '0'} data-gp={c.gestionPilotee ? '1' : '0'}>
+                  <td class="nom">{c.nom}<small>{[c.distributeur, c.assureur && `assuré par ${c.assureur}`].filter(Boolean).join(' · ')}</small></td>
+                  <td class="num" set:html={p(c.fraisVersementPct) ?? nc} />
+                  <td class="num" set:html={p(c.fraisGestionUCPct) ?? nc} />
+                  <td class="num" set:html={p(c.fraisGestionFondsEurosPct) ?? nc} />
+                  <td class="num">{p(c.rendementFondsEuros2025Pct) ?? <span class="nd">n. c.</span>}{c.conditionRendement && <a href={`#d-${c.id}`} style="display:block;font-size:12px;color:var(--doux)">voir conditions</a>}</td>
+                  <td class="num">{c.nbSupportsUC ? new Intl.NumberFormat('fr-FR').format(c.nbSupportsUC) : <span class="nd">n. c.</span>}</td>
+                  <td>{oui(c.etf)}</td>
+                  <td>{oui(c.gestionPilotee)}</td>
+                  <td class="num" set:html={eur(c.versementMin) ?? nc} />
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p class="note-outil">Rendement 2025 du fonds euros : taux servi net de frais de gestion, avant prélèvements sociaux, tel qu'annoncé par l'assureur ou le distributeur. « n. c. » : non communiqué dans les documents consultés. Données relevées le {date}. Cliquer sur un en-tête trie le tableau.</p>
+        {enAttente.length > 0 && <p class="note-outil">En cours de relevé : {enAttente.join(', ')}. Ces contrats apparaîtront ici dès que leurs caractéristiques auront été lues et vérifiées dans un document officiel.</p>}
+      </>
+    )}
+  </div>
+
+  <h2>Comment lire ce comparateur</h2>
+  <ul>
+    <li><strong>Frais sur versement</strong> : un pourcentage prélevé sur chaque somme versée avant qu'elle soit investie. Les contrats en ligne en facturent rarement.</li>
+    <li><strong>Frais de gestion sur unités de compte</strong> : prélevés chaque année sur l'encours. Ils s'ajoutent aux frais courants propres à chaque fonds, indiqués dans son document d'informations clés.</li>
+    <li><strong>Frais du fonds euros</strong> : quand le document officiel n'indique qu'un plafond, c'est ce maximum contractuel qui figure dans le tableau. Le taux servi par le fonds euros est toujours annoncé net de ces frais.</li>
+    <li><strong>Rendement du fonds euros</strong> : c'est un taux passé. Il n'est pas garanti pour les années suivantes et peut dépendre d'une condition, comme une part minimale investie en unités de compte. Les performances passées ne préjugent pas des performances futures.</li>
+    <li><strong>Unités de compte</strong> : leur valeur n'est pas garantie et peut baisser. Le risque de perte en capital est supporté par l'épargnant.</li>
+  </ul>
+  <p>Pour mesurer ce que représentent ces écarts sur ta durée de placement, utilise le <a href="/simulateurs/impact-des-frais/">simulateur d'impact des frais</a>. Pour comprendre le fonctionnement et la fiscalité : <a href="/epargne/assurance-vie/">le guide de l'assurance-vie</a>.</p>
+
+  <h2>Notre méthode</h2>
+  <p>Chaque valeur est relevée sur un document officiel du distributeur ou de l'assureur : page du contrat, notice, document d'informations clés ou communiqué de rendement. Quand une valeur n'est pas lisible dans ces documents, nous écrivons « non communiqué » plutôt que d'estimer. Aucun lien n'est affilié, aucun contrat ne paie pour figurer ici ni pour son classement.</p>
+
+  <h2>Le détail, contrat par contrat</h2>
+  {contrats.map((c) => (
+    <section id={`d-${c.id}`} style="margin-top:1.4em">
+      <h3>{c.nom}</h3>
+      <ul style="font-size:15.5px">
+        {c.fondsEuros && <li><strong>Fonds euros</strong> : {c.fondsEuros}{c.conditionRendement && <>. {c.conditionRendement}</>}</li>}
+        {c.gestionPilotee && c.fraisGestionPilotee && <li><strong>Gestion pilotée</strong> : {c.fraisGestionPilotee}</li>}
+        {c.contrainteUC && <li><strong>Accès au fonds euros</strong> : {c.contrainteUC}</li>}
+        {c.fraisArbitrage && <li><strong>Arbitrages</strong> : {c.fraisArbitrage}</li>}
+        {c.remarques && <li><strong>À noter</strong> : {c.remarques}</li>}
+        <li><strong>Sources</strong> : {c.source?.url ? <a href={c.source.url}>{c.source.titre || 'documentation du contrat'}</a> : 'documentation du contrat'}{c.source?.date && `, ${c.source.date}`}{c.sourceRendement?.url && <> ; rendement : <a href={c.sourceRendement.url}>{c.sourceRendement.titre || 'communiqué'}</a>{c.sourceRendement.date && `, ${c.sourceRendement.date}`}</>}.</li>
+      </ul>
+    </section>
+  ))}
+</Outil>
+
+<script>
+  const t = document.getElementById('t') as HTMLTableElement | null;
+  if (t) {
+    const corps = t.tBodies[0];
+    const lignes = Array.from(corps.rows);
+    let tri = { cle: 'fuc', sens: 1 };
+    const val = (tr: HTMLTableRowElement, k: string) => {
+      if (k === 'nom') return tr.dataset.nom || '';
+      const v = (tr.dataset as any)[k];
+      return v === '' || v === undefined ? null : Number(v);
+    };
+    const coche = (id: string) => (document.getElementById(id) as HTMLInputElement).checked;
+    const maj = () => {
+      for (const tr of lignes) {
+        tr.hidden = !((!coche('f-etf') || tr.dataset.etf === '1') && (!coche('f-immo') || tr.dataset.immo === '1') && (!coche('f-gp') || tr.dataset.gp === '1') && (!coche('f-v0') || tr.dataset.fv === '0'));
+      }
+      const sens = tri.cle === 'rend' || tri.cle === 'nb' ? -tri.sens : tri.sens;
+      lignes.sort((a, b) => {
+        const va = val(a, tri.cle), vb = val(b, tri.cle);
+        if (va === null && vb === null) return 0;
+        if (va === null) return 1;
+        if (vb === null) return -1;
+        return (typeof va === 'string' ? va.localeCompare(vb as string, 'fr') : (va as number) - (vb as number)) * sens;
+      }).forEach((tr) => corps.appendChild(tr));
+      t.querySelectorAll<HTMLButtonElement>('th button').forEach((b) => b.setAttribute('aria-sort', b.dataset.tri === tri.cle ? (sens === 1 ? 'ascending' : 'descending') : 'none'));
+    };
+    t.querySelectorAll<HTMLButtonElement>('th button').forEach((b) => b.addEventListener('click', () => { tri = { cle: b.dataset.tri!, sens: tri.cle === b.dataset.tri ? -tri.sens : 1 }; maj(); }));
+    document.querySelectorAll('.filtres input').forEach((e) => e.addEventListener('change', maj));
+    maj();
+  }
+</script>

@@ -1,0 +1,18 @@
+---
+import Base from '../../layouts/Base.astro';
+import { OUTILS } from '../../lib/site';
+const sim = OUTILS.filter((o) => o.type === 'Simulateur');
+---
+<Base title="Simulateurs gratuits : intérêts composés, frais, inflation, crédit" description="Des simulateurs simples et transparents pour comprendre l'effet du temps, des frais et de l'inflation sur ton épargne, et calculer ta capacité d'emprunt. Sans inscription.">
+  <div class="cadre">
+    <nav class="fil" aria-label="Fil d'Ariane"><a href="/">Accueil</a><span aria-hidden="true">/</span><span>Simulateurs</span></nav>
+    <header class="lettrine-page intro-rubrique">
+      <p class="rubrique" style="margin:18px 0 0">Simulateurs</p>
+      <h1>Fais le calcul, <em>avec tes chiffres</em></h1>
+      <p class="chapo">Chaque simulateur explique sa formule et ses limites. Aucune inscription, aucune donnée enregistrée : tout se calcule dans ton navigateur.</p>
+    </header>
+    <section class="section" style="padding-top:44px">
+      <ul class="index">{sim.map((o) => <li><a href={o.href}><span class="t">{o.titre}</span><span class="d">{o.texte}</span></a></li>)}</ul>
+    </section>
+  </div>
+</Base>

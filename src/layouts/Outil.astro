@@ -1,0 +1,75 @@
+---
+import Base from './Base.astro';
+import { SITE, AVERTISSEMENT, formatDate } from '../lib/site';
+
+interface Props {
+  title: string;
+  seoTitle?: string;
+  description: string;
+  chapo: string;
+  type: 'Simulateur' | 'Comparateur';
+  chemin: string;
+  misAJour: string;
+  pleineLargeur?: boolean;
+}
+const { title, seoTitle, description, chapo, type, chemin, misAJour, pleineLargeur = false } = Astro.props;
+const parent = type === 'Simulateur' ? { nom: 'Simulateurs', href: '/simulateurs/' } : { nom: 'Comparateurs', href: '/comparateurs/' };
+const url = `${SITE.url}${chemin}`;
+const jsonld = [
+  type === 'Simulateur'
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'WebApplication',
+        name: title,
+        description,
+        url,
+        applicationCategory: 'FinanceApplication',
+        operatingSystem: 'Tous',
+        inLanguage: 'fr-FR',
+        isAccessibleForFree: true,
+        offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' },
+        publisher: { '@id': `${SITE.url}/#organisation` },
+      }
+    : {
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        name: title,
+        description,
+        url,
+        inLanguage: 'fr-FR',
+        dateModified: misAJour,
+        publisher: { '@id': `${SITE.url}/#organisation` },
+      },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Accueil', item: `${SITE.url}/` },
+      { '@type': 'ListItem', position: 2, name: parent.nom, item: `${SITE.url}${parent.href}` },
+      { '@type': 'ListItem', position: 3, name: title, item: url },
+    ],
+  },
+];
+const date = formatDate(misAJour);
+---
+<Base title={seoTitle || title} description={description} jsonld={jsonld} misAJour={misAJour}>
+  <div class="cadre">
+    <nav class="fil" aria-label="Fil d'Ariane"><a href="/">Accueil</a><span aria-hidden="true">/</span><a href={parent.href}>{parent.nom}</a></nav>
+    <header class="entete">
+      <p class="rubrique" style="margin:18px 0 0">{type}</p>
+      <h1>{title}</h1>
+      <p class="chapo">{chapo}</p>
+      <p class="meta"><span>Par <b><a href="/a-propos/">la rédaction</a></b></span><span>Mis à jour le <time datetime={misAJour}>{date}</time></span><span><a href="/methode/">Notre méthode</a></span></p>
+    </header>
+    {pleineLargeur ? <div style="padding:36px 0 40px"><slot name="outil" /></div> : (
+      <div class="outil">
+        <div><slot name="formulaire" /></div>
+        <div><slot name="resultat" /></div>
+      </div>
+    )}
+    <div class="colonne-texte" style="padding-top:8px">
+      <div class="prose"><slot /></div>
+      <div class="avertissement" role="note"><b>À lire</b><p>{AVERTISSEMENT} {type === 'Simulateur' ? "Les résultats dépendent entièrement des hypothèses saisies : ils illustrent un mécanisme, ils ne prédisent rien." : "Les données sont relevées sur les documents officiels des acteurs à la date indiquée et peuvent avoir changé : vérifie toujours la grille tarifaire en vigueur avant d'ouvrir un compte."} <a href="/avertissement/">En savoir plus</a></p></div>
+    </div>
+  </div>
+</Base>

@@ -1,0 +1,13 @@
+{
+  "miseAJour": "2026-11-01",
+  "chiffres": [
+    { "id": "livret-a", "valeur": "1,7 %", "label": "Taux du Livret A", "detail": "depuis le 1er août 2026", "lien": "/epargne/livret-a-ldds-lep/", "source": { "titre": "Service-Public.fr, fiche Livret A", "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F2365" } },
+    { "id": "lep", "valeur": "2,5 %", "label": "Taux du LEP", "detail": "sous conditions de revenus", "lien": "/epargne/livret-a-ldds-lep/", "source": { "titre": "Service-Public.fr, fiche LEP", "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F2367" } },
+    { "id": "inflation", "valeur": "3,1 %", "label": "Inflation sur un an", "detail": "septembre 2026", "lien": "/simulateurs/inflation/", "source": { "titre": "Insee, Informations rapides n° 247", "url": "https://www.insee.fr/fr/statistiques/9080209" } },
+    { "id": "fonds-euros", "valeur": "2,63 %", "label": "Rendement moyen des fonds euros", "detail": "en 2025", "lien": "/epargne/assurance-vie/", "source": { "titre": "ACPR, Analyses et synthèses n° 180", "url": "https://acpr.banque-france.fr/system/files/2026-06/20260630_AS180_revalorisation_2025.pdf" } },
+    { "id": "pfu", "valeur": "31,4 %", "label": "Flat tax (PFU) en 2026", "detail": "12,8 % d'impôt + 18,6 % de prélèvements sociaux", "lien": "/fiscalite/fiscalite-des-placements/", "source": { "titre": "Service-Public.fr, fiche prélèvements sociaux", "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F2329" } },
+    { "id": "pea", "valeur": "150 000 €", "label": "Plafond de versements du PEA", "detail": "par personne", "lien": "/bourse/pea/", "source": { "titre": "Service-Public.fr, fiche PEA", "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F2385" } },
+    { "id": "hcsf", "valeur": "35 %", "label": "Taux d'effort maximal d'un crédit immobilier", "detail": "assurance comprise, sur 25 ans au plus", "lien": "/simulateurs/capacite-d-emprunt/", "source": { "titre": "HCSF, economie.gouv.fr", "url": "https://www.economie.gouv.fr/hcsf/mesures/mesure-relative-loctroi-de-credits-immobiliers" } },
+    { "id": "per", "valeur": "37 680 €", "label": "Déduction maximale sur un PER", "detail": "pour un salarié, en 2026", "lien": "/retraite/per/", "source": { "titre": "Service-Public.fr, fiche PER", "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F34982" } }
+  ]
+}

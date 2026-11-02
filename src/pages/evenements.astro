@@ -1,0 +1,168 @@
+---
+import Base from '../layouts/Base.astro';
+import { SITE, formatDate } from '../lib/site';
+
+type Ev = {
+  id: string; nom: string; categorie: string; public: string; debut: string | null; fin: string | null;
+  datesTexte: string; ville: string; pays: string; lieu?: string; langue?: string; description: string;
+  site: string; source?: { titre?: string; url?: string; date?: string }; verifie?: boolean;
+};
+const fichiers = import.meta.glob<{ default: { miseAJour: string; evenements: Ev[] } }>('/src/data/evenements.json', { eager: true });
+const data = Object.values(fichiers)[0]?.default ?? { miseAJour: '2026-11-02', evenements: [] };
+const aujourdhui = new Date().toISOString().slice(0, 10);
+const tous = data.evenements.filter((e) => e.verifie !== false && (!e.fin || e.fin >= aujourdhui));
+const dates = tous.filter((e) => e.debut).sort((a, b) => a.debut!.localeCompare(b.debut!));
+const aVenir = tous.filter((e) => !e.debut).sort((a, b) => a.nom.localeCompare(b.nom, 'fr'));
+
+const CATS: Record<string, { nom: string; c: string }> = {
+  investissement: { nom: 'Investissement', c: '#0F3D2E' },
+  fintech: { nom: 'Fintech', c: '#3E7A62' },
+  crypto: { nom: 'Crypto-actifs', c: '#FF6A4D' },
+  'capital-investissement': { nom: 'Capital-investissement', c: '#C8B994' },
+  economie: { nom: 'Économie', c: '#8DB8A0' },
+  banque: { nom: 'Banque et marchés', c: '#56655C' },
+};
+const cat = (id: string) => CATS[id] || { nom: id, c: '#56655C' };
+const mois = (iso: string) => { const t = new Date(iso + 'T12:00:00').toLocaleDateString('fr-FR', { month: 'long', year: 'numeric' }); return t.charAt(0).toUpperCase() + t.slice(1); };
+const jour = (iso: string) => new Date(iso + 'T12:00:00').getDate();
+const moisCourt = (iso: string) => new Date(iso + 'T12:00:00').toLocaleDateString('fr-FR', { month: 'short' }).replace('.', '');
+const groupes = new Map<string, Ev[]>();
+for (const e of dates) { const k = e.debut!.slice(0, 7); groupes.set(k, [...(groupes.get(k) || []), e]); }
+
+// Frise de l'année : de novembre 2026 à décembre 2027
+const fenetre: string[] = [];
+for (let d = new Date('2026-11-15'); d <= new Date('2027-12-15'); d.setMonth(d.getMonth() + 1)) fenetre.push(d.toISOString().slice(0, 7));
+const enFrance = (e: Ev) => e.pays === 'France';
+
+const jsonld = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'Les événements financiers en Europe',
+    itemListElement: dates.map((e, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      item: {
+        '@type': 'Event',
+        name: e.nom,
+        startDate: e.debut,
+        endDate: e.fin || e.debut,
+        eventStatus: 'https://schema.org/EventScheduled',
+        eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+        location: { '@type': 'Place', name: e.lieu || e.ville, address: { '@type': 'PostalAddress', addressLocality: e.ville, addressCountry: e.pays } },
+        description: e.description,
+        url: e.site,
+        image: `${SITE.url}/img/og-parlons-placement.png`,
+      },
+    })),
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Accueil', item: `${SITE.url}/` },
+      { '@type': 'ListItem', position: 2, name: 'Événements', item: `${SITE.url}/evenements/` },
+    ],
+  },
+];
+---
+<Base title="Événements financiers en Europe : l'agenda 2026-2027" description="Investissement, fintech, crypto, capital-investissement, économie : les grands événements financiers en Europe jusqu'à fin 2027, avec dates, lieux et sites officiels." jsonld={jsonld} misAJour={data.miseAJour}>
+  <div class="cadre">
+    <nav class="fil" aria-label="Fil d'Ariane"><a href="/">Accueil</a><span aria-hidden="true">/</span><span>Événements</span></nav>
+    <header class="lettrine-page intro-rubrique">
+      <p class="rubrique" style="margin:18px 0 0">L'agenda</p>
+      <h1>Les événements financiers <em>en Europe</em></h1>
+      <p class="chapo">Investissement, fintech, crypto-actifs, capital-investissement, grands débats économiques : les rendez-vous européens qui comptent jusqu'à fin 2027. Les rendez-vous organisés en France sont mis en avant. Dates et lieux vérifiés sur les sites officiels des organisateurs.</p>
+      <p class="meta">Mis à jour le {formatDate(data.miseAJour)} · {dates.length + aVenir.length} événements</p>
+    </header>
+
+    {dates.length > 0 && (
+      <section class="viz agenda-frise" aria-label="L'année en un coup d'œil">
+        <p class="viz-titre">L'année en un coup d'œil</p>
+        <div class="af-grille" style={`--n:${fenetre.length}`}>
+          {fenetre.map((m) => {
+            const liste = dates.filter((e) => e.debut!.startsWith(m));
+            return (
+              <a class="af-mois" href={liste.length ? `#m-${m}` : undefined}>
+                <span class="af-points">{liste.map((e) => <i style={`--c:${cat(e.categorie).c}`} class={enFrance(e) ? 'fr' : ''} title={e.nom}></i>)}</span>
+                <span class="af-lab">{moisCourt(m + '-15')}<small>{m.slice(2, 4)}</small></span>
+              </a>
+            );
+          })}
+        </div>
+        <p class="leg-l"><span><i style="--c:var(--papier);height:12px;width:12px;border-radius:50%;box-shadow:0 0 0 3px var(--lime);background:var(--sapin)"></i>En France</span>{Object.entries(CATS).filter(([k]) => tous.some((e) => e.categorie === k)).map(([, v]) => <span><i style={`--c:${v.c};height:10px;width:10px;border-radius:50%`}></i>{v.nom}</span>)}</p>
+      </section>
+    )}
+
+    <div class="filtres agenda-filtres" role="group" aria-label="Filtrer par thème">
+      <label><input type="radio" name="f" value="tous" checked /> Tous</label>
+      {Object.entries(CATS).filter(([k]) => tous.some((e) => e.categorie === k)).map(([k, v]) => <label><input type="radio" name="f" value={k} /> {v.nom}</label>)}
+      <label style="margin-left:auto"><input type="checkbox" id="f-fr" /> En France</label>
+      <label><input type="checkbox" id="f-gp" /> Ouverts au grand public</label>
+    </div>
+
+    <div class="agenda">
+      {[...groupes.entries()].map(([m, liste]) => (
+        <section class="ag-mois" id={`m-${m}`}>
+          <h2 class="ag-titre">{mois(m + '-15')}</h2>
+          <ul class="ag-liste">
+            {liste.map((e) => (
+              <li class={`ag-ev${enFrance(e) ? ' ag-fr' : ''}`} data-cat={e.categorie} data-public={e.public} data-pays={e.pays}>
+                <div class="ag-date"><span class="j">{jour(e.debut!)}{e.fin && e.fin !== e.debut && <small>-{jour(e.fin)}</small>}</span><span class="m">{moisCourt(e.debut!)}</span></div>
+                <div class="ag-corps">
+                  <p class="ag-cat"><i style={`--c:${cat(e.categorie).c}`}></i>{cat(e.categorie).nom} · {e.public}</p>
+                  <h3>{e.nom}</h3>
+                  <p class="ag-lieu">{e.datesTexte} · {e.lieu ? `${e.lieu}, ` : ''}{e.ville} ({e.pays}){e.langue && ` · ${e.langue}`}</p>
+                  <p class="ag-desc">{e.description}</p>
+                  {enFrance(e) && <p class="ag-badge">En France</p>}
+                </div>
+                <a class="ag-lien fleche" href={e.site} rel="noopener">Site officiel</a>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ))}
+
+      {aVenir.length > 0 && (
+        <section class="ag-mois" id="a-confirmer">
+          <h2 class="ag-titre">Dates à confirmer</h2>
+          <ul class="ag-liste">
+            {aVenir.map((e) => (
+              <li class={`ag-ev${enFrance(e) ? ' ag-fr' : ''}`} data-cat={e.categorie} data-public={e.public} data-pays={e.pays}>
+                <div class="ag-date"><span class="j" style="font-size:30px">?</span><span class="m">2027</span></div>
+                <div class="ag-corps">
+                  <p class="ag-cat"><i style={`--c:${cat(e.categorie).c}`}></i>{cat(e.categorie).nom} · {e.public}</p>
+                  <h3>{e.nom}</h3>
+                  <p class="ag-lieu">{e.datesTexte} · {e.ville} ({e.pays})</p>
+                  <p class="ag-desc">{e.description}</p>
+                </div>
+                <a class="ag-lien fleche" href={e.site} rel="noopener">Site officiel</a>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+      {tous.length === 0 && <p>L'agenda est en cours de préparation.</p>}
+    </div>
+
+    <div class="colonne-texte" style="padding-top:8px">
+      <div class="prose">
+        <h2>Comment cet agenda est construit</h2>
+        <p>Nous retenons les grands rendez-vous européens de l'investissement, de la fintech, des crypto-actifs, du capital-investissement et de l'économie qui peuvent intéresser un public français, qu'ils soient ouverts au grand public ou réservés aux professionnels. Les dates et les lieux sont relevés sur le site officiel de chaque organisateur ; quand une édition n'est pas encore annoncée, nous l'indiquons au lieu d'estimer.</p>
+        <p>Aucun organisateur ne paie pour figurer ici. Un événement cité n'est pas une recommandation : avant de t'inscrire, vérifie les conditions, le prix et le programme sur le site officiel. Pour aller plus loin sur les thèmes de ces événements : <a href="/bourse/investir-en-bourse/">investir en bourse</a>, <a href="/protection/arnaques-financieres/">reconnaître une arnaque financière</a> (un réflexe utile face aux offres vues en salon ou en ligne) et le <a href="/lexique/">lexique</a>.</p>
+      </div>
+    </div>
+  </div>
+</Base>
+
+<script>
+  const lignes = Array.from(document.querySelectorAll<HTMLElement>('.ag-ev'));
+  const maj = () => {
+    const c = (document.querySelector('input[name=f]:checked') as HTMLInputElement)?.value || 'tous';
+    const gp = (document.getElementById('f-gp') as HTMLInputElement)?.checked;
+    const fr = (document.getElementById('f-fr') as HTMLInputElement)?.checked;
+    for (const li of lignes) li.hidden = !((c === 'tous' || li.dataset.cat === c) && (!gp || li.dataset.public !== 'Professionnels') && (!fr || li.dataset.pays === 'France'));
+    document.querySelectorAll<HTMLElement>('.ag-mois').forEach((s) => { s.hidden = !s.querySelector('.ag-ev:not([hidden])'); });
+  };
+  document.querySelectorAll('.agenda-filtres input').forEach((i) => i.addEventListener('change', maj));
+</script>

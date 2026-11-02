@@ -1,0 +1,24 @@
+---
+import Base from '../../layouts/Base.astro';
+import { OUTILS } from '../../lib/site';
+const comp = OUTILS.filter((o) => o.type === 'Comparateur');
+const sim = OUTILS.filter((o) => o.type === 'Simulateur');
+---
+<Base title="Comparateurs et simulateurs gratuits pour ton épargne" description="Comparateurs neutres des courtiers en bourse et des contrats d'assurance-vie en ligne, simulateurs d'intérêts composés, de frais, d'inflation et de capacité d'emprunt.">
+  <div class="cadre">
+    <nav class="fil" aria-label="Fil d'Ariane"><a href="/">Accueil</a><span aria-hidden="true">/</span><span>Comparateurs</span></nav>
+    <header class="lettrine-page intro-rubrique">
+      <p class="rubrique" style="margin:18px 0 0">Les outils</p>
+      <h1>Comparer et calculer, <em>sans rien vendre</em></h1>
+      <p class="chapo">Nos comparateurs relèvent les frais sur les grilles tarifaires officielles. Aucun acteur ne paie pour y figurer, aucun lien n'est affilié, et c'est toi qui choisis le critère de tri.</p>
+    </header>
+    <section class="section" style="padding-top:44px">
+      <div class="section-tete"><div><p class="rubrique">Comparateurs</p><h2>Ce que coûtent les acteurs</h2></div></div>
+      <ul class="index">{comp.map((o) => <li><a href={o.href}><span class="t">{o.titre}</span><span class="d">{o.texte}</span></a></li>)}</ul>
+    </section>
+    <section class="section">
+      <div class="section-tete"><div><p class="rubrique">Simulateurs</p><h2>Pour faire tes calculs</h2></div><a class="fleche" href="/simulateurs/">Tous les simulateurs</a></div>
+      <ul class="index">{sim.map((o) => <li><a href={o.href}><span class="t">{o.titre}</span><span class="d">{o.texte}</span></a></li>)}</ul>
+    </section>
+  </div>
+</Base>

@@ -1,0 +1,157 @@
+---
+import { formatDate } from '../../lib/site';
+import Outil from '../../layouts/Outil.astro';
+
+type Src = { titre?: string; url?: string; date?: string };
+type Acteur = {
+  id: string; nom: string; type?: string; pays?: string; supervision?: string;
+  pea?: boolean | null; peaPme?: boolean | null; cto?: boolean | null;
+  fraisOrdreParis?: Record<string, number | null> | null; fraisOrdreParisPEA?: Record<string, number | null> | null;
+  fraisOrdreUS1000?: number | null; fraisChangePct?: number | null;
+  droitsDeGarde?: string | null; fraisTenueCompte?: string | null; fraisInactivite?: string | null;
+  programme?: boolean | null; fractions?: boolean | null; ifu?: boolean | null;
+  offre?: string; remarques?: string; source?: Src; verifie?: boolean;
+};
+const fichiers = import.meta.glob<{ default: { miseAJour: string; plafondsPEA?: { texte: string; source: Src }; acteurs: Acteur[] } }>('/src/data/comparateurs/courtiers.json', { eager: true });
+const data = Object.values(fichiers)[0]?.default ?? { miseAJour: '2026-11-01', acteurs: [] };
+const acteurs = (data.acteurs || []).filter((a) => a.verifie !== false);
+const enAttente = (data.acteurs || []).filter((a) => a.verifie === false).map((a) => a.nom.replace(/ \(.*\)$/, ''));
+const eur = (v?: number | null) => (v === null || v === undefined || !Number.isFinite(v) ? null : new Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR', minimumFractionDigits: v % 1 ? 2 : 0, maximumFractionDigits: 2 }).format(v));
+const oui = (b?: boolean | null) => (b === true ? 'Oui' : b === false ? 'Non' : 'n. c.');
+const date = formatDate(data.miseAJour);
+const montants = ['500', '1000', '5000'];
+---
+<Outil
+  type="Comparateur"
+  chemin="/comparateurs/courtiers-en-bourse/"
+  misAJour={data.miseAJour}
+  pleineLargeur
+  title="Comparateur des courtiers en bourse"
+  seoTitle="Comparatif des courtiers en bourse : frais PEA et compte-titres"
+  description="Frais d'ordre, droits de garde, frais de change, PEA et IFU : les tarifs des courtiers et banques relevés sur leurs grilles officielles. Comparateur neutre, sans affiliation."
+  chapo={`Les frais d'un courtier à l'autre peuvent aller du simple au décuple pour le même ordre. Voici les tarifs relevés le ${date} dans les grilles tarifaires officielles de chaque établissement, pour un particulier qui passe ses ordres en ligne. Aucun acteur ne paie pour figurer ici.`}
+>
+  <div slot="outil">
+    {acteurs.length === 0 ? <p>Les données sont en cours de relevé.</p> : (
+      <>
+        <div class="filtres" role="group" aria-label="Filtres">
+          <label>Montant de l'ordre sur Euronext Paris
+            <select id="montant">{montants.map((m) => <option value={m} selected={m === '1000'}>{new Intl.NumberFormat('fr-FR').format(+m)} €</option>)}</select>
+          </label>
+          <label><input type="checkbox" id="f-pea" /> PEA disponible</label>
+          <label><input type="checkbox" id="f-ifu" /> IFU fourni pour la déclaration</label>
+          <label><input type="checkbox" id="f-prog" /> Investissement programmé</label>
+        </div>
+        <div class="defile">
+          <table class="tableau-comp" id="t">
+            <thead><tr>
+              <th scope="col"><button type="button" data-tri="nom" aria-sort="none">Établissement</button></th>
+              <th scope="col"><button type="button" data-tri="ordre" aria-sort="ascending">Ordre Paris, CTO</button></th>
+              <th scope="col"><button type="button" data-tri="ordrepea" aria-sort="none">Ordre Paris, PEA</button></th>
+              <th scope="col"><button type="button" data-tri="us" aria-sort="none">Ordre US 1 000 €</button></th>
+              <th scope="col"><button type="button" data-tri="change" aria-sort="none">Change</button></th>
+              <th scope="col">Droits de garde</th>
+              <th scope="col">PEA</th>
+              <th scope="col">IFU</th>
+              <th scope="col">Établi en</th>
+            </tr></thead>
+            <tbody>
+              {acteurs.map((a) => {
+                const cto = a.fraisOrdreParis || {};
+                const pea = a.pea ? (a.fraisOrdreParisPEA || a.fraisOrdreParis || {}) : {};
+                return (
+                  <tr data-nom={a.nom} data-cto={a.cto === false ? '0' : '1'} data-pea={a.pea ? '1' : '0'} data-ifu={a.ifu ? '1' : '0'} data-prog={a.programme ? '1' : '0'}
+                      data-us={a.fraisOrdreUS1000 ?? ''} data-change={a.fraisChangePct ?? ''}
+                      {...Object.fromEntries(montants.flatMap((m) => [[`data-cto-${m}`, cto[m] ?? ''], [`data-pea-${m}`, a.pea ? (pea[m] ?? '') : '']]))}>
+                    <td class="nom">{a.nom}<small>{a.type}{a.offre && ` · ${a.offre}`}</small></td>
+                    <td class="num" data-col="ordre">{a.cto === false ? <span class="nd">Pas de CTO</span> : (eur(cto['1000']) ?? <span class="nd">n. c.</span>)}</td>
+                    <td class="num" data-col="ordrepea">{a.pea ? (eur(pea['1000']) ?? <span class="nd">n. c.</span>) : <span class="nd">Pas de PEA</span>}</td>
+                    <td class="num">{eur(a.fraisOrdreUS1000) ?? <span class="nd">n. c.</span>}</td>
+                    <td class="num">{a.fraisChangePct === null || a.fraisChangePct === undefined ? <span class="nd">n. c.</span> : `${new Intl.NumberFormat('fr-FR', { maximumFractionDigits: 3 }).format(a.fraisChangePct)} %`}</td>
+                    <td>{a.droitsDeGarde ?? <span class="nd">n. c.</span>}</td>
+                    <td>{a.pea ? (a.peaPme ? 'PEA et PEA-PME' : 'PEA') : 'Non'}</td>
+                    <td>{oui(a.ifu)}</td>
+                    <td>{a.pays}</td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
+        <p class="note-outil">Frais par ordre passé en ligne, en euros TTC, offre tarifaire standard indiquée sous le nom. « n. c. » : non communiqué dans la grille tarifaire consultée. Tarifs relevés le {date}. Cliquer sur un en-tête trie le tableau.</p>
+        {enAttente.length > 0 && <p class="note-outil">En cours de relevé : {enAttente.join(', ')}. Ces acteurs apparaîtront ici dès que leurs tarifs auront été lus et vérifiés dans un document officiel.</p>}
+      </>
+    )}
+  </div>
+
+  <h2>Comment lire ce comparateur</h2>
+  <p>Le premier chiffre à regarder est le coût d'un ordre au montant que tu passes réellement. Un tarif fixe pèse lourd sur un petit ordre ; un tarif en pourcentage pèse lourd sur un gros. Choisis le montant dans le menu pour voir les frais correspondants.</p>
+  <ul>
+    <li><strong>Droits de garde et frais de tenue de compte</strong> : prélevés chaque année, qu'on passe des ordres ou non.</li>
+    <li><strong>Frais de change</strong> : s'appliquent à chaque achat et à chaque vente d'un titre coté dans une autre devise que l'euro. Ils s'ajoutent aux frais d'ordre.</li>
+    <li><strong>IFU</strong> : l'imprimé fiscal unique récapitule tes revenus et plus-values pour la déclaration de revenus. Un établissement étranger qui ne le fournit pas te laisse faire ce calcul toi-même, et tu dois aussi déclarer le compte détenu à l'étranger.</li>
+    <li><strong>Pays d'établissement</strong> : il détermine l'autorité qui supervise l'acteur et le mécanisme de garantie des dépôts et des titres applicable.</li>
+  </ul>
+  {data.plafondsPEA && (
+    <blockquote><p><strong>À savoir.</strong> {data.plafondsPEA.texte}{data.plafondsPEA.source?.url && <> Source : <a href={data.plafondsPEA.source.url}>{data.plafondsPEA.source.titre}</a>.</>}</p></blockquote>
+  )}
+
+  <h2>Notre méthode</h2>
+  <p>Les tarifs sont relevés dans la grille tarifaire officielle de chaque établissement, pour l'offre standard destinée aux particuliers. Quand une valeur n'apparaît pas clairement dans le document officiel, nous écrivons « non communiqué » plutôt que d'estimer. Aucun lien n'est affilié, aucun acteur ne paie pour figurer ici ni pour son classement, et l'ordre d'affichage ne dépend que du critère que tu choisis.</p>
+  <p>Les frais ne sont qu'un critère parmi d'autres : la gamme de titres disponibles, la qualité du service, la solidité de l'établissement et la simplicité fiscale comptent aussi. Pour comprendre les enveloppes : <a href="/bourse/pea/">le guide du PEA</a>, <a href="/bourse/investir-en-bourse/">investir en bourse, comprendre avant de commencer</a> et <a href="/simulateurs/impact-des-frais/">l'impact des frais sur la durée</a>.</p>
+
+  <h2>Sources</h2>
+  <ul style="font-size:14.5px">
+    {acteurs.map((a) => (<li><strong>{a.nom}</strong> : {a.source?.url ? <a href={a.source.url}>{a.source.titre || 'Grille tarifaire'}</a> : 'grille tarifaire'}{a.source?.date && `, ${a.source.date}`}.{a.remarques && <> {a.remarques}</>}</li>))}
+  </ul>
+</Outil>
+
+<script>
+  const t = document.getElementById('t') as HTMLTableElement | null;
+  if (t) {
+    const corps = t.tBodies[0];
+    const lignes = Array.from(corps.rows);
+    const sel = document.getElementById('montant') as HTMLSelectElement;
+    const fmt = (v: string) => (v === '' ? null : Number(v));
+    const eur = (v: number) => new Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR', minimumFractionDigits: v % 1 ? 2 : 0, maximumFractionDigits: 2 }).format(v);
+    let tri = { cle: 'ordre', sens: 1 };
+    const valeur = (tr: HTMLTableRowElement, cle: string) => {
+      const m = sel.value;
+      if (cle === 'nom') return tr.dataset.nom || '';
+      if (cle === 'ordre') return tr.dataset.cto === '1' ? fmt(tr.getAttribute(`data-cto-${m}`) || '') : null;
+      if (cle === 'ordrepea') return fmt(tr.getAttribute(`data-pea-${m}`) || '');
+      return fmt((tr.dataset as any)[cle] || '');
+    };
+    const maj = () => {
+      const m = sel.value;
+      for (const tr of lignes) {
+        const cto = fmt(tr.getAttribute(`data-cto-${m}`) || '');
+        const pea = fmt(tr.getAttribute(`data-pea-${m}`) || '');
+        const c1 = tr.querySelector('[data-col=ordre]')!, c2 = tr.querySelector('[data-col=ordrepea]')!;
+        if (tr.dataset.cto === '1') c1.textContent = cto === null ? 'n. c.' : eur(cto);
+        if (tr.dataset.pea === '1') c2.textContent = pea === null ? 'n. c.' : eur(pea);
+        const ok = (!(document.getElementById('f-pea') as HTMLInputElement).checked || tr.dataset.pea === '1')
+          && (!(document.getElementById('f-ifu') as HTMLInputElement).checked || tr.dataset.ifu === '1')
+          && (!(document.getElementById('f-prog') as HTMLInputElement).checked || tr.dataset.prog === '1');
+        tr.hidden = !ok;
+      }
+      lignes.sort((a, b) => {
+        const va = valeur(a, tri.cle), vb = valeur(b, tri.cle);
+        if (va === null && vb === null) return 0;
+        if (va === null) return 1;
+        if (vb === null) return -1;
+        return (typeof va === 'string' ? va.localeCompare(vb as string, 'fr') : (va as number) - (vb as number)) * tri.sens;
+      }).forEach((tr) => corps.appendChild(tr));
+      t.querySelectorAll<HTMLButtonElement>('th button').forEach((b) => b.setAttribute('aria-sort', b.dataset.tri === tri.cle ? (tri.sens === 1 ? 'ascending' : 'descending') : 'none'));
+      t.querySelectorAll('thead th button[data-tri=ordre], thead th button[data-tri=ordrepea]').forEach((b) => {
+        b.textContent = `Ordre Paris ${new Intl.NumberFormat('fr-FR').format(+m)} €, ${b.getAttribute('data-tri') === 'ordre' ? 'CTO' : 'PEA'}`;
+      });
+    };
+    t.querySelectorAll<HTMLButtonElement>('th button').forEach((b) => b.addEventListener('click', () => {
+      tri = { cle: b.dataset.tri!, sens: tri.cle === b.dataset.tri ? -tri.sens : 1 };
+      maj();
+    }));
+    document.querySelectorAll('.filtres input, .filtres select').forEach((e) => e.addEventListener('change', maj));
+    maj();
+  }
+</script>

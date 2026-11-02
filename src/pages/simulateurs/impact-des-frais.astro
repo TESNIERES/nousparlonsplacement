@@ -1,0 +1,80 @@
+---
+import Outil from '../../layouts/Outil.astro';
+---
+<Outil
+  type="Simulateur"
+  chemin="/simulateurs/impact-des-frais/"
+  misAJour="2026-11-01"
+  title="Ce que coûtent vraiment les frais"
+  seoTitle="Simulateur de frais : leur impact sur 10, 20 ou 30 ans"
+  description="Compare deux niveaux de frais (gestion annuelle et frais sur versement) et vois ce qu'ils coûtent sur 10, 20 ou 30 ans d'épargne. Simulateur gratuit et sans inscription."
+  chapo="Un point de frais par an paraît indolore. Sur vingt ans, il peut coûter des milliers d'euros, parce que les frais se composent comme les intérêts. Compare deux situations, à rendement brut identique."
+>
+  <form slot="formulaire" class="formulaire" id="f" novalidate>
+    <div class="champ"><label for="initial">Capital de départ</label><div class="saisie"><input id="initial" name="initial" inputmode="decimal" value="10000" /><span class="unite">€</span></div></div>
+    <div class="champ"><label for="mensuel">Versement chaque mois</label><div class="saisie"><input id="mensuel" name="mensuel" inputmode="decimal" value="200" /><span class="unite">€</span></div></div>
+    <div class="champ"><label for="annees">Durée</label><div class="saisie"><input id="annees" name="annees" inputmode="numeric" value="20" /><span class="unite">ans</span></div></div>
+    <div class="champ"><label for="rendement">Rendement brut annuel supposé <span class="aide">Avant frais. Une hypothèse, pas une promesse.</span></label><div class="saisie"><input id="rendement" name="rendement" inputmode="decimal" value="5" /><span class="unite">% / an</span></div></div>
+    <fieldset style="border:0;padding:0;margin:0;display:grid;grid-template-columns:1fr 1fr;gap:14px">
+      <legend class="rubrique" style="margin-bottom:10px">Situation A</legend>
+      <div class="champ"><label for="fa">Frais annuels</label><div class="saisie"><input id="fa" name="fa" inputmode="decimal" value="0.5" /><span class="unite">%</span></div></div>
+      <div class="champ"><label for="va">Frais sur versement</label><div class="saisie"><input id="va" name="va" inputmode="decimal" value="0" /><span class="unite">%</span></div></div>
+    </fieldset>
+    <fieldset style="border:0;padding:0;margin:0;display:grid;grid-template-columns:1fr 1fr;gap:14px">
+      <legend class="rubrique" style="margin-bottom:10px">Situation B</legend>
+      <div class="champ"><label for="fb">Frais annuels</label><div class="saisie"><input id="fb" name="fb" inputmode="decimal" value="2" /><span class="unite">%</span></div></div>
+      <div class="champ"><label for="vb">Frais sur versement</label><div class="saisie"><input id="vb" name="vb" inputmode="decimal" value="2" /><span class="unite">%</span></div></div>
+    </fieldset>
+  </form>
+  <div slot="resultat" class="resultat" aria-live="polite">
+    <div class="chiffres">
+      <div><p class="l">Capital final, situation A</p><p class="v fort" id="r-a">-</p></div>
+      <div><p class="l">Capital final, situation B</p><p class="v" id="r-b">-</p></div>
+      <div><p class="l">Écart dû aux frais</p><p class="v alerte" id="r-ecart">-</p></div>
+    </div>
+    <p class="note-outil" id="r-phrase"></p>
+    <div class="graphique" id="g"></div>
+    <p class="note-outil">Calcul : versements en début de mois, frais sur versement prélevés sur chaque somme versée, frais annuels déduits du rendement brut et appliqués mois par mois. Avant impôts et prélèvements sociaux.</p>
+  </div>
+
+  <h2>Pourquoi les frais pèsent autant ?</h2>
+  <p>Les frais de gestion sont prélevés chaque année sur l'encours, c'est-à-dire sur tout ce que tu as accumulé, gains compris. L'argent prélevé ne rapporte plus rien les années suivantes. Les frais se composent donc exactement comme les intérêts, mais contre toi.</p>
+  <blockquote><p><strong>Exemple.</strong> Avec les valeurs par défaut (10 000 € au départ, 200 € par mois pendant 20 ans, 5 % de rendement brut), passer de 0,5 % à 2 % de frais annuels et de 0 % à 2 % de frais sur versement réduit le capital final d'environ 20 000 €. Les versements sont pourtant les mêmes : 58 000 € dans les deux cas.</p></blockquote>
+
+  <h2>Les frais à repérer avant de placer</h2>
+  <table>
+    <thead><tr><th>Type de frais</th><th>Où on le trouve</th><th>Comment il est prélevé</th></tr></thead>
+    <tbody>
+      <tr><td>Frais sur versement</td><td>Assurance-vie, PER, SCPI (frais de souscription)</td><td>Un pourcentage de chaque somme versée, avant qu'elle soit investie</td></tr>
+      <tr><td>Frais de gestion du contrat</td><td>Assurance-vie, PER</td><td>Un pourcentage annuel de l'encours</td></tr>
+      <tr><td>Frais courants des fonds</td><td>Fonds, ETF, unités de compte</td><td>Un pourcentage annuel, déjà déduit de la valeur du fonds</td></tr>
+      <tr><td>Frais de courtage</td><td>PEA, compte-titres</td><td>Un montant ou un pourcentage à chaque achat et vente</td></tr>
+      <tr><td>Droits de garde</td><td>PEA, compte-titres</td><td>Un montant ou un pourcentage annuel, selon l'établissement</td></tr>
+    </tbody>
+  </table>
+  <p>Dans une assurance-vie investie en unités de compte, les frais du contrat et les frais courants des fonds s'additionnent : additionne-les dans la case « frais annuels » pour voir le coût total. Le document d'informations clés (<a href="/lexique/dic/">DIC</a>) de chaque support détaille ses coûts.</p>
+
+  <h2>Pour comparer les frais réels</h2>
+  <p>Nos comparateurs relèvent les frais sur les grilles tarifaires officielles : <a href="/comparateurs/courtiers-en-bourse/">les frais des courtiers en bourse</a> et <a href="/comparateurs/assurance-vie-en-ligne/">les frais des contrats d'assurance-vie en ligne</a>. Pour comprendre chaque enveloppe : <a href="/epargne/assurance-vie/">le guide de l'assurance-vie</a> et <a href="/bourse/etf/">le guide des ETF</a>.</p>
+</Outil>
+
+<script>
+  import { lire, ecrire, euros, graphique, brancher, projection } from '../../scripts/outils';
+  const form = document.getElementById('f') as HTMLFormElement;
+  brancher(form, () => {
+    const annees = Math.min(50, Math.max(1, Math.round(lire(form, 'annees'))));
+    const base = { initial: Math.max(0, lire(form, 'initial')), mensuel: Math.max(0, lire(form, 'mensuel')), annees, rendement: lire(form, 'rendement') };
+    const a = projection({ ...base, fraisAnnuels: lire(form, 'fa'), fraisVersement: lire(form, 'va') });
+    const b = projection({ ...base, fraisAnnuels: lire(form, 'fb'), fraisVersement: lire(form, 'vb') });
+    const s = projection(base);
+    ecrire('r-a', euros(a.final));
+    ecrire('r-b', euros(b.final));
+    ecrire('r-ecart', euros(Math.abs(a.final - b.final)));
+    ecrire('r-phrase', `Pour ${euros(a.verse)} versés au total. Sans aucun frais, le capital aurait atteint ${euros(s.final)}.`);
+    graphique(document.getElementById('g')!, [
+      { nom: 'Situation A', valeurs: a.valeurs, couleur: '#0F3D2E' },
+      { nom: 'Situation B', valeurs: b.valeurs, couleur: '#FF6A4D' },
+      { nom: 'Total versé', valeurs: a.verses, couleur: '#8DB8A0', pointille: true },
+    ], a.valeurs.map((_, i) => (i === 0 ? 'Départ' : `${i} an${i > 1 ? 's' : ''}`)), 'Capital selon le niveau de frais');
+  });
+</script>

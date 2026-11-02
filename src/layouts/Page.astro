@@ -1,0 +1,19 @@
+---
+import { formatDate } from '../lib/site';
+import Base from './Base.astro';
+interface Props { title: string; h1?: string; description: string; rubrique: string; chapo?: string; noindex?: boolean; misAJour?: string }
+const { title, h1, description, rubrique, chapo, noindex, misAJour = '2026-11-01' } = Astro.props;
+const date = formatDate(misAJour);
+---
+<Base title={title} description={description} noindex={noindex} misAJour={misAJour}>
+  <div class="cadre">
+    <nav class="fil" aria-label="Fil d'Ariane"><a href="/">Accueil</a><span aria-hidden="true">/</span><span>{rubrique}</span></nav>
+    <div class="colonne-texte" style="padding-top:18px">
+      <p class="rubrique" style="margin:0">{rubrique}</p>
+      <h1 set:html={h1 || title} />
+      {chapo && <p class="chapo">{chapo}</p>}
+      <p class="meta">Mis à jour le {date}</p>
+      <div class="prose" style="margin-top:34px"><slot /></div>
+    </div>
+  </div>
+</Base>

@@ -1,0 +1,153 @@
+---
+import Base from '../layouts/Base.astro';
+import { articles, parCategorie, parHref, tempsLecture } from '../lib/content';
+import { CATEGORIES, OUTILS, SITE, categorie, formatDate } from '../lib/site';
+import tableau from '../data/chiffres.json';
+const evFichiers = import.meta.glob<{ default: { evenements: any[] } }>('/src/data/evenements.json', { eager: true });
+const evAujourdhui = new Date().toISOString().slice(0, 10);
+const prochains = (Object.values(evFichiers)[0]?.default.evenements ?? [])
+  .filter((e) => e.verifie !== false && e.debut && (e.fin || e.debut) >= evAujourdhui)
+  .sort((a, b) => a.debut.localeCompare(b.debut))
+  .slice(0, 4);
+
+const questions = [
+  ['/bourse/investir-en-bourse/', 'Comment fonctionne la bourse quand on débute ?'],
+  ['/epargne/livret-a-ldds-lep/', 'Livret A, LDDS, LEP : qui peut ouvrir quoi ?'],
+  ['/epargne/assurance-vie/', "L'assurance-vie, comment ça marche vraiment ?"],
+  ['/bourse/etf/', "Un ETF, qu'est-ce que c'est ?"],
+  ['/immobilier/frais-de-notaire/', 'Que paie-t-on vraiment chez le notaire ?'],
+  ['/retraite/per/', "Le PER, que change la déduction d'impôt ?"],
+  ['/protection/arnaques-financieres/', 'Comment reconnaître une arnaque financière ?'],
+]
+  .map(([href, q]) => ({ q, a: parHref(href) }))
+  .filter((x) => x.a);
+const recents = articles.slice(0, 6);
+const titre = "Parlons Placement : l'argent, expliqué simplement";
+const description = "Épargne, bourse, immobilier, retraite, impôts : des guides clairs et sourcés sur les textes officiels, des comparateurs neutres et des simulateurs gratuits. Sans conseil personnalisé.";
+---
+<Base title={titre} description={description}>
+  <section class="une">
+    <div class="cadre">
+      <div>
+        <p class="rubrique" style="margin:0 0 22px">Le média de l'argent expliqué</p>
+        <h1>L'argent, <em>expliqué</em> simplement.</h1>
+      </div>
+      <div>
+        <p class="intro">Épargne, bourse, immobilier, retraite, impôts. On t'explique comment ça marche, ce que ça coûte et les risques, chiffres officiels à l'appui. Ensuite, c'est toi qui choisis.</p>
+        <div class="actions">
+          <a class="bouton" href="/bourse/investir-en-bourse/">Commencer par les bases</a>
+          <a href="/comparateurs/" class="fleche" style="align-self:center">Comparer les frais</a>
+          <a href="/simulateurs/" class="fleche" style="align-self:center">Faire un calcul</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tableau-bord" aria-labelledby="tb-titre">
+    <div class="cadre">
+      <div class="section-tete"><div><p class="rubrique">Le tableau de bord</p><h2 id="tb-titre">Les chiffres qui comptent, <em>aujourd'hui</em></h2></div><span class="tb-maj">Mis à jour le {formatDate(tableau.miseAJour)}</span></div>
+      <div class="tb-grille">
+        {tableau.chiffres.map((c) => (
+          <a class="tb-c" href={c.lien}>
+            <span class="v" data-compte>{c.valeur}</span>
+            <span class="l">{c.label}</span>
+            <span class="d">{c.detail}</span>
+          </a>
+        ))}
+      </div>
+      <p class="tb-sources">Sources : {tableau.chiffres.map((c, i) => <>{i > 0 && ' · '}<a href={c.source.url}>{c.source.titre}</a></>)}.</p>
+    </div>
+  </section>
+
+  <div class="cadre">
+    {questions.length > 0 && (
+      <section class="section">
+        <div class="section-tete"><div><p class="rubrique">Par où commencer</p><h2>Les questions que tout le monde se pose</h2></div></div>
+        <ol class="questions">
+          {questions.map(({ q, a }) => (<li><a href={a!.href}><span class="t">{q}</span><span class="m">{tempsLecture(a!.mots)} min</span></a></li>))}
+        </ol>
+      </section>
+    )}
+
+    <section class="section">
+      <div class="section-tete"><div><p class="rubrique">Les rubriques</p><h2>Tout ce qui touche à ton argent</h2></div></div>
+      <div class="grille">
+        {CATEGORIES.map((c) => {
+          const l = parCategorie(c.id).slice(0, 3);
+          return (
+            <div>
+              <a class="rubrique" href={`/${c.id}/`}>{c.nom}</a>
+              <h3><a href={`/${c.id}/`}>{c.titre.split(':')[0]}</a></h3>
+              <p>{c.intro}</p>
+              {l.length > 0 && <ul>{l.map((a) => <li><a href={a.href}>{a.frontmatter.title}</a></li>)}</ul>}
+            </div>
+          );
+        })}
+        <div>
+          <a class="rubrique" href="/lexique/">Lexique</a>
+          <h3><a href="/lexique/">Les mots de l'argent</a></h3>
+          <p>PEA, fonds euros, TAEG, démembrement : chaque terme défini simplement, avec ses chiffres officiels.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-tete"><div><p class="rubrique">Les outils</p><h2>Comparer et calculer, sans rien vendre</h2></div><a class="fleche" href="/comparateurs/">Tous les outils</a></div>
+      <div class="grille">
+        {OUTILS.map((o) => (
+          <div>
+            <span class="rubrique">{o.type}</span>
+            <h3><a href={o.href}>{o.titre}</a></h3>
+            <p>{o.texte}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    {prochains.length > 0 && (
+      <section class="section">
+        <div class="section-tete"><div><p class="rubrique">L'agenda</p><h2>Les prochains rendez-vous de la finance en Europe</h2></div><a class="fleche" href="/evenements/">Tout l'agenda</a></div>
+        <div class="grille">
+          {prochains.map((e) => (
+            <div>
+              <span class="rubrique">{new Date(e.debut + 'T12:00:00').toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' }).replace(/^1 /, '1er ')}</span>
+              <h3><a href={`/evenements/#m-${e.debut.slice(0, 7)}`}>{e.nom}</a></h3>
+              <p>{e.ville} ({e.pays}) · {e.public}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+    )}
+
+    {recents.length > 0 && (
+      <section class="section">
+        <div class="section-tete"><div><p class="rubrique">Les dernières publications</p><h2>À lire en ce moment</h2></div></div>
+        <ul class="index">
+          {recents.map((a) => (
+            <li><a href={a.href}><span class="r rubrique">{categorie(a.frontmatter.categorie)?.nom}</span><span class="t">{a.frontmatter.title}</span><span class="d">{a.frontmatter.description}</span><span class="m">{formatDate(a.frontmatter.misAJour!)}</span></a></li>
+          ))}
+        </ul>
+      </section>
+    )}
+
+    <section class="section">
+      <div class="section-tete"><div><p class="rubrique">Notre méthode</p><h2>Trois engagements, sans exception</h2></div><a class="fleche" href="/methode/">Lire la méthode</a></div>
+      <div class="engagements">
+        <div><h3>Des sources officielles, en note</h3><p>Chaque taux, plafond ou règle renvoie à sa source : service-public.gouv.fr, impots.gouv.fr, Banque de France, AMF, Légifrance, Insee. Et chaque page affiche sa date de mise à jour.</p></div>
+        <div><h3>Aucun conseil personnalisé</h3><p>On explique comment les choses fonctionnent, on ne dit jamais quoi acheter. Ta situation mérite un professionnel habilité, et on te dit lequel.</p></div>
+        <div><h3>Aucune place achetée</h3><p>Nos comparateurs sont relevés sur les grilles tarifaires officielles. Aucun acteur ne paie pour y figurer ni pour y être mieux placé.</p></div>
+      </div>
+    </section>
+  </div>
+
+  <section class="bandeau-encre">
+    <div class="cadre instagram">
+      <div>
+        <p class="rubrique" style="margin:0 0 10px">Sur Instagram</p>
+        <p class="serif" style="font-size:clamp(30px,4vw,46px);line-height:1.05;margin:0">Un sujet par jour, <em style="color:var(--lime)">en quelques pages</em>.</p>
+        <p class="doux" style="margin:12px 0 0;font-size:15.5px">Un chiffre, une règle, une explication sourcée. Chaque matin sur {SITE.instagramHandle}.</p>
+      </div>
+      <a class="bouton" href={SITE.instagram} rel="me">Suivre {SITE.instagramHandle}</a>
+    </div>
+  </section>
+</Base>
