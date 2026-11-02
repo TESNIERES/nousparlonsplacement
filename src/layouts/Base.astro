@@ -71,6 +71,12 @@ const actif = (h: string) => (chemin.startsWith(h) ? 'page' : undefined);
   {publie && <meta property="article:published_time" content={publie} />}
   {misAJour && <meta property="article:modified_time" content={misAJour} />}
   {schemas.map((s) => <script type="application/ld+json" set:html={JSON.stringify(s)} />)}
+  <!-- Mesure d'audience Plausible : sans cookie, données agrégées hébergées dans l'UE -->
+  <script is:inline async src="https://plausible.io/js/pa-VXOW8brvs-7g7VWTX2SgB.js"></script>
+  <script is:inline>
+    window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+    plausible.init()
+  </script>
   <script is:inline>if ('IntersectionObserver' in window) document.documentElement.classList.add('anim');</script>
 </head>
 <body>
