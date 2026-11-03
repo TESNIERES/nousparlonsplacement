@@ -1,6 +1,7 @@
 ---
 import { formatDate } from '../../lib/site';
 import Outil from '../../layouts/Outil.astro';
+import { affiliationActive, PHRASE_LIENS } from '../../lib/affiliation';
 
 type Src = { titre?: string; url?: string; date?: string };
 type Acteur = {
@@ -28,7 +29,7 @@ const montants = ['500', '1000', '5000'];
   pleineLargeur
   title="Comparateur des courtiers en bourse"
   seoTitle="Comparatif des courtiers en bourse : frais PEA et compte-titres"
-  description="Frais d'ordre, droits de garde, frais de change, PEA et IFU : les tarifs des courtiers et banques relevés sur leurs grilles officielles. Comparateur neutre, sans affiliation."
+  description="Frais d'ordre, droits de garde, frais de change, PEA et IFU : les tarifs des courtiers et banques relevés sur leurs grilles officielles. Comparateur neutre, tri au choix du lecteur."
   chapo={`Les frais d'un courtier à l'autre peuvent aller du simple au décuple pour le même ordre. Voici les tarifs relevés le ${date} dans les grilles tarifaires officielles de chaque établissement, pour un particulier qui passe ses ordres en ligne. Aucun acteur ne paie pour figurer ici.`}
 >
   <div slot="outil">
@@ -97,7 +98,7 @@ const montants = ['500', '1000', '5000'];
   )}
 
   <h2>Notre méthode</h2>
-  <p>Les tarifs sont relevés dans la grille tarifaire officielle de chaque établissement, pour l'offre standard destinée aux particuliers. Quand une valeur n'apparaît pas clairement dans le document officiel, nous écrivons « non communiqué » plutôt que d'estimer. Aucun lien n'est affilié, aucun acteur ne paie pour figurer ici ni pour son classement, et l'ordre d'affichage ne dépend que du critère que tu choisis.</p>
+  <p>Les tarifs sont relevés dans la grille tarifaire officielle de chaque établissement, pour l'offre standard destinée aux particuliers. Quand une valeur n'apparaît pas clairement dans le document officiel, nous écrivons « non communiqué » plutôt que d'estimer. {PHRASE_LIENS} Aucun acteur ne paie pour figurer ici ni pour son classement, et l'ordre d'affichage ne dépend que du critère que tu choisis.</p>
   <p>Les frais ne sont qu'un critère parmi d'autres : la gamme de titres disponibles, la qualité du service, la solidité de l'établissement et la simplicité fiscale comptent aussi. Pour comprendre les enveloppes : <a href="/bourse/pea/">le guide du PEA</a>, <a href="/bourse/investir-en-bourse/">investir en bourse, comprendre avant de commencer</a> et <a href="/simulateurs/impact-des-frais/">l'impact des frais sur la durée</a>.</p>
 
   <h2>Sources</h2>

@@ -1,6 +1,7 @@
 ---
 import Page from '../layouts/Page.astro';
 import { SITE } from '../lib/site';
+import { PHRASE_LIENS, affiliationActive } from '../lib/affiliation';
 const jsonld = [{
   '@context': 'https://schema.org', '@type': 'AboutPage', url: `${SITE.url}/a-propos/`, name: 'Qui sommes-nous',
   about: { '@id': `${SITE.url}/#organisation` },
@@ -15,7 +16,7 @@ const jsonld = [{
   <ul>
     <li>Nous expliquons comment fonctionnent l'épargne, la bourse, l'immobilier, la retraite, les impôts et le crédit.</li>
     <li>Nous citons nos sources pour chaque chiffre et chaque règle, et nous datons chaque mise à jour.</li>
-    <li>Nous comparons les frais des acteurs à partir de leurs documents officiels, sans affiliation.</li>
+    <li>Nous comparons les frais des acteurs à partir de leurs documents officiels, {affiliationActive ? 'avec des liens partenaires signalés comme tels, qui ne modifient ni les données ni l’ordre.' : 'sans affiliation.'}</li>
     <li>Nous ne donnons jamais de conseil en investissement personnalisé et nous ne vendons aucun produit financier.</li>
   </ul>
 

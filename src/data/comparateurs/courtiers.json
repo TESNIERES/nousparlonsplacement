@@ -279,6 +279,30 @@
         "date": "2020-10-09"
       },
       "verifie": false
+    },
+    {
+      "id": "xtb",
+      "nom": "XTB",
+      "type": "courtier en ligne",
+      "pays": null,
+      "supervision": null,
+      "pea": null,
+      "peaPme": null,
+      "cto": null,
+      "fraisOrdreParis": { "500": null, "1000": null, "5000": null },
+      "fraisOrdreParisPEA": null,
+      "fraisOrdreUS1000": null,
+      "fraisChangePct": null,
+      "droitsDeGarde": null,
+      "fraisTenueCompte": null,
+      "fraisInactivite": null,
+      "programme": null,
+      "fractions": null,
+      "ifu": null,
+      "offre": null,
+      "remarques": "Grille tarifaire officielle non lue le 3 novembre 2026. Toutes les valeurs sont à compléter dans la grille officielle de XTB France avant de passer verifie à true : commissions actions et ETF (seuil mensuel éventuel), frais de change, droits de garde, PEA, IFU, entité juridique et autorité de supervision. Ne pas reprendre les chiffres de sites tiers.",
+      "source": { "titre": null, "url": null, "date": null },
+      "verifie": false
     }
   ]
 }

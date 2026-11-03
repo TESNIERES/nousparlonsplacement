@@ -1,17 +1,18 @@
 ---
 import Page from '../layouts/Page.astro';
 import { SITE } from '../lib/site';
+import { affiliationActive, PHRASE_LIENS } from '../lib/affiliation';
 ---
 <Page title="Partenariats et transparence" h1="Partenariats et <em>transparence</em>" rubrique="Parlons Placement" description="Comment Parlons Placement est financé, comment les contenus partenaires sont identifiés et ce qu'un partenaire ne peut jamais acheter. Contact pour les marques." chapo="Tu dois toujours savoir si un contenu est financé, et par qui. Voici nos règles, et ce qu'elles garantissent.">
   <h2>Comment le site est financé</h2>
-  <p>À ce jour, le site ne contient ni publicité, ni lien affilié, ni contenu financé. Demain, Parlons Placement pourra travailler avec des marques du monde de l'épargne et de l'investissement. Ces collaborations suivront les règles ci-dessous, sans exception.</p>
+  <p>{affiliationActive ? PHRASE_LIENS : 'À ce jour, le site ne contient ni publicité, ni lien affilié, ni contenu financé.'} Demain, Parlons Placement pourra travailler avec des marques du monde de l'épargne et de l'investissement. Ces collaborations suivront les règles ci-dessous, sans exception.</p>
 
   <h2>Les règles des contenus partenaires</h2>
   <ul>
     <li><strong>Toujours identifiés.</strong> Un contenu financé porte la mention « Partenariat » en tête de page et sur sa carte de présentation, et nomme le partenaire, conformément à la loi du 9 juin 2023 sur l'influence commerciale.</li>
     <li><strong>Toujours conformes à notre charte.</strong> Sources citées, risques mentionnés, aucune promesse de rendement, aucun conseil personnalisé.</li>
     <li><strong>Jamais dans les guides.</strong> Nos guides et notre lexique ne sont jamais financés, relus ou orientés par un partenaire.</li>
-    <li><strong>Jamais dans les classements.</strong> Un partenaire ne peut ni figurer dans un comparateur parce qu'il paie, ni y améliorer sa place. Le tri dépend uniquement du critère choisi par le lecteur. Si un acteur présent dans un comparateur a une relation commerciale avec l'éditeur, le comparateur l'indique.</li>
+    <li><strong>Jamais dans les classements.</strong> Un partenaire ne peut ni figurer dans un comparateur parce qu'il paie, ni y améliorer sa place, et un lien partenaire n'est jamais mis en avant par le tri. Le tri dépend uniquement du critère choisi par le lecteur. Si un acteur présent dans un comparateur a une relation commerciale avec l'éditeur, le comparateur l'indique.</li>
     <li><strong>Jamais de produit interdit.</strong> Aucune promotion de produits ou de prestataires non autorisés en France, ni de produits que la réglementation interdit de promouvoir.</li>
   </ul>
 

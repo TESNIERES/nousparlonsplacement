@@ -32,6 +32,7 @@ Chemins publics, à utiliser pour les liens internes. Une page qui n'existe pas 
 ## Outils
 
 - /comparateurs/courtiers-en-bourse/ : frais des courtiers et banques en ligne (PEA et compte-titres)
+- /comparateurs/meilleur-courtier-en-bourse/ : quel courtier selon le critère (frais, PEA, change), points à vérifier
 - /comparateurs/assurance-vie-en-ligne/ : frais et fonds euros des contrats d'assurance-vie en ligne
 - /simulateurs/interets-composes/ : intérêts composés et versements réguliers
 - /simulateurs/impact-des-frais/ : ce que coûtent les frais sur 10, 20, 30 ans

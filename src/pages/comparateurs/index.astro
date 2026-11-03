@@ -1,6 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import { OUTILS } from '../../lib/site';
+import { affiliationActive } from '../../lib/affiliation';
 const comp = OUTILS.filter((o) => o.type === 'Comparateur');
 const sim = OUTILS.filter((o) => o.type === 'Simulateur');
 ---
@@ -10,7 +11,7 @@ const sim = OUTILS.filter((o) => o.type === 'Simulateur');
     <header class="lettrine-page intro-rubrique">
       <p class="rubrique" style="margin:18px 0 0">Les outils</p>
       <h1>Comparer et calculer, <em>sans rien vendre</em></h1>
-      <p class="chapo">Nos comparateurs relèvent les frais sur les grilles tarifaires officielles. Aucun acteur ne paie pour y figurer, aucun lien n'est affilié, et c'est toi qui choisis le critère de tri.</p>
+      <p class="chapo">Nos comparateurs relèvent les frais sur les grilles tarifaires officielles. Aucun acteur ne paie pour y figurer, {affiliationActive ? 'les éventuels liens partenaires sont signalés comme tels, et c’est toi qui choisis le critère de tri.' : 'aucun lien n’est affilié, et c’est toi qui choisis le critère de tri.'}</p>
     </header>
     <section class="section" style="padding-top:44px">
       <div class="section-tete"><div><p class="rubrique">Comparateurs</p><h2>Ce que coûtent les acteurs</h2></div></div>

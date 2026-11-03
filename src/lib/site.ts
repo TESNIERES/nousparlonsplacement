@@ -74,6 +74,7 @@ export const categorie = (id: string) => CATEGORIES.find((c) => c.id === id);
 
 export const OUTILS = [
   { href: '/comparateurs/courtiers-en-bourse/', type: 'Comparateur', titre: 'Courtiers en bourse', texte: "Frais d'ordre, droits de garde, PEA : les grilles tarifaires officielles, côte à côte." },
+  { href: '/comparateurs/meilleur-courtier-en-bourse/', type: 'Comparateur', titre: 'Meilleur courtier en bourse', texte: "Le courtier le moins cher selon ton critère, et les points à vérifier avant d'ouvrir un compte." },
   { href: '/comparateurs/assurance-vie-en-ligne/', type: 'Comparateur', titre: 'Assurance-vie en ligne', texte: 'Frais, fonds euros, supports : les contrats en ligne relevés sur leurs documents officiels.' },
   { href: '/simulateurs/interets-composes/', type: 'Simulateur', titre: 'Intérêts composés', texte: 'Ce que deviennent des versements réguliers selon la durée et le rendement supposé.' },
   { href: '/simulateurs/impact-des-frais/', type: 'Simulateur', titre: 'Impact des frais', texte: "Un point de frais par an, combien ça coûte sur 10, 20 ou 30 ans." },

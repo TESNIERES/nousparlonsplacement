@@ -1,0 +1,6 @@
+{
+  "note": "Un lien partenaire n'est affiché que si le partenaire est actif ET que l'url est renseignée. Tant que rien n'est actif, le site affirme qu'il ne contient aucun lien affilié. Voir redaction/AFFILIATION.md avant d'activer.",
+  "partenaires": {
+    "xtb": { "nom": "XTB", "url": null, "actif": false }
+  }
+}

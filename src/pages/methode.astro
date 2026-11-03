@@ -1,5 +1,6 @@
 ---
 import Page from '../layouts/Page.astro';
+import { PHRASE_LIENS, affiliationActive } from '../lib/affiliation';
 ---
 <Page title="Notre méthode : comment nous écrivons et vérifions" h1="Notre méthode" rubrique="Parlons Placement" description="Sources primaires, vérification de chaque chiffre, mises à jour datées, corrections publiques, aucune recommandation : la charte éditoriale de Parlons Placement." chapo="Un site qui parle d'argent doit être irréprochable sur les faits. Voici comment nous choisissons nos sujets, vérifions nos chiffres et corrigeons nos erreurs.">
   <h2>1. Des sources primaires, citées en note</h2>
@@ -13,7 +14,7 @@ import Page from '../layouts/Page.astro';
   <p>Nous décrivons le fonctionnement, les coûts et les risques. Nous ne disons jamais quoi acheter, et nous ne citons aucun produit commercial dans nos guides. Les risques de perte en capital sont toujours indiqués. Pour une décision qui dépend de ta situation, nous te renvoyons vers un professionnel habilité : conseiller en investissements financiers, notaire, expert-comptable.</p>
 
   <h2>4. Des comparateurs sans place achetée</h2>
-  <p>Les comparateurs reprennent les tarifs publiés dans les grilles tarifaires et documents officiels, à une date indiquée. Aucun acteur ne paie pour y figurer ni pour y être mieux placé, aucun lien n'est affilié. Le classement dépend uniquement du critère choisi par le lecteur. Voir aussi <a href="/partenariats/">notre politique de partenariats</a>.</p>
+  <p>Les comparateurs reprennent les tarifs publiés dans les grilles tarifaires et documents officiels, à une date indiquée. Aucun acteur ne paie pour y figurer ni pour y être mieux placé, {PHRASE_LIENS} Le classement dépend uniquement du critère choisi par le lecteur. Voir aussi <a href="/partenariats/">notre politique de partenariats</a>.</p>
 
   <h2>5. Comment nos textes sont produits</h2>
   <p>Nos textes sont préparés avec l'aide d'outils d'intelligence artificielle, dans le cadre strict de notre charte éditoriale. La rédaction fixe la ligne, les sujets et les règles ; chaque texte suit une liste de contrôle : chaque chiffre vérifié sur sa source primaire et cité en note, aucun produit commercial nommé, risques mentionnés, aucune recommandation. Nous préférons le dire clairement : ce qui compte, c'est que chaque information soit juste, vérifiable et utile.</p>

@@ -1,0 +1,121 @@
+---
+import { formatDate } from '../../lib/site';
+import Outil from '../../layouts/Outil.astro';
+import { lienPartenaire, affiliationActive, PHRASE_LIENS, REL_PARTENAIRE } from '../../lib/affiliation';
+import donnees from '../../data/comparateurs/courtiers.json';
+
+type Ordres = Record<string, number | null> | null | undefined;
+type Acteur = {
+  id: string; nom: string; type?: string; pays?: string | null;
+  pea?: boolean | null; cto?: boolean | null;
+  fraisOrdreParis?: Ordres; fraisOrdreParisPEA?: Ordres;
+  fraisOrdreUS1000?: number | null; fraisChangePct?: number | null;
+  offre?: string | null; verifie?: boolean;
+};
+const tous = donnees.acteurs as Acteur[];
+const acteurs = tous.filter((a) => a.verifie !== false);
+const enAttente = tous.filter((a) => a.verifie === false).map((a) => a.nom.replace(/ \(.*\)$/, ''));
+const xtbVerifie = acteurs.some((a) => a.id === 'xtb');
+const date = formatDate(donnees.miseAJour);
+
+const eur = (v: number) => new Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR', minimumFractionDigits: v % 1 ? 2 : 0, maximumFractionDigits: 2 }).format(v);
+const pct = (v: number) => `${new Intl.NumberFormat('fr-FR', { maximumFractionDigits: 3 }).format(v)} %`;
+
+// Le moins cher selon chaque critère, calculé sur les seuls acteurs vérifiés. Aucune pondération, aucun classement global.
+type Critere = { libelle: string; valeur: (a: Acteur) => number | null; fmt: (v: number) => string; precision: string };
+const criteres: Critere[] = [
+  { libelle: 'Ordre de 1 000 € sur Euronext Paris, compte-titres', valeur: (a) => (a.cto === false ? null : a.fraisOrdreParis?.['1000'] ?? null), fmt: eur, precision: "frais d'un ordre" },
+  { libelle: 'Ordre de 1 000 € sur Euronext Paris, PEA', valeur: (a) => (a.pea ? (a.fraisOrdreParisPEA ?? a.fraisOrdreParis)?.['1000'] ?? null : null), fmt: eur, precision: "frais d'un ordre" },
+  { libelle: 'Ordre de 1 000 € sur une action américaine', valeur: (a) => a.fraisOrdreUS1000 ?? null, fmt: eur, precision: "frais d'un ordre" },
+  { libelle: 'Frais de change', valeur: (a) => a.fraisChangePct ?? null, fmt: pct, precision: 'par opération' },
+];
+const lignes = criteres.map((c) => {
+  const vals = acteurs.map((a) => ({ a, v: c.valeur(a) })).filter((x): x is { a: Acteur; v: number } => x.v !== null);
+  if (vals.length === 0) return { c, noms: [] as Acteur[], v: null as number | null, n: 0 };
+  const min = Math.min(...vals.map((x) => x.v));
+  return { c, noms: vals.filter((x) => x.v === min).map((x) => x.a), v: min, n: vals.length };
+});
+const avecLien = acteurs.filter((a) => lienPartenaire(a.id));
+---
+<Outil
+  type="Comparateur"
+  chemin="/comparateurs/meilleur-courtier-en-bourse/"
+  misAJour={donnees.miseAJour}
+  pleineLargeur
+  title="Meilleur courtier en bourse : comment choisir"
+  seoTitle="Meilleur courtier en bourse : comparatif et critères"
+  description="Quel est le meilleur courtier en bourse pour toi ? Les frais d'ordre, de change et de PEA relevés sur les grilles officielles, et les points à vérifier avant d'ouvrir un compte."
+  chapo={`Il n'existe pas un meilleur courtier pour tout le monde : le bon choix dépend de ce que tu comptes faire (PEA ou compte-titres, petits versements réguliers ou gros ordres, actions françaises ou américaines). Voici, pour chaque critère, l'établissement le moins cher dans nos relevés du ${date}, puis les points à vérifier avant d'ouvrir un compte.`}
+>
+  <div slot="outil">
+    <div class="defile">
+      <table class="tableau-comp">
+        <caption style="text-align:left;padding-bottom:10px">Le moins cher selon le critère, parmi les acteurs relevés à ce jour</caption>
+        <thead><tr><th scope="col">Critère</th><th scope="col">Le moins cher dans nos relevés</th><th scope="col">Montant</th><th scope="col">Acteurs comparés</th></tr></thead>
+        <tbody>
+          {lignes.map((l) => (
+            <tr>
+              <td class="nom">{l.c.libelle}<small>{l.c.precision}</small></td>
+              <td>{l.noms.length === 0 ? <span class="nd">n. c.</span> : l.noms.map((a, i) => (<>{i > 0 && ', '}<strong>{a.nom}</strong>{lienPartenaire(a.id) && <> <a href={lienPartenaire(a.id)!} rel={REL_PARTENAIRE} target="_blank">(lien partenaire)</a></>}</>))}</td>
+              <td class="num">{l.v === null ? <span class="nd">n. c.</span> : l.c.fmt(l.v)}</td>
+              <td class="num">{l.n}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    <p class="note-outil">Tarifs de l'offre standard pour un particulier qui passe ses ordres en ligne, relevés dans les grilles officielles. Un tarif plus bas sur un critère ne fait pas un meilleur courtier : voir les autres critères ci-dessous. Détail complet, tri et sources dans <a href="/comparateurs/courtiers-en-bourse/">le comparateur des courtiers en bourse</a>.</p>
+    {enAttente.length > 0 && <p class="note-outil">En cours de relevé : {enAttente.join(', ')}. Ces acteurs apparaîtront ici dès que leurs tarifs auront été lus dans un document officiel.</p>}
+  </div>
+
+  <h2>Quels critères comptent pour choisir un courtier ?</h2>
+  <p>Les frais sont le critère le plus facile à comparer, pas le seul. Voici ce qui change réellement l'expérience d'un investisseur particulier.</p>
+  <ul>
+    <li><strong>Les enveloppes proposées.</strong> Un <a href="/bourse/pea/">PEA</a> n'est pas ouvert partout, et peu d'acteurs proposent à la fois PEA, compte-titres et assurance-vie. Regarde aussi si le <a href="/lexique/pea/">PEA-PME</a> existe, si tu en as besoin.</li>
+    <li><strong>Le coût d'un ordre à ton montant habituel.</strong> Un tarif fixe pèse sur un petit ordre, un pourcentage pèse sur un gros. Teste avec le montant que tu investis vraiment, par exemple avec <a href="/simulateurs/impact-des-frais/">le simulateur d'impact des frais</a>.</li>
+    <li><strong>Les frais récurrents et cachés.</strong> <a href="/lexique/droits-de-garde/">Droits de garde</a>, frais de tenue de compte, d'inactivité, de transfert, et frais de change à chaque achat d'un titre coté hors zone euro.</li>
+    <li><strong>La fiscalité.</strong> Un établissement établi à l'étranger ne fournit pas toujours l'imprimé fiscal unique (IFU) : tu dois alors calculer toi-même tes plus-values et déclarer le compte. Voir <a href="/fiscalite/fiscalite-des-placements/">la fiscalité des placements</a>.</li>
+    <li><strong>La supervision et la garantie.</strong> Le pays d'établissement détermine l'autorité de contrôle et le mécanisme de garantie des dépôts et des titres. Vérifie l'agrément de l'établissement dans le registre de l'<a href="https://www.amf-france.org">AMF</a> ou de l'ACPR.</li>
+    <li><strong>Les produits à effet de levier.</strong> Certains courtiers proposent aussi des CFD. Ce sont des produits très risqués, distincts de l'achat d'actions ou d'ETF (voir plus bas).</li>
+  </ul>
+
+  <h2>Quel courtier selon ce que tu veux faire ?</h2>
+  <div class="defile">
+    <table class="tableau-comp">
+      <thead><tr><th scope="col">Ton usage</th><th scope="col">Le critère à regarder en premier</th></tr></thead>
+      <tbody>
+        <tr><td class="nom">Petits versements réguliers</td><td>Le coût d'un ordre à 100 ou 200 €, le montant minimum d'achat et la possibilité d'investir de façon programmée.</td></tr>
+        <tr><td class="nom">Un PEA pour investir en <a href="/bourse/etf/">ETF</a></td><td>Les frais d'ordre sur PEA, les ETF éligibles proposés, les frais de transfert si tu changes d'établissement.</td></tr>
+        <tr><td class="nom">Actions américaines</td><td>Les frais d'ordre sur les places américaines et les frais de change, qui s'appliquent à l'achat comme à la vente.</td></tr>
+        <tr><td class="nom">Peu d'ordres, gros montants</td><td>Le pourcentage de courtage au-delà du palier fixe, plus que le tarif d'entrée.</td></tr>
+        <tr><td class="nom">Un seul établissement pour tout</td><td>Les enveloppes disponibles (PEA, compte-titres, assurance-vie, PER) et la simplicité de l'IFU.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Ce tableau décrit des critères, pas une recommandation : seule ta situation personnelle (montants, horizon, fiscalité, tolérance au risque) permet de choisir. Pour une décision engageante, un conseiller en investissements financiers (CIF) peut t'aider.</p>
+
+  <h2>Où en est XTB dans ce comparateur ?</h2>
+  {xtbVerifie ? (
+    <p>XTB figure dans le tableau ci-dessus, avec les tarifs relevés dans sa grille officielle. Comme pour les autres acteurs, regarde aussi ses conditions (seuils éventuels, frais de change, enveloppes proposées) dans le <a href="/comparateurs/courtiers-en-bourse/">comparateur détaillé</a>.</p>
+  ) : (
+    <p>XTB fait partie des courtiers que nous relevons, mais il n'apparaît pas encore dans le tableau : ses tarifs n'y figureront qu'une fois lus dans sa grille tarifaire officielle, comme pour tous les acteurs. Nous n'estimons rien et nous ne reprenons pas les chiffres de sites tiers.</p>
+  )}
+  <p>Un point mérite attention pour XTB comme pour tout courtier : vérifie dans sa documentation officielle s'il propose aussi des CFD, en plus de l'achat d'actions et d'ETF, et quel type de compte tu ouvres. Lis le paragraphe suivant.</p>
+
+  <h2>Pourquoi les CFD ne sont pas un placement comme les autres</h2>
+  <p>Un CFD (contrat financier avec paiement d'un différentiel) est un produit à effet de levier : il amplifie les gains comme les pertes, et tu peux perdre rapidement tout ou partie de la somme engagée. Ce n'est pas la même chose que de détenir une action ou un ETF. En France, la loi encadre strictement la publicité, directe ou indirecte, par voie électronique, pour certains de ces contrats (options binaires, CFD et contrats sur devises) : <a href="https://www.amf-france.org/sites/institutionnel/files/pdf/60047/fr/Trading_speculatif_sur_internet__l%27interdiction_de_la_publicite_des_produits_les_plus_risques_-_Point_presse.pdf">point presse de l'AMF, 10 janvier 2017</a>. C'est pourquoi ce site ne présente jamais les CFD comme une façon d'investir ou de « gagner de l'argent ».</p>
+
+  <h2>Comment ce site est financé</h2>
+  <p>{PHRASE_LIENS} Aucun acteur ne paie pour figurer dans nos comparateurs ni pour y être mieux placé. Notre politique complète est détaillée sur la page <a href="/partenariats/">partenariats et transparence</a>.</p>
+  {affiliationActive && avecLien.length > 0 && (
+    <blockquote><p><strong>À savoir.</strong> Les liens marqués « lien partenaire » sont rémunérés si tu ouvres un compte. Les performances passées ne préjugent pas des performances futures, et investir comporte un risque de perte en capital.</p></blockquote>
+  )}
+
+  <h2>Pour aller plus loin</h2>
+  <ul>
+    <li><a href="/comparateurs/courtiers-en-bourse/">Le comparateur détaillé des courtiers en bourse</a>, avec tri et sources.</li>
+    <li><a href="/bourse/investir-en-bourse/">Investir en bourse : comprendre avant de commencer</a></li>
+    <li><a href="/bourse/pea/">Le PEA : fonctionnement, plafonds, fiscalité</a></li>
+    <li><a href="/lexique/frais-de-courtage/">Frais de courtage : la définition</a></li>
+  </ul>
+</Outil>
