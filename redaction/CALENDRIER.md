@@ -4,7 +4,7 @@ Un sujet par jour, dans l'ordre. Chaque sujet vise une requête réelle, précis
 
 ## Rendez-vous datés (prioritaires le jour venu ; ajouter « Traité le … » une fois fait)
 
-- **Le 1er de chaque mois** : mettre à jour l'agenda `src/data/evenements.json` (dates nouvellement annoncées, éditions passées retirées automatiquement). N'ajouter aucun nouveau salon ou journée destiné aux investisseurs particuliers ou aux CGP en France sans validation de la rédaction.
+- **Le 1er de chaque mois** : mettre à jour l'agenda `src/data/evenements.json` (dates nouvellement annoncées, éditions passées retirées automatiquement). N'ajouter aucun nouveau salon ou journée destiné aux investisseurs particuliers ou aux CGP en France sans validation de la rédaction. Novembre 2026 : traité le 2 novembre 2026 (agenda vérifié, `miseAJour` du fichier).
 - **20 novembre 2026** : entrée en vigueur de nouvelles règles du crédit à la consommation (service-public.gouv.fr, actualité A17785). Publier l'article d'actualité correspondant et mettre à jour /lexique/taeg/ et /lexique/taux-d-usure/.
 - **Fin novembre 2026** : publication par l'Insee de l'inflation d'octobre 2026. Mettre à jour /lexique/inflation/, /simulateurs/inflation/, le guide Livret A et le tableau de bord (`src/data/chiffres.json`).
 - **15 janvier 2027** : calcul des taux réglementés par la Banque de France. **1er février 2027** : nouveaux taux du Livret A, du LDDS et du LEP. Mettre à jour le guide /epargne/livret-a-ldds-lep/ (titre SEO et visuels compris), le lexique, le tableau de bord (`src/data/chiffres.json`) et toute page qui cite ces taux.
@@ -14,7 +14,7 @@ Un sujet par jour, dans l'ordre. Chaque sujet vise une requête réelle, précis
 
 | # | Chemin | Requête principale | Angle | Statut |
 |---|---|---|---|---|
-| 1 | /fiscalite/flat-tax/ | flat tax | Le prélèvement forfaitaire unique : taux en vigueur, revenus concernés, option pour le barème, exemples | À faire |
+| 1 | /fiscalite/flat-tax/ | flat tax | Le prélèvement forfaitaire unique : taux en vigueur, revenus concernés, option pour le barème, exemples. Attention : le guide /fiscalite/fiscalite-des-placements/ couvre déjà ces points (seoTitle « flat tax »), choisir un angle plus précis qui lui renvoie ou passer au sujet suivant | À faire |
 | 2 | /credit/taeg/ | TAEG | Ce que contient le TAEG, comment comparer deux offres, lien avec le taux d'usure | À faire |
 | 3 | /protection/ciclade-argent-oublie/ | Ciclade argent oublié | Comptes inactifs et contrats en déshérence : comment rechercher et récupérer les sommes | À faire |
 | 4 | /bourse/msci-world/ | MSCI World | Ce que contient l'indice, sa composition par pays et secteurs, ce qu'il ne contient pas, les risques | À faire |
