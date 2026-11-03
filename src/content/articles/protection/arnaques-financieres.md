@@ -5,7 +5,7 @@ description: "Faux conseillers, faux livrets, cryptos, réseaux sociaux : les ar
 categorie: protection
 type: guide
 publie: 2026-11-01
-misAJour: 2026-11-01
+misAJour: 2026-11-03
 motCle: "arnaques financières"
 chiffre:
   valeur: "62 %"
@@ -172,7 +172,7 @@ Tu peux aussi poser ta question avant d'investir : AMF Epargne Info Service rép
 Le temps compte. Voici les démarches, dans l'ordre :
 
 1. **Arrête tout versement** et coupe le contact, même si l'on te promet de débloquer tes gains contre un dernier paiement.
-2. **Préviens ta banque immédiatement.** Fais opposition si tu as transmis des données de carte ou de chèque[^12]. Pour un virement, tu peux demander son annulation : la démarche est strictement encadrée et peut ne pas aboutir[^8]. Une fraude à la carte bancaire se signale aussi sur la plateforme Perceval[^12].
+2. **Préviens ta banque immédiatement.** Fais opposition si tu as transmis des données de carte ou de chèque[^12]. Pour un virement, tu peux demander son annulation : la démarche est strictement encadrée et peut ne pas aboutir[^8]. Une fraude à la carte bancaire se signale aussi sur la plateforme Perceval[^12]. Si une opération a été faite à ton insu, avec tes identifiants volés par exemple, ta banque doit d'abord te rembourser, même si elle invoque ta négligence grave, selon un arrêt de la Cour de justice de l'Union européenne du 15 octobre 2026[^13] : voir [ce que cet arrêt change pour le remboursement d'une fraude bancaire](/protection/fraude-bancaire-remboursement/).
 3. **Rassemble les preuves** : nom du site, coordonnées des interlocuteurs, e-mails, contrats, ordres de virement, captures d'écran, montant total versé[^8].
 4. **Porte plainte**, après une pré-plainte en ligne sur pre-plainte-en-ligne.gouv.fr, au commissariat ou à la gendarmerie, ou par lettre adressée au tribunal judiciaire[^8][^12]. L'escroquerie est punie de jusqu'à cinq ans d'emprisonnement et 375 000 € d'amende[^12].
 5. **Signale l'arnaque** à l'AMF par son formulaire de signalement, ce qui peut mener à l'inscription du site sur liste noire, et sur internet-signalement.gouv.fr pour les contenus illicites en ligne[^8].
@@ -216,3 +216,4 @@ Investir comporte des risques réels, même chez des acteurs autorisés : notre 
 [^10]: [La vérification du bénéficiaire : en quoi consiste-t-elle ?](https://www.banque-france.fr/system/files/2025-09/CNMP_Infographie-Verification-du-beneficiaire.pdf), Comité national des moyens de paiement et Banque de France, page consultée le 1er novembre 2026.
 [^11]: [Qu'est-ce que « Epargne Info Service » ?](https://www.amf-france.org/sites/institutionnel/files/pdf/59204/fr/Qu%27est-ce_que_%3C%3C_Epargne_Info_Service_%3E%3E_.pdf), Autorité des marchés financiers, mise à jour le 25 août 2026.
 [^12]: [Escroquerie](https://www.service-public.gouv.fr/particuliers/vosdroits/F1520), Service-Public.fr (DILA), mise à jour le 28 mai 2025.
+[^13]: [Arnaque en ligne : la banque doit-elle vous rembourser si vous avez transmis vos coordonnées bancaires ?](https://www.service-public.gouv.fr/particuliers/actualites/A19102), Service-Public.fr (DILA), publiée le 2 novembre 2026.

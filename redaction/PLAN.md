@@ -46,7 +46,7 @@ Chemins publics, à utiliser pour les liens internes. Une page qui n'existe pas 
 
 /lexique/ et une page par terme : /lexique/<slug>/ (voir la liste des slugs dans `src/content/lexique/`).
 
-action, obligation, etf, pea, compte-titres, assurance-vie, fonds-euros, unite-de-compte, scpi, per, pfu, prelevements-sociaux, taeg, taux-d-usure, dividende, diversification, volatilite, interets-composes, inflation, indice-boursier, capitalisation-boursiere, frais-de-gestion, droits-de-garde, frais-de-courtage, valeur-liquidative, plus-value, rendement, livret-a, ldds, lep, epargne-de-precaution, demembrement, usufruit, nue-propriete, opcvm, dic, indicateur-de-risque, amf, cif, private-equity
+action, obligation, etf, pea, compte-titres, assurance-vie, fonds-euros, unite-de-compte, scpi, per, pfu, prelevements-sociaux, taeg, taux-d-usure, dividende, diversification, volatilite, interets-composes, inflation, indice-boursier, capitalisation-boursiere, frais-de-gestion, droits-de-garde, frais-de-courtage, valeur-liquidative, plus-value, rendement, livret-a, ldds, lep, epargne-de-precaution, demembrement, usufruit, nue-propriete, opcvm, dic, indicateur-de-risque, amf, cif, private-equity, hameconnage
 
 ## Pages institutionnelles
 
