@@ -6,6 +6,7 @@ description: "Définition du TAEG : ce que comprend ce taux « tout compris » d
 categorie: credit
 misAJour: 2026-11-01
 voirAussi: [taux-d-usure, interets-composes]
+guide: /credit/taeg/
 ---
 
 Deux crédits affichant le même taux nominal peuvent coûter très différemment, à cause des frais qui s'y ajoutent. Le TAEG sert à comparer les offres sur une base commune. La Banque de France le présente comme le taux d'intérêt « tout compris » d'un crédit[^1].
