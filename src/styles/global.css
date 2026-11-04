@@ -230,6 +230,10 @@ h1 em, h2 em, .une em { font-style: italic; color: var(--sapin); }
 .bandeau-encre .doux { color: #B5C9BC; }
 .instagram { padding-top: 56px; padding-bottom: 56px; display: grid; grid-template-columns: 1fr auto; gap: 28px; align-items: center; }
 @media (max-width: 700px) { .instagram { grid-template-columns: 1fr; } .instagram .bouton { justify-self: start; } }
+.suivre { margin-top: 32px; padding: 22px 24px; background: var(--papier-2); border-top: 3px double var(--encre); display: grid; grid-template-columns: 1fr auto; gap: 18px; align-items: center; }
+.suivre .rubrique { margin: 0 0 6px; }
+.suivre .serif { font-size: 26px; line-height: 1.1; margin: 0; }
+@media (max-width: 700px) { .suivre { grid-template-columns: 1fr; } .suivre .bouton { justify-self: start; } }
 
 /* ---------- Outils ---------- */
 .outil { padding: 36px 0 72px; display: grid; grid-template-columns: minmax(0, 380px) minmax(0, 1fr); gap: 48px; align-items: start; }
