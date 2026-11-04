@@ -30,7 +30,7 @@ const montants = ['500', '1000', '5000'];
   title="Comparateur des courtiers en bourse"
   seoTitle="Comparatif des courtiers en bourse : frais PEA et compte-titres"
   description="Frais d'ordre, droits de garde, frais de change, PEA et IFU : les tarifs des courtiers et banques relevés sur leurs grilles officielles. Comparateur neutre, tri au choix du lecteur."
-  chapo={`Les frais d'un courtier à l'autre peuvent aller du simple au décuple pour le même ordre. Voici les tarifs relevés le ${date} dans les grilles tarifaires officielles de chaque établissement, pour un particulier qui passe ses ordres en ligne. Aucun acteur ne paie pour figurer ici.`}
+  chapo={`Les frais d'un courtier à l'autre peuvent aller du simple au décuple pour le même ordre. Voici les tarifs relevés dans les grilles tarifaires officielles de chaque établissement (mise à jour le ${date}, date de chaque relevé dans les sources), pour un particulier qui passe ses ordres en ligne. Aucun acteur ne paie pour figurer ici.`}
 >
   <div slot="outil">
     {acteurs.length === 0 ? <p>Les données sont en cours de relevé.</p> : (
@@ -66,11 +66,11 @@ const montants = ['500', '1000', '5000'];
                       {...Object.fromEntries(montants.flatMap((m) => [[`data-cto-${m}`, cto[m] ?? ''], [`data-pea-${m}`, a.pea ? (pea[m] ?? '') : '']]))}>
                     <td class="nom">{a.nom}<small>{a.type}{a.offre && ` · ${a.offre}`}</small></td>
                     <td class="num" data-col="ordre">{a.cto === false ? <span class="nd">Pas de CTO</span> : (eur(cto['1000']) ?? <span class="nd">n. c.</span>)}</td>
-                    <td class="num" data-col="ordrepea">{a.pea ? (eur(pea['1000']) ?? <span class="nd">n. c.</span>) : <span class="nd">Pas de PEA</span>}</td>
+                    <td class="num" data-col="ordrepea">{a.pea ? (eur(pea['1000']) ?? <span class="nd">n. c.</span>) : <span class="nd">{a.pea === false ? 'Pas de PEA' : 'n. c.'}</span>}</td>
                     <td class="num">{eur(a.fraisOrdreUS1000) ?? <span class="nd">n. c.</span>}</td>
                     <td class="num">{a.fraisChangePct === null || a.fraisChangePct === undefined ? <span class="nd">n. c.</span> : `${new Intl.NumberFormat('fr-FR', { maximumFractionDigits: 3 }).format(a.fraisChangePct)} %`}</td>
                     <td>{a.droitsDeGarde ?? <span class="nd">n. c.</span>}</td>
-                    <td>{a.pea ? (a.peaPme ? 'PEA et PEA-PME' : 'PEA') : 'Non'}</td>
+                    <td>{a.pea ? (a.peaPme ? 'PEA et PEA-PME' : 'PEA') : a.pea === false ? 'Non' : 'n. c.'}</td>
                     <td>{oui(a.ifu)}</td>
                     <td>{a.pays}</td>
                   </tr>
@@ -79,7 +79,7 @@ const montants = ['500', '1000', '5000'];
             </tbody>
           </table>
         </div>
-        <p class="note-outil">Frais par ordre passé en ligne, en euros TTC, offre tarifaire standard indiquée sous le nom. « n. c. » : non communiqué dans la grille tarifaire consultée. Tarifs relevés le {date}. Cliquer sur un en-tête trie le tableau.</p>
+        <p class="note-outil">Frais par ordre passé en ligne, en euros TTC, offre tarifaire standard indiquée sous le nom. « n. c. » : non communiqué dans la grille tarifaire consultée. Dernière mise à jour le {date}. Cliquer sur un en-tête trie le tableau.</p>
         {enAttente.length > 0 && <p class="note-outil">En cours de relevé : {enAttente.join(', ')}. Ces acteurs apparaîtront ici dès que leurs tarifs auront été lus et vérifiés dans un document officiel.</p>}
       </>
     )}

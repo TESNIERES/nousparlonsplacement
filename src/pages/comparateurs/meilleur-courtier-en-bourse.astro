@@ -45,7 +45,7 @@ const avecLien = acteurs.filter((a) => lienPartenaire(a.id));
   title="Meilleur courtier en bourse : comment choisir"
   seoTitle="Meilleur courtier en bourse : comparatif et critères"
   description="Quel est le meilleur courtier en bourse pour toi ? Les frais d'ordre, de change et de PEA relevés sur les grilles officielles, et les points à vérifier avant d'ouvrir un compte."
-  chapo={`Il n'existe pas un meilleur courtier pour tout le monde : le bon choix dépend de ce que tu comptes faire (PEA ou compte-titres, petits versements réguliers ou gros ordres, actions françaises ou américaines). Voici, pour chaque critère, l'établissement le moins cher dans nos relevés du ${date}, puis les points à vérifier avant d'ouvrir un compte.`}
+  chapo={`Il n'existe pas un meilleur courtier pour tout le monde : le bon choix dépend de ce que tu comptes faire (PEA ou compte-titres, petits versements réguliers ou gros ordres, actions françaises ou américaines). Voici, pour chaque critère, l'établissement le moins cher dans nos relevés (dates et sources dans le comparateur détaillé), puis les points à vérifier avant d'ouvrir un compte.`}
 >
   <div slot="outil">
     <div class="defile">
@@ -64,7 +64,7 @@ const avecLien = acteurs.filter((a) => lienPartenaire(a.id));
         </tbody>
       </table>
     </div>
-    <p class="note-outil">Tarifs de l'offre standard pour un particulier qui passe ses ordres en ligne, relevés dans les grilles officielles. Un tarif plus bas sur un critère ne fait pas un meilleur courtier : voir les autres critères ci-dessous. Détail complet, tri et sources dans <a href="/comparateurs/courtiers-en-bourse/">le comparateur des courtiers en bourse</a>.</p>
+    <p class="note-outil">Tarifs de l'offre standard pour un particulier qui passe ses ordres en ligne, relevés dans les grilles officielles. Un tarif plus bas sur un critère ne fait pas un meilleur courtier : voir les autres critères ci-dessous. Un 0 € peut dépendre d'un seuil (chez XTB, 100 000 € investis par mois), précisé dans le comparateur détaillé. Détail complet, tri et sources dans <a href="/comparateurs/courtiers-en-bourse/">le comparateur des courtiers en bourse</a>.</p>
     {enAttente.length > 0 && <p class="note-outil">En cours de relevé : {enAttente.join(', ')}. Ces acteurs apparaîtront ici dès que leurs tarifs auront été lus dans un document officiel.</p>}
   </div>
 
@@ -96,11 +96,15 @@ const avecLien = acteurs.filter((a) => lienPartenaire(a.id));
 
   <h2>Où en est XTB dans ce comparateur ?</h2>
   {xtbVerifie ? (
-    <p>XTB figure dans le tableau ci-dessus, avec les tarifs relevés dans sa grille officielle. Comme pour les autres acteurs, regarde aussi ses conditions (seuils éventuels, frais de change, enveloppes proposées) dans le <a href="/comparateurs/courtiers-en-bourse/">comparateur détaillé</a>.</p>
+    <p>XTB figure dans le <a href="/comparateurs/courtiers-en-bourse/">comparateur détaillé</a>, avec les tarifs relevés sur sa page officielle <a href="https://www.xtb.com/fr/compte-et-frais">« Compte et frais »</a>. Sa commission sur les actions et ETF est de 0 % jusqu'à 100 000 € investis par mois, puis de 0,2 %, et des frais de conversion de 0,5 % peuvent s'appliquer aux titres cotés dans une autre devise. Cette page ne mentionne pas le PEA, les droits de garde ni l'IFU : ces points restent à vérifier auprès de XTB avant d'ouvrir un compte.</p>
   ) : (
     <p>XTB fait partie des courtiers que nous relevons, mais il n'apparaît pas encore dans le tableau : ses tarifs n'y figureront qu'une fois lus dans sa grille tarifaire officielle, comme pour tous les acteurs. Nous n'estimons rien et nous ne reprenons pas les chiffres de sites tiers.</p>
   )}
-  <p>Un point mérite attention pour XTB comme pour tout courtier : vérifie dans sa documentation officielle s'il propose aussi des CFD, en plus de l'achat d'actions et d'ETF, et quel type de compte tu ouvres. Lis le paragraphe suivant.</p>
+  {xtbVerifie ? (
+    <p>XTB propose aussi des CFD, en plus de l'achat d'actions et d'ETF. Sur sa propre page, XTB indique qu'une large majorité des comptes d'investisseurs de détail perdent de l'argent en négociant des CFD chez lui (79 % au moment de notre relevé). Vérifie toujours quel type de compte et quel produit tu ouvres. Lis le paragraphe suivant.</p>
+  ) : (
+    <p>Un point mérite attention pour tout courtier : vérifie dans sa documentation officielle s'il propose aussi des CFD, en plus de l'achat d'actions et d'ETF, et quel type de compte tu ouvres. Lis le paragraphe suivant.</p>
+  )}
 
   <h2>Pourquoi les CFD ne sont pas un placement comme les autres</h2>
   <p>Un CFD (contrat financier avec paiement d'un différentiel) est un produit à effet de levier : il amplifie les gains comme les pertes, et tu peux perdre rapidement tout ou partie de la somme engagée. Ce n'est pas la même chose que de détenir une action ou un ETF. En France, la loi encadre strictement la publicité, directe ou indirecte, par voie électronique, pour certains de ces contrats (options binaires, CFD et contrats sur devises) : <a href="https://www.amf-france.org/sites/institutionnel/files/pdf/60047/fr/Trading_speculatif_sur_internet__l%27interdiction_de_la_publicite_des_produits_les_plus_risques_-_Point_presse.pdf">point presse de l'AMF, 10 janvier 2017</a>. C'est pourquoi ce site ne présente jamais les CFD comme une façon d'investir ou de « gagner de l'argent ».</p>
