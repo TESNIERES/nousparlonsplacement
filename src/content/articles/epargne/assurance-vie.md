@@ -206,7 +206,7 @@ Les frères et sœurs peuvent aussi être exonérés, sous de strictes condition
 
 > **Exemple.** Une personne verse 60 000 € après ses 70 ans. À son décès, le contrat vaut 75 000 € et revient à son enfant. Après l'abattement de 30 500 €, 29 500 € de primes entrent dans la succession, avec les mêmes abattements que le reste de l'héritage, qui peuvent suffire à éviter tout droit à payer. Les 15 000 € d'intérêts ne sont pas taxés. Exemple hypothétique.
 
-L'assureur a l'obligation de rechercher les bénéficiaires d'un contrat après le décès de l'assuré[^1]. Pour une succession avec des montants importants, des enfants de plusieurs unions ou un patrimoine à équilibrer, un notaire t'aide à mesurer l'effet de l'assurance-vie sur l'ensemble.
+L'assureur a l'obligation de rechercher les bénéficiaires d'un contrat après le décès de l'assuré[^1]. Si tu penses être bénéficiaire d'un contrat jamais réclamé, notre article sur [Ciclade et l'argent oublié](/protection/ciclade-argent-oublie/) explique les démarches. Pour une succession avec des montants importants, des enfants de plusieurs unions ou un patrimoine à équilibrer, un notaire t'aide à mesurer l'effet de l'assurance-vie sur l'ensemble.
 
 ## Comment rédiger la clause bénéficiaire ?
 

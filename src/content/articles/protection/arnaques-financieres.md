@@ -113,7 +113,7 @@ Un faux informateur t'annonce une offre publique d'achat imminente sur une soci�
 
 ### La « fraude au carré » : les faux récupérateurs de fonds
 
-Après une première arnaque, un prétendu avocat, mandataire ou même agent de l'AMF te contacte : il peut récupérer ton argent, moyennant des honoraires. C'est une seconde arnaque[^2]. L'AMF ne propose aucun service de récupération de fonds : toute personne qui prétend agir en son nom est un escroc[^8].
+Après une première arnaque, un prétendu avocat, mandataire ou même agent de l'AMF te contacte : il peut récupérer ton argent, moyennant des honoraires. C'est une seconde arnaque[^2]. L'AMF ne propose aucun service de récupération de fonds : toute personne qui prétend agir en son nom est un escroc[^8]. Ne confonds pas ces offres avec la recherche de comptes oubliés sur Ciclade, un service public gratuit présenté dans notre article sur [l'argent oublié](/protection/ciclade-argent-oublie/).
 
 ## Quels sont les signaux d'alerte ?
 
