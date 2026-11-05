@@ -9,15 +9,15 @@ Un sujet par jour, dans l'ordre. Chaque sujet vise une requête réelle, précis
 - **Fin novembre 2026** : publication par l'Insee de l'inflation d'octobre 2026. Mettre à jour /lexique/inflation/, /simulateurs/inflation/, le guide Livret A et le tableau de bord (`src/data/chiffres.json`).
 - **Fin décembre 2026** : publication par la Banque de France des seuils de l'usure applicables au 1er janvier 2027. Mettre à jour le tableau, la FAQ et le chiffre clé de /credit/taeg/ (puis chaque trimestre : fin mars, fin juin, fin septembre).
 - **15 janvier 2027** : calcul des taux réglementés par la Banque de France. **1er février 2027** : nouveaux taux du Livret A, du LDDS et du LEP. Mettre à jour le guide /epargne/livret-a-ldds-lep/ (titre SEO et visuels compris), le lexique, le tableau de bord (`src/data/chiffres.json`) et toute page qui cite ces taux.
-- **Janvier 2027** : loi de finances pour 2027 (barème de l'impôt, plafonds). Mettre à jour /fiscalite/fiscalite-des-placements/, /retraite/per/ et les pages concernées.
+- **Janvier 2027** : loi de finances pour 2027 (barème de l'impôt, plafonds). Mettre à jour /fiscalite/fiscalite-des-placements/, /retraite/per/ et les pages concernées. Vérifier aussi le sort du prélèvement exceptionnel de 17 % sur les avoirs en déshérence (article 23 du projet, supprimé par les députés en première lecture le 2 novembre 2026) et mettre à jour la section « Le budget 2027 va-t-il prélever une part de ton argent oublié ? » de /protection/ciclade-argent-oublie/ et la ligne correspondante de son « essentiel ».
 
 ## Sujets
 
 | # | Chemin | Requête principale | Angle | Statut |
 |---|---|---|---|---|
-| 1 | /fiscalite/flat-tax/ | flat tax | Le prélèvement forfaitaire unique : taux en vigueur, revenus concernés, option pour le barème, exemples. Attention : le guide /fiscalite/fiscalite-des-placements/ couvre déjà ces points (seoTitle « flat tax »), choisir un angle plus précis qui lui renvoie ou passer au sujet suivant | À faire |
+| 1 | /fiscalite/flat-tax/ | flat tax | Le prélèvement forfaitaire unique : taux en vigueur, revenus concernés, option pour le barème, exemples. Attention : le guide /fiscalite/fiscalite-des-placements/ couvre déjà ces points (seoTitle « flat tax »), choisir un angle plus précis qui lui renvoie ou passer au sujet suivant | Passé le 5 novembre 2026 : déjà couvert par le guide fiscalité (PFU, option case 2OP), à ne reprendre qu'avec un angle nouveau |
 | 2 | /credit/taeg/ | TAEG | Ce que contient le TAEG, comment comparer deux offres, lien avec le taux d'usure | Publié (4 novembre 2026) |
-| 3 | /protection/ciclade-argent-oublie/ | Ciclade argent oublié | Comptes inactifs et contrats en déshérence : comment rechercher et récupérer les sommes | À faire |
+| 3 | /protection/ciclade-argent-oublie/ | Ciclade argent oublié | Comptes inactifs et contrats en déshérence : comment rechercher et récupérer les sommes | Publié (5 novembre 2026) |
 | 4 | /bourse/msci-world/ | MSCI World | Ce que contient l'indice, sa composition par pays et secteurs, ce qu'il ne contient pas, les risques | À faire |
 | 5 | /epargne/clause-beneficiaire-assurance-vie/ | clause bénéficiaire assurance-vie | Rédiger, modifier, accepter : les règles et les pièges | À faire |
 | 6 | /protection/garantie-des-depots/ | garantie des dépôts 100 000 € | Ce que couvre le fonds de garantie, par banque et par déposant, titres et assurance-vie | À faire |
