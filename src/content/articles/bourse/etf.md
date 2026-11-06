@@ -128,7 +128,7 @@ Quelques indices de marché courants, cités par l'AMF parmi ceux que suivent le
 |---|---|
 | CAC 40 | Les 40 actions les plus importantes et les plus échangées d'Euronext Paris[^3] |
 | Euro Stoxx 50 | De grandes entreprises de la zone euro |
-| MSCI World | Des entreprises des pays développés |
+| [MSCI World](/bourse/msci-world/) | Des entreprises des pays développés |
 | S&P 500 | De grandes entreprises cotées aux États-Unis |
 | CAC 40 ESG | Les 40 sociétés les mieux notées sur des critères ESG parmi les 60 plus grandes valeurs du CAC Large 60[^1] |
 

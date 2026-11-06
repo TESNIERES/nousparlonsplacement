@@ -18,7 +18,7 @@ Il regroupe 40 valeurs parmi les plus importantes et les plus échangées d'Euro
 
 ## Ce qu'il faut savoir
 
-- Il existe des indices pour presque tous les marchés : le S&P 500 pour de grandes entreprises américaines, le MSCI World pour les pays développés, mais aussi des indices sectoriels ou obligataires.
+- Il existe des indices pour presque tous les marchés : le S&P 500 pour de grandes entreprises américaines, [le MSCI World](/bourse/msci-world/) pour les pays développés, mais aussi des indices sectoriels ou obligataires.
 - Un indice « de prix » ne tient pas compte des dividendes versés, contrairement à un indice « dividendes réinvestis ». Comparer une performance à un indice suppose de savoir lequel est utilisé.
 - On ne peut pas acheter un indice directement. Des [ETF](/lexique/etf/) cherchent à en reproduire l'évolution le plus fidèlement possible ; si l'indice baisse, leur valeur baisse dans les mêmes proportions, avec un risque de perte en capital[^3].
 - Un indice large offre une forme de [diversification](/lexique/diversification/), mais reste concentré sur ses plus grosses entreprises quand il est pondéré par les capitalisations.
