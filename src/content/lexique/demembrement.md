@@ -12,7 +12,7 @@ voirAussi: [usufruit, nue-propriete, assurance-vie]
 
 ## Dans quelles situations le rencontre-t-on ?
 
-On le rencontre surtout dans la transmission d'un patrimoine, lors d'une donation ou d'une succession : par exemple, des parents donnent la nue-propriété d'un bien à leurs enfants et en gardent l'usufruit. Il existe aussi des investissements en nue-propriété, sur un logement ou des parts de [SCPI](/lexique/scpi/), pendant une durée fixée à l'avance. Comme tout placement immobilier, ces investissements comportent un risque de perte en capital, et les parts de SCPI peuvent être difficiles à revendre.
+On le rencontre surtout dans la transmission d'un patrimoine, lors d'une donation ou d'une succession : par exemple, des parents donnent la nue-propriété d'un bien à leurs enfants et en gardent l'usufruit. Une [clause bénéficiaire d'assurance-vie](/epargne/clause-beneficiaire-assurance-vie/) peut aussi partager le capital entre un usufruitier et des nus-propriétaires. Il existe enfin des investissements en nue-propriété, sur un logement ou des parts de [SCPI](/lexique/scpi/), pendant une durée fixée à l'avance. Comme tout placement immobilier, ces investissements comportent un risque de perte en capital, et les parts de SCPI peuvent être difficiles à revendre.
 
 ## Comment sont valorisés les deux droits ?
 

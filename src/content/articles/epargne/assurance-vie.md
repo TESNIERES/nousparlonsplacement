@@ -210,7 +210,7 @@ L'assureur a l'obligation de rechercher les bénéficiaires d'un contrat après 
 
 ## Comment rédiger la clause bénéficiaire ?
 
-La clause bénéficiaire dit qui reçoit le capital. Elle mérite plus d'attention que la case cochée à la souscription.
+La clause bénéficiaire dit qui reçoit le capital. Elle mérite plus d'attention que la case cochée à la souscription. Les règles de rédaction, de modification et d'acceptation, avec les pièges les plus courants, sont détaillées dans notre article sur [la clause bénéficiaire](/epargne/clause-beneficiaire-assurance-vie/).
 
 - **La clause type** proposée par l'assureur ressemble souvent à « mon conjoint, à défaut par parts égales mes enfants vivants ou représentés, à défaut mes héritiers »[^3]. Attention : le mot « conjoint » désigne la personne avec qui tu es marié au moment du décès, ce qui exclut en principe le partenaire de Pacs ou le concubin[^3].
 - **La désignation nominative** cite chaque bénéficiaire avec son identité complète : noms d'usage et de naissance, prénoms, adresse, idéalement date et lieu de naissance. Elle évite aux bénéficiaires de fournir un acte de notoriété[^3].

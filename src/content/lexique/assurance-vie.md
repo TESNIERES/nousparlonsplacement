@@ -8,7 +8,7 @@ voirAussi: [fonds-euros, unite-de-compte, prelevements-sociaux, frais-de-gestion
 guide: /epargne/assurance-vie/
 ---
 
-Malgré son nom, l'assurance-vie sert surtout à épargner. Tu verses de l'argent sur un contrat, que l'assureur investit sur un ou plusieurs supports : le [fonds en euros](/lexique/fonds-euros/), dont la valeur est garantie par l'assureur, et les [unités de compte](/lexique/unite-de-compte/), non garanties, qui comportent un risque de perte en capital[^1]. L'argent reste disponible : tu peux faire un rachat partiel ou total, le rachat total mettant fin au contrat[^1]. Au décès, le capital revient aux bénéficiaires désignés dans le contrat[^1].
+Malgré son nom, l'assurance-vie sert surtout à épargner. Tu verses de l'argent sur un contrat, que l'assureur investit sur un ou plusieurs supports : le [fonds en euros](/lexique/fonds-euros/), dont la valeur est garantie par l'assureur, et les [unités de compte](/lexique/unite-de-compte/), non garanties, qui comportent un risque de perte en capital[^1]. L'argent reste disponible : tu peux faire un rachat partiel ou total, le rachat total mettant fin au contrat[^1]. Au décès, le capital revient aux bénéficiaires désignés dans le contrat, par la [clause bénéficiaire](/lexique/clause-beneficiaire/)[^1].
 
 ## Comment sont imposés les gains ?
 

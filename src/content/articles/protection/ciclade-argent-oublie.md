@@ -5,7 +5,7 @@ description: "Compte inactif, livret oublié, assurance-vie non réclamée : qua
 categorie: protection
 type: article
 publie: 2026-11-05
-misAJour: 2026-11-05
+misAJour: 2026-11-07
 motCle: "ciclade argent oublié"
 chiffre:
   valeur: "30 ans"
@@ -15,7 +15,7 @@ essentiel:
   - "Après 10 ans d'inactivité, ou 3 ans après le décès du titulaire, la banque transfère l'argent à la Caisse des dépôts."
   - "La Caisse des dépôts le conserve 20 ans, ou 27 ans si le titulaire est décédé. Ensuite, il revient définitivement à l'État."
   - "La recherche sur Ciclade est gratuite. Pour l'assurance-vie d'un proche décédé depuis moins de 10 ans, c'est l'Agira qu'il faut saisir."
-  - "Le prélèvement de 17 % prévu par le projet de budget 2027 a été supprimé par les députés, mais le texte n'est pas définitif."
+  - "Le prélèvement de 17 % prévu par le projet de budget 2027 est de nouveau en discussion au Sénat : le texte n'est pas définitif."
 faq:
   - q: "La recherche sur Ciclade est-elle gratuite ?"
     r: "Oui. Ciclade, le service de la Caisse des dépôts, permet de rechercher gratuitement si tu es titulaire ou bénéficiaire de sommes transférées par une banque ou un assureur. Tu indiques l'identité du titulaire : nom, prénoms, date et lieu de naissance, dernière adresse connue et, s'il est décédé, la date et le lieu du décès. Un message qui te demande de payer pour débloquer de l'argent oublié doit éveiller ta méfiance."
@@ -115,7 +115,7 @@ Les assureurs doivent aussi consulter chaque année le RNIPP et rechercher eux-m
 
 Le projet de loi de finances pour 2027, déposé à l'Assemblée nationale le 1er octobre 2026, prévoyait dans son article 23 un prélèvement exceptionnel de 17 % sur les sommes en déshérence détenues par la Caisse des dépôts au 31 décembre 2026 : comptes inactifs et contrats d'assurance-vie ou de capitalisation non réclamés. Selon le texte, un titulaire qui réclamerait ensuite son argent le récupérerait en totalité, avec les intérêts, l'État remboursant le prélèvement. Le gouvernement en attendait 1,4 milliard d'euros de recettes en 2027[^10].
 
-Le 2 novembre 2026, en première lecture, les députés ont adopté des amendements qui suppriment cet article, rapporte Moneyvox le même jour. La mesure peut toutefois réapparaître au cours de la navette parlementaire[^11]. Cette page sera mise à jour quand la loi de finances sera adoptée.
+Le 2 novembre 2026, en première lecture, les députés ont adopté des amendements qui suppriment cet article, rapportait Moneyvox le même jour[^11]. Mais le 4 novembre, l'Assemblée nationale a rejeté l'ensemble du projet de loi de finances[^12]. Les amendements votés par les députés tombent avec ce rejet : c'est le texte initial du gouvernement, article 23 compris, qui est transmis au Sénat, selon LCP[^13]. Le Sénat doit l'examiner en séance à partir du 20 novembre 2026[^14]. La mesure reste donc possible. Cette page sera mise à jour quand la loi de finances sera adoptée.
 
 ## Ce qu'il faut retenir pour ta situation
 
@@ -139,3 +139,6 @@ La recherche sur Ciclade est gratuite[^2] : un message qui te demande de payer p
 [^9]: [Service-Public.fr, fiche F15269 (bénéficiaire de l'assurance-vie d'un assuré décédé)](https://www.service-public.gouv.fr/particuliers/vosdroits/F15269), DILA, vérifiée le 8 octobre 2026, page consultée le 5 novembre 2026.
 [^10]: [Projet de loi de finances pour 2027, n° 3210, article 23 et exposé des motifs](https://www.assemblee-nationale.fr/dyn/17/textes/l17b3210_projet-loi.pdf), Assemblée nationale, enregistré le 1er octobre 2026, consulté le 5 novembre 2026.
 [^11]: [Assurance vie, livret bancaire... Le prélèvement de 17% sur l'épargne « en déshérence » supprimé par les députés](https://www.moneyvox.fr/placement/actualites/111083/assurance-vie-livret-bancaire-le-prelevement-de-17-sur-epargne-en-desherence-supprime-par-les-deputes), Moneyvox, 2 novembre 2026.
+[^12]: [Projet de loi de finances pour 2027 rejeté par l'Assemblée nationale le 4 novembre 2026, T.A. n° 362](https://www.assemblee-nationale.fr/dyn/17/textes/l17t0362_texte-adopte-seance), Assemblée nationale, 4 novembre 2026, consulté le 7 novembre 2026.
+[^13]: [Budget 2027 : l'Assemblée rejette à l'unanimité la partie « recettes », le projet de loi de finances va être transmis au Sénat](https://lcp.fr/actualites/budget-2027-l-assemblee-rejette-a-l-unanimite-la-partie-recettes-le-projet-de-loi-de), LCP, 4 novembre 2026.
+[^14]: [Calendrier de la discussion du projet de loi de finances pour 2027](https://www.senat.fr/ordre-du-jour/files/Calendrier_budgetaire_2027.pdf), Sénat, 3 novembre 2026, consulté le 7 novembre 2026.
