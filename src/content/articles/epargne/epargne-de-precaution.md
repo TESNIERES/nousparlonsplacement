@@ -129,7 +129,7 @@ Ils cochent les trois critères de l'AMF : capital garanti, aucun frais, retrait
 
 Les intérêts se calculent par quinzaine, et les plafonds s'appliquent par personne. Le détail des taux, des plafonds et des conditions figure dans notre guide sur [le Livret A, le LDDS et le LEP](/epargne/livret-a-ldds-lep/).
 
-En cas de faillite d'une banque, les sommes placées sur ces trois livrets sont garanties indépendamment du plafond de 100 000 € par déposant et par établissement qui s'applique à tes autres comptes, comme le compte courant ou un livret bancaire[^11]. Le délai d'indemnisation prévu est de sept jours ouvrables[^11].
+En cas de faillite d'une banque, les sommes placées sur ces trois livrets sont garanties indépendamment du [plafond de 100 000 € par déposant et par établissement](/protection/garantie-des-depots/) qui s'applique à tes autres comptes, comme le compte courant ou un livret bancaire[^11]. Le délai d'indemnisation prévu est de sept jours ouvrables[^11].
 
 ### Les livrets bancaires et comptes à terme
 

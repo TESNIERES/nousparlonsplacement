@@ -193,7 +193,7 @@ Le détail de ces règles figure dans notre guide sur [la fiscalité des placeme
 | Mineurs | Oui, retraits à partir de 16 ans[^2] | Non s'ils sont rattachés au foyer de leurs parents[^3] | Non s'ils sont rattachés au foyer de leurs parents[^4] |
 | Fiscalité des intérêts | Exonérés[^2] | Exonérés[^3] | Exonérés[^4] |
 
-Côté sécurité, les sommes placées sur le Livret A, le LDDS et le LEP sont couvertes par la garantie des dépôts indépendamment du plafond de 100 000 € par déposant et par banque qui s'applique à tes autres comptes[^11]. En cas de défaillance d'une banque, le délai d'indemnisation prévu est de sept jours ouvrables[^11].
+Côté sécurité, les sommes placées sur le Livret A, le LDDS et le LEP sont couvertes par [la garantie des dépôts](/protection/garantie-des-depots/) indépendamment du plafond de 100 000 € par déposant et par banque qui s'applique à tes autres comptes[^11]. En cas de défaillance d'une banque, le délai d'indemnisation prévu est de sept jours ouvrables[^11].
 
 Attention aux offres de « livrets » à taux très élevé proposées par téléphone ou sur les réseaux sociaux : les [signaux d'alerte des arnaques financières](/protection/arnaques-financieres/) aident à reconnaître les faux placements.
 
