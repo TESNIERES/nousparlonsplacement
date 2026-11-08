@@ -21,7 +21,7 @@ Un sujet par jour, dans l'ordre. Chaque sujet vise une requête réelle, précis
 | 3 | /protection/ciclade-argent-oublie/ | Ciclade argent oublié | Comptes inactifs et contrats en déshérence : comment rechercher et récupérer les sommes | Publié (5 novembre 2026) |
 | 4 | /bourse/msci-world/ | MSCI World | Ce que contient l'indice, sa composition par pays et secteurs, ce qu'il ne contient pas, les risques | Publié (6 novembre 2026) |
 | 5 | /epargne/clause-beneficiaire-assurance-vie/ | clause bénéficiaire assurance-vie | Rédiger, modifier, accepter : les règles et les pièges | Publié (7 novembre 2026) |
-| 6 | /protection/garantie-des-depots/ | garantie des dépôts 100 000 € | Ce que couvre le fonds de garantie, par banque et par déposant, titres et assurance-vie | À faire |
+| 6 | /protection/garantie-des-depots/ | garantie des dépôts 100 000 € | Ce que couvre le fonds de garantie, par banque et par déposant, titres et assurance-vie | Publié (8 novembre 2026) |
 | 7 | /immobilier/pret-a-taux-zero/ | PTZ 2026 | Conditions en vigueur, zones, plafonds, montants, comment le demander | À faire |
 | 8 | /fiscalite/tranche-marginale-imposition/ | tranche marginale d'imposition | Comment la calculer, différence avec le taux moyen, exemples par situation | À faire |
 | 9 | /bourse/pea-ou-assurance-vie/ | PEA ou assurance-vie | Tableau comparatif des deux enveloppes, sans recommandation | À faire |
