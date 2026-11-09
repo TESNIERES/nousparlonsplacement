@@ -59,7 +59,7 @@ Oui, au sens où tu construis un patrimoine au lieu de payer un loyer. Mais ce l
 
 Deux atouts fiscaux. La plus-value réalisée en revendant ta résidence principale est totalement exonérée[^4]. Et si ton patrimoine immobilier net taxable dépasse un jour 1 300 000 €, seuil de l'impôt sur la fortune immobilière (IFI), ta résidence principale bénéficie d'un abattement de 30 %[^15].
 
-Si tu n'as pas été propriétaire de ta résidence principale au cours des deux années précédentes, tu peux avoir droit au prêt à taux zéro (PTZ), sous plafonds de ressources. Il finance une partie d'un logement neuf, ou d'un logement ancien avec au moins 25 % de travaux situé en zone B2 ou C, et s'ajoute obligatoirement à un autre prêt immobilier[^5].
+Si tu n'as pas été propriétaire de ta résidence principale au cours des deux années précédentes, tu peux avoir droit au prêt à taux zéro (PTZ), sous plafonds de ressources. Il finance une partie d'un logement neuf, ou d'un logement ancien avec au moins 25 % de travaux situé en zone B2 ou C, et s'ajoute obligatoirement à un autre prêt immobilier[^5]. Plafonds, calcul du montant et durée de remboursement : tout est détaillé dans [notre article sur le PTZ en 2026](/immobilier/pret-a-taux-zero/).
 
 > **Idée reçue.** « Acheter, c'est toujours mieux que louer. » Pas forcément. Les frais d'acquisition, les intérêts, l'assurance du prêt, la taxe foncière et l'entretien doivent être compensés par le loyer que tu n'as plus à payer et par l'évolution du prix du bien. Plus tu revends tôt, plus c'est difficile.
 
