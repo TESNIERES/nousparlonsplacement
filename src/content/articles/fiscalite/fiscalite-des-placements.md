@@ -104,7 +104,7 @@ Si tu renonces au PFU, tes revenus de placement s'ajoutent à tes autres revenus
 | De 84 578 € à 181 917 € | 41 % |
 | Plus de 181 917 € | 45 % |
 
-Chaque taux ne s'applique qu'à la fraction du revenu comprise dans sa tranche. Ta **tranche marginale d'imposition** (TMI) est le taux de la dernière tranche atteinte. Pour un célibataire avec 30 000 € de revenu net imposable, l'impôt brut est de 2 103,99 € : sa TMI est de 30 %, mais son taux moyen n'est que d'environ 7 %[^5].
+Chaque taux ne s'applique qu'à la fraction du revenu comprise dans sa tranche. Ta **tranche marginale d'imposition** (TMI) est le taux de la dernière tranche atteinte ([comment la calculer, exemples par situation](/fiscalite/tranche-marginale-imposition/)). Pour un célibataire avec 30 000 € de revenu net imposable, l'impôt brut est de 2 103,99 € : sa TMI est de 30 %, mais son taux moyen n'est que d'environ 7 %[^5].
 
 ```graphique
 {"type":"tranches","titre":"Une TMI de 30 % ne veut pas dire 30 % d'impôt sur tout ton revenu","unite":"€","items":[{"de":0,"a":11600,"taux":0},{"de":11601,"a":29579,"taux":11},{"de":29580,"a":84577,"taux":30},{"de":84578,"a":181917,"taux":41},{"de":181917,"a":null,"taux":45}],"accent":2,"note":"Exemple : avec 30 000 € de revenu net imposable pour une part, un célibataire atteint la tranche à 30 %. Son impôt brut, 2 103,99 €, représente environ 7 % de son revenu.","source":"Service-Public.fr, fiche F1419, avril 2026"}

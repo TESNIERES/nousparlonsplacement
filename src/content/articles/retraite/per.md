@@ -97,7 +97,7 @@ Ton plafond personnalisé pour 2026 figure sur ton avis d'impôt 2026, établi s
 
 ## Combien d'impôt le PER fait-il économiser selon ta tranche ?
 
-L'impôt sur le revenu est progressif : ton revenu est découpé en tranches, chacune imposée à son propre taux. Ta **tranche marginale d'imposition** (TMI) est le taux de la dernière tranche que ton revenu atteint. Voici le barème appliqué en 2026 aux revenus de 2025, pour une part de quotient familial[^4] :
+L'impôt sur le revenu est progressif : ton revenu est découpé en tranches, chacune imposée à son propre taux. Ta [tranche marginale d'imposition](/fiscalite/tranche-marginale-imposition/) (TMI) est le taux de la dernière tranche que ton revenu atteint. Voici le barème appliqué en 2026 aux revenus de 2025, pour une part de quotient familial[^4] :
 
 | Revenu imposable par part | Taux |
 |---|---|
