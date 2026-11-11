@@ -166,7 +166,7 @@ Deux cas particuliers méritent d'être connus :
 - **Les titres non cotés** : leurs revenus sont exonérés chaque année dans la limite de 10 % de leur valeur d'acquisition. Le surplus est imposé à 12,8 % (ou au barème), plus les prélèvements sociaux, même sans retrait[^10].
 - **Les pertes** : si tu clôtures un plan de moins de cinq ans en perte, celle-ci s'impute sur tes plus-values de même nature de l'année et des dix années suivantes. Après cinq ans, une clôture en perte (valeur du plan inférieure à tes versements) ouvre le même droit, à condition d'avoir vendu tous les titres avant de clôturer[^16] [^17].
 
-Pour comparer avec les autres placements, voir [la fiscalité des placements, PFU et prélèvements sociaux](/fiscalite/fiscalite-des-placements/).
+Pour comparer avec les autres placements, voir [la fiscalité des placements, PFU et prélèvements sociaux](/fiscalite/fiscalite-des-placements/). Si tu hésites avec l'assurance-vie, notre comparatif [PEA ou assurance-vie](/bourse/pea-ou-assurance-vie/) met les deux enveloppes côte à côte : plafonds, retraits, fiscalité et transmission.
 
 ## Combien coûte un PEA ? Les frais plafonnés par la loi
 

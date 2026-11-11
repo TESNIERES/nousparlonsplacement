@@ -255,7 +255,7 @@ L'assurance-vie n'est ni bonne ni mauvaise en soi : tout dépend de ce que tu y 
 - Qui veux-tu protéger, et ta clause bénéficiaire le dit-elle clairement ?
 - Quel est ton taux marginal d'imposition, et quelle est l'ancienneté de tes contrats existants ?
 
-Elles ne désignent pas un contrat, mais aident à lire les documents avec les bonnes questions en tête.
+Elles ne désignent pas un contrat, mais aident à lire les documents avec les bonnes questions en tête. Si tu hésites entre cette enveloppe et un PEA, notre comparatif [PEA ou assurance-vie](/bourse/pea-ou-assurance-vie/) les met côte à côte, règle par règle.
 
 [^1]: [Contrat d'assurance-vie : fonctionnement](https://www.service-public.gouv.fr/particuliers/vosdroits/F15274), Service-Public.fr (DILA), mise à jour le 25 septembre 2026.
 [^2]: [Comment sont imposés les revenus d'un contrat d'assurance-vie ?](https://www.service-public.gouv.fr/particuliers/vosdroits/F22414), Service-Public.fr (DILA), mise à jour le 15 avril 2026.
