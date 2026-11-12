@@ -167,7 +167,7 @@ Ces frais ne créent aucune valeur revendable : ils s'ajoutent au budget à fina
 
 ## Peut-on récupérer une partie des frais de notaire ?
 
-Surtout à la revente. Si tu revends un bien autre que ta résidence principale, les frais d'acquisition s'ajoutent au prix d'achat pour calculer la [plus-value](/lexique/plus-value/) imposable : pour leur montant réel justifié, ou pour un forfait de 7,5 % du prix d'achat[^13]. La vente de ta résidence principale, elle, est exonérée de toute façon[^13]. Au régime réel de la location meublée, les frais d'acquisition obéissent à d'autres règles : un expert-comptable peut te les détailler.
+Surtout à la revente. Si tu revends un bien autre que ta résidence principale, les frais d'acquisition s'ajoutent au prix d'achat pour calculer la [plus-value](/lexique/plus-value/) imposable : pour leur montant réel justifié, ou pour un forfait de 7,5 % du prix d'achat[^13]. La vente de ta résidence principale, elle, est exonérée de toute façon[^13]. Au régime réel de la [location meublée](/immobilier/lmnp/), les frais d'acquisition obéissent à d'autres règles : un expert-comptable peut te les détailler.
 
 > **À savoir.** Acheter des parts de SCPI ne passe pas par le notaire, mais le prix de la part comprend des frais de souscription et, indirectement, les frais d'achat des immeubles de la SCPI : voir [comment fonctionnent les SCPI](/immobilier/scpi/).
 

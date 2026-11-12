@@ -91,7 +91,7 @@ Pour les revenus de 2026, deux régimes existent :
 - **Micro-BIC** : abattement de 50 % jusqu'à 83 600 € de recettes pour une location de longue durée ou un meublé de tourisme classé ; abattement de 30 % jusqu'à 15 000 € pour un meublé de tourisme non classé[^2].
 - **Régime réel** : tu déduis tes charges réelles et tu amortis le prix du logement et des meubles. Un déficit s'impute sur tes revenus de location meublée de l'année et des dix années suivantes[^2].
 
-L'amortissement peut réduire fortement, voire annuler, le revenu imposable pendant plusieurs années. Contrepartie : pour les ventes réalisées depuis le 15 février 2025, les amortissements déduits viennent, sous conditions, diminuer le prix d'achat retenu, ce qui augmente la plus-value imposable[^4].
+L'amortissement peut réduire fortement, voire annuler, le revenu imposable pendant plusieurs années. Contrepartie : pour les ventes réalisées depuis le 15 février 2025, les amortissements déduits viennent, sous conditions, diminuer le prix d'achat retenu, ce qui augmente la plus-value imposable[^4]. Le détail des deux régimes, des limites de l'amortissement, des obligations du loueur et du plafond prévu par le projet de budget pour 2027 est dans notre article [LMNP : statut, micro-BIC ou réel, amortissement et revente](/immobilier/lmnp/).
 
 Côté prélèvements sociaux, les revenus de location meublée non professionnelle font partie des revenus du patrimoine. Leur taux général est de 18,6 % en 2026, alors que les revenus fonciers restent à 17,2 %[^3].
 

@@ -5,7 +5,7 @@ description: "Le MSCI World réunit 1 248 entreprises de 23 pays développés : 
 categorie: bourse
 type: article
 publie: 2026-11-06
-misAJour: 2026-11-06
+misAJour: 2026-11-12
 motCle: "msci world"
 chiffre:
   valeur: "72,77 %"
@@ -28,7 +28,7 @@ faq:
   - q: "Peut-on perdre de l'argent avec le MSCI World ?"
     r: "Oui. Un fonds qui suit l'indice ne garantit pas le capital. Exprimé en euros, le MSCI World a perdu 12,78 % en 2022, et sa plus forte baisse mesurée depuis la fin de 2000 a atteint 53,60 %, entre mai 2001 et mars 2009. Les performances passées ne préjugent pas des performances futures, ni à la hausse ni à la baisse."
   - q: "Quand la composition du MSCI World change-t-elle ?"
-    r: "MSCI révise ses indices chaque trimestre, en février, mai, août et novembre. Des entreprises peuvent alors entrer, sortir ou voir leur poids ajusté. Les résultats de la révision de novembre 2026 sont annoncés le 11 novembre, peu après 23 heures, heure de Paris, et s'appliquent à la clôture de la bourse le 30 novembre 2026."
+    r: "MSCI révise ses indices chaque trimestre, en février, mai, août et novembre. Des entreprises peuvent alors entrer, sortir ou voir leur poids ajusté. Les résultats de la révision de novembre 2026 ont été publiés le 11 novembre au soir et s'appliquent à la clôture de la bourse le 30 novembre 2026."
 liens:
   - /bourse/etf/
   - /bourse/pea/
@@ -45,7 +45,7 @@ L'indice retient les grandes et moyennes entreprises de chaque pays développé,
 
 Chaque entreprise y pèse selon cette [capitalisation boursière](/lexique/capitalisation-boursiere/) flottante : plus elle vaut cher en bourse, plus elle compte[^3]. C'est ce choix de pondération qui explique la forme très particulière de l'indice, par pays comme par secteur.
 
-> **À savoir.** La liste change régulièrement. MSCI révise ses indices chaque trimestre, en février, mai, août et novembre[^3]. Les résultats de la révision de novembre 2026 seront publiés le 11 novembre, peu après 23 heures, heure de Paris, et appliqués à la clôture du 30 novembre[^4].
+> **À savoir.** La liste change régulièrement. MSCI révise ses indices chaque trimestre, en février, mai, août et novembre[^3]. Les résultats de la révision de novembre 2026 ont été publiés le 11 novembre au soir et s'appliquent à la clôture du 30 novembre[^4]. Les chiffres de cette page datent du 30 octobre 2026, avant cette révision[^1].
 
 ## Quels pays composent le MSCI World ?
 
@@ -150,7 +150,7 @@ Pour une situation particulière, un [conseiller en investissements financiers](
 [^1]: [MSCI World Index (EUR), fiche de l'indice](https://www.msci.com/documents/10199/890dd84d-3750-4656-87f2-1229ed5a5d6e), MSCI, données au 30 octobre 2026, performances dividendes nets réinvestis, page consultée le 6 novembre 2026.
 [^2]: [MSCI World Index](https://www.msci.com/indexes/index/990100/msci-world-index), MSCI, page consultée le 6 novembre 2026.
 [^3]: [MSCI Global Investable Market Indexes Methodology](https://www.msci.com/eqb/methodology/meth_docs/MSCI_GIMIMethodology_May2026.pdf), MSCI, mai 2026 (pondération : section 1 ; couverture de 85 % : section 2.3.1 ; révisions trimestrielles : section 3), page consultée le 6 novembre 2026.
-[^4]: [MSCI November Index Review Announcement Scheduled for November 11, 2026](https://ir.msci.com/news-releases/news-release-details/msci-november-index-review-announcement-scheduled-november-11), communiqué de MSCI, 4 novembre 2026.
+[^4]: [MSCI Global Standard Indexes November 2026 Index Review](https://app2.msci.com/webapp/index_ann/DocGet?pub_key=t6TJpGLKQvg%3D&lang=en&format=html), MSCI, annonce du 11 novembre 2026 à 22 h 04 (heure UTC), changements appliqués à la clôture du 30 novembre 2026, page consultée le 12 novembre 2026.
 [^5]: [MSCI ACWI Index (EUR), fiche de l'indice](https://www.msci.com/documents/10199/8e74bd60-019e-4ef5-8181-49c32ea67d57), MSCI, données au 30 octobre 2026, page consultée le 6 novembre 2026.
 [^6]: [MSCI World Small Cap Index (USD), fiche de l'indice](https://www.msci.com/documents/10199/255599/msci-world-small-cap-index.pdf), MSCI, données au 30 octobre 2026, page consultée le 6 novembre 2026.
 [^7]: [Ce qu'il faut savoir sur les ETF avant d'investir](https://www.amf-france.org/sites/institutionnel/files/pdf/59268/fr/Ce_qu%27il_faut_savoir_sur_les_ETF_avant_d%27investir.pdf?1788787798), Autorité des marchés financiers (AMF), page consultée le 6 novembre 2026.
