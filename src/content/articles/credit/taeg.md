@@ -89,7 +89,7 @@ Le TAEG ne dit pas, en revanche, combien tu paieras en euros. À TAEG égal, un 
 
 Les documents remis avant la signature te donnent ces chiffres. Pour un crédit à la consommation, le prêteur doit te remettre une fiche d'information précontractuelle qui indique notamment le montant, la durée, le coût et le TAEG du crédit. Il maintient les conditions de son offre au moins 15 jours, et tu disposes de 14 jours après la signature pour te rétracter[^7].
 
-Pour un crédit immobilier, la fiche d'information standardisée européenne (FISE), établie selon un modèle réglementaire, sert à comparer les offres. L'offre de prêt engage le prêteur au moins 30 jours, et tu ne peux l'accepter qu'après un délai de réflexion de 10 jours[^6]. Pour l'assurance emprunteur, le taux annuel effectif de l'assurance (TAEA) permet de comparer le coût des différentes formules[^6].
+Pour un crédit immobilier, la fiche d'information standardisée européenne (FISE), établie selon un modèle réglementaire, sert à comparer les offres. L'offre de prêt engage le prêteur au moins 30 jours, et tu ne peux l'accepter qu'après un délai de réflexion de 10 jours[^6]. Pour l'assurance emprunteur, le taux annuel effectif de l'assurance (TAEA) permet de comparer le coût des différentes formules[^6]. Une fois le prêt signé, tu peux aussi [changer d'assurance emprunteur en cours de prêt](/credit/changer-assurance-emprunteur/).
 
 ## Quel est le lien entre le TAEG et le taux d'usure ?
 
