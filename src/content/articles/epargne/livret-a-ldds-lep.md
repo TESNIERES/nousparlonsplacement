@@ -5,7 +5,7 @@ description: "Taux du Livret A, du LDDS et du LEP au 1er novembre 2026, plafonds
 categorie: epargne
 type: guide
 publie: 2026-11-01
-misAJour: 2026-11-01
+misAJour: 2026-11-13
 motCle: "livret a taux"
 chiffre:
   valeur: "1,7 %"
@@ -62,10 +62,10 @@ Le détail des taux à chaque date d'application :
 
 Sources : Banque de France et Service-Public.fr[^5][^1].
 
-Pour situer ces taux face aux prix : l'inflation hors tabac retenue dans le dernier calcul, en moyenne sur janvier à juin 2026, était de 1,52 % sur un an[^6]. Depuis, les prix ont accéléré : selon l'Insee, ils ont augmenté de 3,1 % sur un an en septembre 2026[^12]. À ce niveau, un taux de 1,7 % ne suffit pas à maintenir le pouvoir d'achat de l'épargne, alors que le LEP, à 2,5 %, s'en rapproche.
+Pour situer ces taux face aux prix : l'inflation hors tabac retenue dans le dernier calcul, en moyenne sur janvier à juin 2026, était de 1,52 % sur un an[^6]. Depuis, les prix ont accéléré : selon l'Insee, ils ont augmenté de 3,4 % sur un an en octobre 2026, après 3,1 % en septembre[^12]. À ce niveau, ni le taux de 1,7 % du Livret A et du LDDS ni celui de 2,5 % du LEP ne suffisent à maintenir le pouvoir d'achat de l'épargne.
 
 ```graphique
-{"type":"barres","titre":"En septembre 2026, les prix montent plus vite que les trois livrets","unite":"%","decimales":1,"items":[{"label":"Inflation sur un an","valeur":3.1,"note":"septembre 2026"},{"label":"LEP","valeur":2.5},{"label":"Livret A et LDDS","valeur":1.7},{"label":"Inflation retenue dans le calcul de juillet","valeur":1.52,"affichage":"1,52 %","note":"moyenne de janvier à juin 2026, hors tabac"}],"accent":0,"source":"Insee, octobre 2026 ; Banque de France, juillet 2026 ; Service-Public.fr"}
+{"type":"barres","titre":"En octobre 2026, les prix montent plus vite que les trois livrets","unite":"%","decimales":1,"items":[{"label":"Inflation sur un an","valeur":3.4,"note":"octobre 2026"},{"label":"LEP","valeur":2.5},{"label":"Livret A et LDDS","valeur":1.7},{"label":"Inflation retenue dans le calcul de juillet","valeur":1.52,"affichage":"1,52 %","note":"moyenne de janvier à juin 2026, hors tabac"}],"accent":0,"source":"Insee, novembre 2026 ; Banque de France, juillet 2026 ; Service-Public.fr"}
 ```
 
 Le [simulateur d'inflation](/simulateurs/inflation/) montre ce que devient le pouvoir d'achat d'une somme selon le taux d'inflation que tu choisis.
@@ -219,4 +219,4 @@ Pour l'argent destiné aux coups durs, notre guide sur [l'épargne de précautio
 [^9]: [Revenus d'épargne et de placement](https://www.service-public.gouv.fr/particuliers/vosdroits/F2613), Service-Public.fr (DILA), mise à jour le 15 avril 2026.
 [^10]: [Prélèvements sociaux (CSG, CRDS...) sur les revenus du patrimoine et de placements](https://www.service-public.gouv.fr/particuliers/vosdroits/F2329), Service-Public.fr (DILA), mise à jour le 30 juin 2026.
 [^11]: [Arrêté du 27 octobre 2015 relatif à l'information des déposants sur la garantie des dépôts](https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000031396931), Légifrance, page consultée le 1er novembre 2026.
-[^12]: [En septembre 2026, les prix à la consommation augmentent de 3,1 % sur un an](https://www.insee.fr/fr/statistiques/9080209), Insee, Informations rapides n° 247, 15 octobre 2026.
+[^12]: [En octobre 2026, les prix à la consommation augmentent de 3,4 % sur un an](https://www.insee.fr/fr/statistiques/9131332), Insee, Informations rapides n° 271, 13 novembre 2026, page consultée le 13 novembre 2026.
