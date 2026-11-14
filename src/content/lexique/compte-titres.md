@@ -6,7 +6,7 @@ description: "Définition du compte-titres ordinaire : titres acceptés, absence
 categorie: bourse
 misAJour: 2026-11-01
 voirAussi: [pea, pfu, frais-de-courtage, droits-de-garde]
-guide: /bourse/investir-en-bourse/
+guide: /bourse/compte-titres-ordinaire/
 ---
 
 Le compte-titres ordinaire, souvent abrégé CTO, sert à conserver les titres que tu possèdes et à passer tes ordres de bourse[^1]. Il accepte une large palette de titres : [actions](/lexique/action/), [obligations](/lexique/obligation/), fonds ([OPCVM](/lexique/opcvm/)), [ETF](/lexique/etf/), mais aussi des produits plus complexes comme les warrants[^1]. Il est toujours associé à un compte espèces, débité de tes achats et des frais, crédité de tes ventes et de tes revenus[^1].

@@ -86,7 +86,7 @@ Une enveloppe est le « contenant » dans lequel tu loges tes placements. Elle d
 
 ### Le compte-titres ordinaire
 
-C'est l'enveloppe la plus souple. Il n'a aucun plafond, tu peux en ouvrir plusieurs chez différents intermédiaires, à tout âge (un mineur en détient un par l'intermédiaire de son représentant légal)[^5]. En contrepartie, il n'offre aucun avantage fiscal : dividendes et plus-values sont imposés[^5], au titre de l'année où tu les encaisses[^10].
+C'est l'enveloppe la plus souple. Il n'a aucun plafond, tu peux en ouvrir plusieurs chez différents intermédiaires, à tout âge (un mineur en détient un par l'intermédiaire de son représentant légal)[^5]. En contrepartie, il n'offre aucun avantage fiscal : dividendes et plus-values sont imposés[^5], au titre de l'année où tu les encaisses[^10]. Son fonctionnement, ses moins-values reportables et son sort au décès sont détaillés dans notre article sur [le compte-titres ordinaire](/bourse/compte-titres-ordinaire/).
 
 ### Le PEA
 

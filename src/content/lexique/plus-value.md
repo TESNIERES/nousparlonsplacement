@@ -4,7 +4,7 @@ definition: "Gain réalisé quand tu revends un bien ou un placement plus cher q
 description: "Définition de la plus-value : latente ou réalisée, imposition des gains sur titres au PFU en 2026, cas du PEA et règles de la plus-value immobilière."
 categorie: fiscalite
 misAJour: 2026-11-01
-voirAussi: [pfu, prelevements-sociaux, action, compte-titres]
+voirAussi: [moins-value, pfu, prelevements-sociaux, action, compte-titres]
 guide: /fiscalite/fiscalite-des-placements/
 ---
 
