@@ -41,7 +41,7 @@ Une voiture qui lâche, une fin de contrat, un dégât des eaux, une facture de 
 
 Elle sert à absorber les coups durs. L'AMF la présente comme ce qui « permettra de faire face aux coups durs »[^1], aux imprévus, mais aussi aux coups de cœur[^2]. Elle a trois fonctions concrètes :
 
-- **Payer un imprévu sans crédit ni découvert.** Une réparation urgente ou une baisse de revenus se règle avec ton épargne, pas avec un crédit à la consommation ou des agios.
+- **Payer un imprévu sans crédit ni découvert.** Une réparation urgente ou une baisse de revenus se règle avec ton épargne, pas avec un crédit à la consommation ou des agios. Elle limite aussi le risque de [frais d'incidents bancaires](/protection/frais-bancaires-plafonnes/), comme les rejets de prélèvement.
 - **Protéger tes autres placements.** Sans réserve disponible, un besoin d'argent peut t'obliger à vendre des actions ou des parts de fonds au moment où elles ont baissé, et à transformer une baisse temporaire en perte définitive.
 - **Te laisser du temps.** Face à une perte d'emploi ou une séparation, quelques mois de marge permettent de prendre des décisions sans urgence.
 

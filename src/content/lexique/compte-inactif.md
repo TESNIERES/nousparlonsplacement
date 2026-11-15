@@ -17,7 +17,7 @@ Un compte courant devient inactif après 12 mois sans opération ni manifestatio
 
 ## Que devient l'argent ?
 
-La banque informe chaque année le titulaire, et ses frais sont plafonnés : aucun frais sur un livret réglementé, 30 € par an au maximum sur un compte courant[^1][^2]. Après 10 ans d'inactivité, ou 3 ans après le décès, elle clôture le compte et transfère l'argent à la Caisse des dépôts, qui le conserve 20 ans, ou 27 ans si le titulaire est décédé. Il revient ensuite définitivement à l'État[^2].
+La banque informe chaque année le titulaire, et ses frais sont plafonnés : aucun frais sur un livret réglementé, 30 € par an au maximum sur un compte courant[^1][^2]. D'autres frais bancaires sont plafonnés, comme ceux des incidents de paiement : voir notre article sur [les frais d'incidents bancaires](/protection/frais-bancaires-plafonnes/). Après 10 ans d'inactivité, ou 3 ans après le décès, elle clôture le compte et transfère l'argent à la Caisse des dépôts, qui le conserve 20 ans, ou 27 ans si le titulaire est décédé. Il revient ensuite définitivement à l'État[^2].
 
 Tant que les fonds sont à la Caisse des dépôts, ils se recherchent gratuitement sur Ciclade[^3]. Les délais, les frais et les démarches sont détaillés dans notre article sur [Ciclade et l'argent oublié](/protection/ciclade-argent-oublie/).
 
