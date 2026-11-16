@@ -185,6 +185,8 @@ Un ordre complet précise le sens (achat ou vente), le nom ou le code ISIN du ti
 
 Ces cinq types d'ordres sont décrits par l'AMF[^2]. Par défaut, un ordre n'est valable que pour la séance. Il peut aussi l'être jusqu'à une date choisie, ou « à révocation », c'est-à-dire jusqu'à 365 jours[^2].
 
+Ce qui se passe concrètement pour chacun, au fixing, au déclenchement d'un seuil ou pendant une interruption de la cotation, est détaillé dans notre article sur [les types d'ordres de bourse](/bourse/ordres-de-bourse/).
+
 ## Par quelles étapes passer avant d'investir ?
 
 1. **Faire le point sur ton budget et ton épargne de précaution.** L'argent investi en bourse est celui dont tu n'as pas besoin à court terme[^5].

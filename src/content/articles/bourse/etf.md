@@ -108,7 +108,7 @@ Selon l'AMF, les ETF qui répliquent des indices d'actions affichaient en 2025 d
 
 Il faut aussi compter la **fourchette**, l'écart entre le meilleur prix proposé à l'achat et le meilleur prix proposé à la vente.
 
-Sur un ETF exotique (petites entreprises, pays émergents, obligations peu échangées), les coûts de transaction peuvent être plus élevés et le prix s'écarter de la valeur des titres détenus[^1]. La liquidité d'un ETF repose en partie sur des teneurs de marché, des établissements qui se portent à la fois acheteurs et vendeurs[^4].
+Sur un ETF exotique (petites entreprises, pays émergents, obligations peu échangées), les coûts de transaction peuvent être plus élevés et le prix s'écarter de la valeur des titres détenus[^1]. La liquidité d'un ETF repose en partie sur des teneurs de marché, des établissements qui se portent à la fois acheteurs et vendeurs[^4]. Sur un ETF peu échangé, le type d'ordre compte aussi : un ordre sans limite de prix peut s'exécuter loin du dernier cours affiché, comme l'explique notre article sur [les types d'ordres de bourse](/bourse/ordres-de-bourse/).
 
 Dans un PEA, la réglementation plafonne les frais de transaction à 0,5 % du montant pour un ordre dématérialisé sur des titres cotés, et les droits de garde à 0,4 % de la valeur des titres plus 5 € par ligne et par an[^11].
 
