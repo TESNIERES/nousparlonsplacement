@@ -134,7 +134,7 @@ Les unités de compte comportent un risque de perte en capital, partielle ou tot
 
 ## Quand et comment récupérer ton épargne à la retraite ?
 
-Tu peux débloquer ton PER au plus tôt à la date où tu obtiens ta pension de retraite, ou quand tu atteins l'âge légal de départ[^1]. Tu choisis alors entre trois options[^1] :
+Tu peux débloquer ton PER au plus tôt à la date où tu obtiens ta pension de retraite, ou quand tu atteins [l'âge légal de départ](/retraite/age-de-depart-a-la-retraite/)[^1]. Tu choisis alors entre trois options[^1] :
 
 - un **capital**, versé en une ou plusieurs fois ;
 - une **rente viagère**, c'est-à-dire un revenu versé régulièrement jusqu'à ton décès, éventuellement réversible à ton conjoint ;

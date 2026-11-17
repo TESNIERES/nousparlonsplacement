@@ -13,7 +13,7 @@ Le PER existe en trois versions : le PER individuel, que tout majeur peut ouvrir
 
 ## Quand peut-on récupérer son argent ?
 
-En principe, au plus tôt à la date d'obtention de ta pension de retraite ou à l'âge légal de départ[^1]. Des déblocages anticipés sont prévus dans une liste limitative de cas, dont l'achat de la résidence principale, le décès du conjoint ou partenaire de Pacs, l'invalidité, le surendettement ou la fin des droits au chômage[^1].
+En principe, au plus tôt à la date d'obtention de ta pension de retraite ou à [l'âge légal de départ](/retraite/age-de-depart-a-la-retraite/)[^1]. Des déblocages anticipés sont prévus dans une liste limitative de cas, dont l'achat de la résidence principale, le décès du conjoint ou partenaire de Pacs, l'invalidité, le surendettement ou la fin des droits au chômage[^1].
 
 ## Quel est l'avantage fiscal ?
 
