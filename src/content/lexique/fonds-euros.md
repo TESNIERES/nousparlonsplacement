@@ -3,9 +3,9 @@ terme: "Fonds en euros"
 definition: "Support d'un contrat d'assurance-vie dont la valeur des sommes investies est garantie par l'assureur, en contrepartie d'un rendement plus modeste que celui des supports non garantis."
 description: "Définition du fonds en euros : garantie du capital par l'assureur, rendement moyen observé en 2025, prélèvements sociaux et limites face à l'inflation."
 categorie: epargne
-misAJour: 2026-11-01
-voirAussi: [assurance-vie, unite-de-compte, rendement, inflation]
-guide: /epargne/assurance-vie/
+misAJour: 2026-11-18
+voirAussi: [assurance-vie, unite-de-compte, participation-aux-benefices, rendement, inflation]
+guide: /epargne/fonds-euros/
 ---
 
 Le fonds en euros est le support sécurisé de l'[assurance-vie](/lexique/assurance-vie/). Service Public le résume ainsi : « La valeur des fonds investis est garantie par l'assureur »[^1]. En contrepartie de cette garantie, son rendement est faible[^1]. Les intérêts annuels s'ajoutent au capital[^1] et produisent à leur tour des intérêts les années suivantes, selon le principe des [intérêts composés](/lexique/interets-composes/).

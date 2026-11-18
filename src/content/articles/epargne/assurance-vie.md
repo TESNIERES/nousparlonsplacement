@@ -74,7 +74,7 @@ Dans ton contrat, l'argent est réparti entre un ou plusieurs supports. Ce choix
 
 Son rendement est fixé chaque année par l'assureur. Selon l'Autorité de contrôle prudentiel et de résolution (ACPR), le taux moyen servi en 2025 sur les contrats individuels est de 2,63 %, comme en 2024, net des frais de gestion et avant prélèvements sociaux[^5]. Les écarts sont réels : la moitié des encours a été revalorisée entre 2,3 % et 2,9 %[^5]. Les performances passées ne préjugent pas des performances futures.
 
-La garantie du capital repose sur l'assureur lui-même : la section sur les risques détaille ce qui se passe s'il fait défaut.
+La garantie du capital repose sur l'assureur lui-même : la section sur les risques détaille ce qui se passe s'il fait défaut. Ce qui fixe le taux d'une année à l'autre (placements, réserves, frais, bonus) est expliqué dans [notre article sur le fonds euros](/epargne/fonds-euros/).
 
 ### Les unités de compte
 
