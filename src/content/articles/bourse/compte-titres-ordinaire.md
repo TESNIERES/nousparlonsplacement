@@ -107,7 +107,7 @@ Côté impôt sur le revenu, le décès n'est pas une vente. Pour des titres re�
 {"type":"flux","titre":"Au décès, le prix d'acquisition des héritiers devient la valeur transmise","etapes":[{"titre":"Tu achètes pour 20 000 €","texte":"Des actions, sur ton compte-titres."},{"titre":"Au décès, elles valent 50 000 €","texte":"Les droits de succession se calculent sur cette valeur, après abattement."},{"titre":"Tes héritiers repartent de 50 000 €","texte":"C'est leur prix d'acquisition pour l'impôt sur le revenu."},{"titre":"Ils revendent 52 000 €","texte":"Plus-value imposable : **2 000 €**, et non 32 000 €."}],"source":"Exemple hypothétique ; impots.gouv.fr, les cessions mobilières, avril 2026"}
 ```
 
-Un compte joint ou démembré, une famille recomposée, des montants importants : un notaire peut mesurer l'effet d'une transmission sur l'ensemble de ton patrimoine, et comparer succession et donation.
+Un compte joint ou démembré, une famille recomposée, des montants importants : un notaire peut mesurer l'effet d'une transmission sur l'ensemble de ton patrimoine, et comparer succession et donation, dont les [abattements selon le lien de parenté](/fiscalite/donation-abattement/) se reconstituent tous les quinze ans.
 
 ## Ce qu'il faut retenir pour ta situation
 

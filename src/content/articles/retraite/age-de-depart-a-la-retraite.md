@@ -5,7 +5,7 @@ description: "L'âge légal de départ à la retraite selon ton année de naissa
 categorie: retraite
 type: article
 publie: 2026-11-17
-misAJour: 2026-11-17
+misAJour: 2026-11-19
 motCle: "âge de départ à la retraite"
 chiffre:
   valeur: "64 ans"
@@ -15,7 +15,7 @@ essentiel:
   - "Depuis le 1er septembre 2026, la suspension de la réforme de 2023 fait partir les générations 1964 à 1968 trois à six mois plus tôt."
   - "L'âge légal ouvre le droit de partir ; le taux plein demande aussi jusqu'à 172 trimestres, sauf si tu attends 67 ans."
   - "Une carrière commencée avant 21 ans, un handicap ou une inaptitude au travail peuvent permettre de partir avant l'âge légal, sous conditions."
-  - "Le 17 novembre 2026, le Sénat a voté en première lecture le retour d'un calendrier plus rapide : rien n'est définitif à ce stade."
+  - "Le 18 novembre 2026, le Sénat a adopté en première lecture un budget de la Sécurité sociale qui accélère le calendrier : rien n'est définitif."
 faq:
   - q: "À quel âge peut-on partir à la retraite quand on est né en 1965 ?"
     r: "Cela dépend de ta date exacte de naissance. Si tu es né entre le 1er janvier et le 31 mars 1965, ton âge légal est de 62 ans et 9 mois et il te faut 170 trimestres pour le taux plein. Entre le 1er avril et le 31 décembre 1965, c'est 63 ans et 171 trimestres. Une carrière longue peut permettre de partir plus tôt, sous conditions."
@@ -24,7 +24,7 @@ faq:
   - q: "La réforme des retraites de 2023 est-elle suspendue pour tout le monde ?"
     r: "Non. La loi de financement de la sécurité sociale pour 2026 décale le calendrier de la réforme pour les générations 1964 à 1968, qui partent trois à six mois plus tôt que prévu, pour les retraites qui prennent effet à compter du 1er septembre 2026. L'âge légal de 64 ans et les 172 trimestres restent prévus pour les personnes nées à partir de 1969."
   - q: "Le vote du Sénat de novembre 2026 change-t-il l'âge de départ ?"
-    r: "Pas pour l'instant. Le 17 novembre 2026, le Sénat a voté en première lecture un amendement au budget de la Sécurité sociale pour 2027 qui rétablirait un calendrier plus rapide, jusqu'à 64 ans. Le texte n'est pas définitivement adopté et peut encore changer. Tant qu'aucune loi ne modifie le calendrier, les âges en vigueur depuis le 1er septembre 2026 s'appliquent."
+    r: "Pas pour l'instant. Le 18 novembre 2026, le Sénat a adopté en première lecture le budget de la Sécurité sociale pour 2027, avec un amendement qui rétablirait un calendrier plus rapide, jusqu'à 64 ans, pour les pensions liquidées à partir du 1er juillet 2027. Députés et sénateurs doivent encore s'accorder, et le texte peut changer. Tant qu'aucune loi ne modifie le calendrier, les âges en vigueur depuis le 1er septembre 2026 s'appliquent."
   - q: "Comment connaître son âge de départ exact ?"
     r: "Le site officiel info-retraite.fr propose un simulateur de l'âge légal de départ, accessible sans compte. Ton compte retraite récapitule ta carrière et l'ensemble de tes droits, et donne une estimation de ta pension selon l'âge de départ. C'est aussi là que tu peux repérer une période d'activité absente : à partir de 55 ans, tu peux y signaler une correction."
 liens:
@@ -35,7 +35,7 @@ liens:
 
 Ton âge de départ à la retraite dépend de ta date de naissance. L'âge légal, le plus tôt où tu peux partir hors départ anticipé, est de 62 ans et 9 mois si tu es né entre le 1er janvier 1963 et le 31 mars 1965, puis il augmente de trois mois par génération jusqu'à 64 ans pour les personnes nées à partir de 1969[^1]. Pour toucher une pension sans décote, il faut en plus avoir le nombre de trimestres requis, jusqu'à 172, ou attendre 67 ans[^2].
 
-Tu approches de la soixantaine et tu te demandes quand tu pourras t'arrêter, ou tu veux simplement savoir combien d'années de travail il te reste. La réponse tient en deux repères : un âge et un nombre de trimestres. Cet article décrit les règles des salariés du secteur privé en vigueur au 17 novembre 2026, et ce que le Parlement discute encore.
+Tu approches de la soixantaine et tu te demandes quand tu pourras t'arrêter, ou tu veux simplement savoir combien d'années de travail il te reste. La réponse tient en deux repères : un âge et un nombre de trimestres. Cet article décrit les règles des salariés du secteur privé en vigueur au 19 novembre 2026, et ce que le Parlement discute encore.
 
 ## Quel est l'âge légal de départ selon ton année de naissance ?
 
@@ -91,11 +91,11 @@ La suspension a aussi avancé les âges des carrières longues. Service-Public.f
 
 Les conditions de ces départs anticipés sont précises et se vérifient au cas par cas : ta caisse de retraite est l'interlocuteur pour savoir si tu y as droit.
 
-## Le vote du Sénat du 17 novembre change-t-il ton âge de départ ?
+## Le vote du Sénat de novembre 2026 change-t-il ton âge de départ ?
 
-Pas à ce stade. Le Parlement examine le projet de loi de financement de la sécurité sociale pour 2027 : l'Assemblée nationale l'a rejeté le 23 octobre 2026, et le Sénat en débat en première lecture[^7]. Sa commission des affaires sociales a adopté un amendement qui annulerait le décalage d'une génération et rétablirait un calendrier plus rapide, jusqu'à 64 ans et 172 trimestres. Comme certains assurés sont déjà partis avec les règles actuelles, la mesure ne viserait que les pensions liquidées à compter du 1er juillet 2027[^8].
+Pas à ce stade. Le Parlement examine le projet de loi de financement de la sécurité sociale pour 2027 : l'Assemblée nationale l'a rejeté le 23 octobre 2026, puis le Sénat l'a examiné en première lecture[^7]. Sa commission des affaires sociales a adopté un amendement qui annulerait le décalage d'une génération et rétablirait un calendrier plus rapide, jusqu'à 64 ans et 172 trimestres. Comme certains assurés sont déjà partis avec les règles actuelles, la mesure ne viserait que les pensions liquidées à compter du 1er juillet 2027[^8].
 
-Le Sénat a adopté cette mesure dans la nuit du 16 au 17 novembre 2026, par 200 voix contre 129, contre l'avis du Gouvernement, rapporte Public Sénat[^9]. Le vote solennel des sénateurs sur l'ensemble du texte est prévu le 18 novembre[^10]. Rien n'est définitif : la mesure peut encore être modifiée ou supprimée avant l'adoption finale du budget de la Sécurité sociale.
+Le Sénat a adopté cette mesure dans la nuit du 16 au 17 novembre 2026, par 200 voix contre 129[^9], alors que le Gouvernement y était opposé[^12]. Le 18 novembre, il a adopté l'ensemble du texte en première lecture, par 201 voix contre 124[^10]. Une commission mixte paritaire, qui réunit députés et sénateurs pour chercher un texte commun, est convoquée le 26 novembre, rapporte Public Sénat[^12]. Rien n'est définitif : la mesure peut encore être modifiée ou supprimée avant l'adoption finale du budget de la Sécurité sociale.
 
 > **À savoir.** Tant qu'aucune loi ne change le calendrier, ce sont les âges du tableau ci-dessus qui s'appliquent[^3]. Cette page sera mise à jour quand le texte sera définitivement adopté.
 
@@ -121,8 +121,9 @@ Pour une décision qui engage ta retraite (départ anticipé, rachat de trimestr
 [^4]: [Suspension de la réforme des retraites : qui est concerné ?](https://www.service-public.gouv.fr/particuliers/actualites/A18825), Service-Public.fr (DILA), 27 février 2026, page consultée le 17 novembre 2026.
 [^5]: [Retraite du salarié du secteur privé : qu'est-ce que la surcote ?](https://www.service-public.gouv.fr/particuliers/vosdroits/F19643), Service-Public.fr (DILA), mise à jour le 1er janvier 2026, page consultée le 17 novembre 2026.
 [^6]: [Départ à la retraite en carrière longue : quels sont vos droits à partir de septembre 2026 ?](https://www.service-public.gouv.fr/particuliers/actualites/A18997), Service-Public.fr (DILA), 15 juillet 2026, mise à jour le 17 juillet 2026.
-[^7]: [Financement de la sécurité sociale pour 2027](https://www.senat.fr/dossier-legislatif/plfss2027.html), Sénat, dossier législatif, page consultée le 17 novembre 2026.
+[^7]: [Financement de la sécurité sociale pour 2027](https://www.senat.fr/dossier-legislatif/plfss2027.html), Sénat, dossier législatif, mis à jour le 18 novembre 2026, page consultée le 19 novembre 2026.
 [^8]: [Projet de loi de financement de la sécurité sociale pour 2027 : Examen des articles](https://www.senat.fr/rap/l26-144-2/l26-144-2_mono.html), Sénat, rapport n° 144 (2026-2027), tome II, commission des affaires sociales, 4 novembre 2026, article additionnel après l'article 35.
-[^9]: [Le Sénat vote la réactivation de la réforme des retraites de 2023, contre l'avis du gouvernement](https://www.publicsenat.fr/actualites/politique/le-senat-vote-la-reactivation-de-la-reforme-des-retraites-de-2023-contre-lavis-du-gouvernement), Public Sénat, 17 novembre 2026.
-[^10]: [Projet de loi de financement de la sécurité sociale pour 2027](https://www.senat.fr/travaux-parlementaires/textes-legislatifs/la-loi-en-clair/projet-de-loi-de-financement-de-la-securite-sociale-pour-2027.html), Sénat, « La loi en clair », page consultée le 17 novembre 2026.
+[^9]: [Scrutin n° 112, séance du 16 novembre 2026](https://www.senat.fr/scrutin-public/2026/scr2026-112.html), Sénat, amendements identiques n° 323, 694 et 1358 rectifié bis portant article additionnel après l'article 35 : 200 voix pour, 129 contre, page consultée le 19 novembre 2026.
+[^10]: [Projet de loi de financement de la sécurité sociale pour 2027](https://www.senat.fr/travaux-parlementaires/textes-legislatifs/la-loi-en-clair/projet-de-loi-de-financement-de-la-securite-sociale-pour-2027.html), Sénat, « La loi en clair », page consultée le 19 novembre 2026.
 [^11]: [Un simulateur actualisé pour préparer votre retraite](https://www.service-public.gouv.fr/particuliers/actualites/A18792), Service-Public.fr (DILA), 5 février 2026, page consultée le 17 novembre 2026.
+[^12]: [Budget 2027 de la Sécurité sociale : les modifications à retenir après l'adoption du projet de loi au Sénat](https://www.publicsenat.fr/actualites/politique/budget-2027-de-la-securite-sociale-les-modifications-a-retenir-apres-le-passage-du-projet-de-loi-au-senat), Public Sénat, 18 novembre 2026.

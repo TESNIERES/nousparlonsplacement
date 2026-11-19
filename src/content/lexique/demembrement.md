@@ -18,7 +18,7 @@ On le rencontre surtout dans la transmission d'un patrimoine, lors d'une donatio
 
 Fiscalement, la valeur de l'usufruit viager dépend de l'âge de l'usufruitier, selon le barème de l'article 669 du Code général des impôts[^1]. Plus l'usufruitier est âgé, moins l'usufruit vaut, et plus la nue-propriété vaut.
 
-> **Exemple.** Un parent de 65 ans donne la nue-propriété d'un appartement de 300 000 € et en garde l'usufruit. À moins de 71 ans révolus, l'usufruit vaut 40 % et la nue-propriété 60 % de la valeur du bien[^1][^2] : les droits de donation se calculent sur 180 000 €, avant abattements éventuels.
+> **Exemple.** Un parent de 65 ans donne la nue-propriété d'un appartement de 300 000 € et en garde l'usufruit. À moins de 71 ans révolus, l'usufruit vaut 40 % et la nue-propriété 60 % de la valeur du bien[^1][^2] : les droits de donation se calculent sur 180 000 €, avant [abattements](/fiscalite/donation-abattement/) éventuels.
 
 ## Comment prend-il fin ?
 
