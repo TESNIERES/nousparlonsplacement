@@ -5,7 +5,7 @@ description: "Commission d'intervention, chèque ou prélèvement rejeté, clien
 categorie: protection
 type: article
 publie: 2026-11-15
-misAJour: 2026-11-15
+misAJour: 2026-11-20
 motCle: "frais d'incident bancaire plafond"
 chiffre:
   valeur: "25 €"
@@ -45,7 +45,7 @@ La commission d'intervention rémunère le traitement d'une irrégularité de fo
 
 Ces frais ne se confondent pas avec les agios, les intérêts dus sur un découvert[^1].
 
-> **À savoir.** À partir du 20 novembre 2026, toute nouvelle autorisation de découvert relève des règles du crédit à la consommation, quel que soit son montant : analyse de solvabilité proportionnée, information précontractuelle claire avec le coût total du crédit et le [TAEG](/credit/taeg/). Les autorisations accordées avant cette date ne sont pas concernées[^5].
+> **À savoir.** Depuis le 20 novembre 2026, toute nouvelle autorisation de découvert relève des règles du crédit à la consommation, quel que soit son montant : analyse de solvabilité proportionnée, information précontractuelle claire avec le coût total du crédit et le [TAEG](/credit/taeg/). Les autorisations accordées avant cette date ne sont pas concernées[^5]. Ce que change la réforme, du découvert au paiement en plusieurs fois, est détaillé dans notre article sur [les nouvelles règles du crédit à la consommation](/credit/reforme-credit-consommation/).
 
 ## Quels sont les plafonds légaux des frais d'incidents ?
 

@@ -5,7 +5,7 @@ description: "Le TAEG mesure le coût total d'un crédit : ce qu'il inclut, comm
 categorie: credit
 type: article
 publie: 2026-11-04
-misAJour: 2026-11-04
+misAJour: 2026-11-20
 motCle: "taeg"
 chiffre:
   valeur: "5,40 %"
@@ -22,7 +22,7 @@ faq:
   - q: "L'assurance emprunteur est-elle comprise dans le TAEG ?"
     r: "Oui, quand elle est exigée pour obtenir le crédit, ce qui est souvent le cas pour un crédit immobilier. Une assurance facultative, que tu choisis librement sans qu'elle conditionne le prêt, n'y entre pas. Pour comparer les assurances entre elles, un autre indicateur existe : le taux annuel effectif de l'assurance, ou TAEA."
   - q: "Quel est le taux d'usure en vigueur en novembre 2026 ?"
-    r: "Depuis le 1er octobre 2026 et pour le quatrième trimestre, il atteint 23,60 % pour un crédit à la consommation de 3 000 € ou moins, 15,76 % entre 3 000 et 6 000 €, 8,56 % au-delà. Pour un crédit immobilier à taux fixe, il va de 4,09 % sous 10 ans à 5,40 % pour 20 ans ou plus. Ces seuils changent chaque trimestre."
+    r: "Depuis le 1er octobre 2026 et pour le quatrième trimestre, il atteint 23,60 % pour un crédit à la consommation de 3 000 € ou moins, 15,76 % entre 3 000 et 6 000 €, 8,56 % au-delà. Une LOA a son propre seuil depuis le 20 novembre : 10,99 %. Pour un crédit immobilier à taux fixe, il va de 4,09 % sous 10 ans à 5,40 % pour 20 ans ou plus. Ces seuils changent chaque trimestre."
   - q: "Un TAEG plus bas signifie-t-il un crédit moins cher ?"
     r: "Seulement à montant et durée identiques. À TAEG égal, un crédit plus long coûte davantage en euros, parce que les intérêts courent plus longtemps. Pour comparer, regarde ensemble le TAEG, le coût total du crédit en euros et la mensualité, et ajoute les frais qui n'entrent pas dans le TAEG, comme une assurance facultative."
   - q: "Que faire si le TAEG de mon contrat est faux ?"
@@ -95,13 +95,14 @@ Pour un crédit immobilier, la fiche d'information standardisée européenne (FI
 
 Le [taux d'usure](/lexique/taux-d-usure/) est le TAEG maximal applicable lors de la souscription d'un prêt. Si le TAEG le dépasse au moment où le prêt est accordé, le prêt est dit usuraire, et il est interdit de l'accorder[^2]. La loi le fixe au taux moyen pratiqué au cours du trimestre précédent, augmenté d'un tiers. La Banque de France le mesure chaque trimestre par catégorie de prêt, et chaque révision est publiée au Journal officiel[^2].
 
-Voici les seuils applicables au quatrième trimestre 2026, à compter du 1er octobre[^8]. Les crédits à la consommation regroupent les crédits de trésorerie aux particuliers et les prêts pour travaux de 75 000 € au plus ; les prêts pour travaux plus importants suivent les seuils des crédits immobiliers[^8].
+Voici les seuils applicables au quatrième trimestre 2026 : à compter du 1er octobre, et du 20 novembre pour la location avec option d'achat[^8]. Les crédits à la consommation regroupent les crédits de trésorerie aux particuliers et les prêts pour travaux de 75 000 € au plus, un seuil porté à 100 000 € depuis le 20 novembre 2026 ; les prêts pour travaux plus importants suivent les seuils des crédits immobiliers[^8].
 
-| Catégorie de prêt | Taux moyen constaté au 3e trimestre 2026 | Taux d'usure au 1er octobre 2026 |
+| Catégorie de prêt | Taux moyen constaté au 3e trimestre 2026 | Taux d'usure au 4e trimestre 2026 |
 |---|---|---|
 | Crédit à la consommation de 3 000 € ou moins | 17,70 % | 23,60 % |
 | Crédit à la consommation de plus de 3 000 € et jusqu'à 6 000 € | 11,82 % | 15,76 % |
 | Crédit à la consommation de plus de 6 000 € | 6,42 % | 8,56 % |
+| Location avec option d'achat, depuis le 20 novembre 2026 | 8,24 % | 10,99 % |
 | Crédit immobilier à taux fixe, moins de 10 ans | 3,07 % | 4,09 % |
 | Crédit immobilier à taux fixe, de 10 à moins de 20 ans | 3,51 % | 4,68 % |
 | Crédit immobilier à taux fixe, 20 ans ou plus | 4,05 % | 5,40 % |
@@ -120,17 +121,17 @@ Pour signaler une pratique, RéponseConso, le service de la DGCCRF, répond au 0
 
 > **Idée reçue.** « Un crédit accordé facilement, avec un TAEG très bas, c'est une aubaine. » Méfiance : une offre de prêt qui exige un versement avant le déblocage des fonds est un signal d'alerte, décrit dans notre guide sur les [faux crédits](/protection/arnaques-financieres/#les-faux-crédits).
 
-## Qu'est-ce qui change le 20 novembre 2026 ?
+## Qu'est-ce qui a changé le 20 novembre 2026 ?
 
-À partir du 20 novembre 2026, de nouvelles règles transposent une directive européenne d'octobre 2023 et étendent les protections du crédit à la consommation à des crédits jusqu'ici exclus en tout ou partie[^9] :
+Depuis le 20 novembre 2026, de nouvelles règles transposent une directive européenne d'octobre 2023 et étendent les protections du crédit à la consommation à des crédits jusqu'ici exclus en tout ou partie[^9] :
 
 - les crédits sans frais ni intérêts, dits « crédits gratuits » ;
 - les mini-crédits de moins de 200 €[^9] ;
-- les crédits de moins de 3 mois à frais négligeables ;
+- les crédits de moins de 3 mois à frais négligeables, comme le paiement fractionné ou différé ;
 - les crédits à la consommation de 75 000 € à 100 000 €[^9] ;
-- la location avec option d'achat (LOA).
+- la location avec option d'achat (LOA), qui a désormais son propre taux d'usure[^8].
 
-Les cartes à débit différé restent exclues. L'information remise avant la signature sera plus encadrée, notamment sur le coût total du crédit, et la publicité devra porter la mention « Attention ! Un crédit coûte de l'argent et doit être remboursé ! »[^9].
+Avant la signature, le prêteur remet une fiche normalisée qui présente notamment le TAEG et le coût total dû, et toute publicité porte la mention « Attention ! Un crédit coûte de l'argent et doit être remboursé. »[^9]. Le détail de la réforme, découverts compris, est dans notre article sur [les nouvelles règles du crédit à la consommation](/credit/reforme-credit-consommation/).
 
 ## Ce qu'il faut retenir pour ta situation
 
@@ -151,5 +152,5 @@ Les petits crédits sont les plus chers : 17,70 % de TAEG moyen au troisième tr
 [^5]: [Faire une simulation de l'échéancier et du TAEG d'un crédit immobilier](https://www.service-public.gouv.fr/particuliers/vosdroits/R2924), Service-Public.fr et ANIL, vérifiée le 5 avril 2024, page consultée le 4 novembre 2026.
 [^6]: [Contrat de crédit immobilier](https://www.anil.org/votre-besoin/acheter/financement/contrat-de-credit-immobilier/), ANIL, page consultée le 4 novembre 2026.
 [^7]: [Crédit à la consommation : obligations de la banque](https://www.service-public.gouv.fr/particuliers/vosdroits/F2440), Service-Public.fr (DILA), vérifiée le 1er juillet 2026.
-[^8]: [Taux d'usure et taux effectifs moyens pratiqués par les établissements de crédit et les sociétés de financement](https://acpr.banque-france.fr/system/files/webstats/Taux_dusure_2026T4_20260928/FR_202610_RESULT_TABLEAU_INTERNET_USURE_23Sep26.pdf), Banque de France, seuils applicables à compter du 1er octobre 2026, publiés le 28 septembre 2026.
-[^9]: [Crédits à la consommation : les règles évoluent pour prévenir le surendettement](https://www.service-public.gouv.fr/particuliers/actualites/A18451), Service-Public.fr (DILA), mise à jour le 27 octobre 2026.
+[^8]: [Taux d'usure et taux effectifs moyens pratiqués par les établissements de crédit et les sociétés de financement](https://www.banque-france.fr/system/files/webstats/Taux_dusure_2026T4_20261109/FR_202610_RESULT_TABLEAU_INTERNET_USURE_20Oct26.pdf), Banque de France, taux d'usure applicables au 20 novembre 2026 (seuils du 1er octobre 2026 et nouvelle catégorie de la location avec option d'achat), page consultée le 20 novembre 2026.
+[^9]: [Crédits à la consommation : les règles évoluent pour prévenir le surendettement](https://www.service-public.gouv.fr/particuliers/actualites/A18451), Service-Public.fr (DILA), mise à jour le 17 novembre 2026.

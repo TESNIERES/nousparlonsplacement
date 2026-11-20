@@ -4,8 +4,8 @@ nomComplet: "Taux de l'usure"
 definition: "Taux maximal légal qu'un prêteur peut appliquer à un crédit, exprimé en TAEG, fixé chaque trimestre par catégorie de prêt à partir des taux moyens observés."
 description: "Définition du taux d'usure : le TAEG maximal légal d'un crédit, son calcul à partir des taux moyens majorés d'un tiers et sa révision chaque trimestre."
 categorie: credit
-misAJour: 2026-11-01
-voirAussi: [taeg, inflation]
+misAJour: 2026-11-20
+voirAussi: [taeg, inflation, loa]
 ---
 
 Le taux d'usure protège l'emprunteur contre des crédits trop chers. C'est le taux d'intérêt maximal légal : un prêt dont le [TAEG](/lexique/taeg/) dépasse ce seuil au moment où il est accordé est dit usuraire[^1].
@@ -21,8 +21,10 @@ La loi le définit comme le taux moyen pratiqué au cours du trimestre précéde
 - Le seuil s'applique au TAEG, donc frais de dossier, frais d'intermédiaire, assurance et garanties obligatoires compris, et pas au seul taux nominal[^1].
 - Les seuils changent chaque trimestre et sont consultables sur le site de la Banque de France[^1].
 - Une révision mensuelle a été appliquée de février à décembre 2023, avant un retour à la fixation trimestrielle[^1].
+- Depuis le 20 novembre 2026, la location avec option d'achat ([LOA](/lexique/loa/)) a son propre seuil, classé parmi les crédits de trésorerie : 10,99 %. Le montant au-delà duquel un prêt pour travaux suit les seuils du crédit immobilier passe de 75 000 € à 100 000 €[^2]. Ces changements accompagnent [la réforme du crédit à la consommation](/credit/reforme-credit-consommation/).
 - Comme le seuil suit des moyennes passées, une hausse rapide des taux de marché peut rapprocher certaines offres du plafond, notamment quand l'assurance emprunteur coûte cher.
 
 Les taux d'intérêt évoluent notamment avec le contexte économique, dont l'[inflation](/lexique/inflation/). Pour te faire une idée de ce que tu peux emprunter, le [simulateur de capacité d'emprunt](/simulateurs/capacite-d-emprunt/) applique les règles du HCSF.
 
 [^1]: [Le taux de l'usure : qu'est-ce que c'est ?](https://www.banque-france.fr/a-votre-service/particuliers/connaitre-pratiques-bancaires-assurance/credit/taux-usure), Banque de France, page consultée le 1er novembre 2026.
+[^2]: [Taux d'usure et taux effectifs moyens pratiqués par les établissements de crédit et les sociétés de financement](https://www.banque-france.fr/system/files/webstats/Taux_dusure_2026T4_20261109/FR_202610_RESULT_TABLEAU_INTERNET_USURE_20Oct26.pdf), Banque de France, taux d'usure applicables au 20 novembre 2026 (notes 1, 2 et 4), page consultée le 20 novembre 2026.
