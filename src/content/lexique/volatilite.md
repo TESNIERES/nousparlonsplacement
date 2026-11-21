@@ -20,7 +20,7 @@ La volatilité est une façon de mesurer le risque. Quand elle est élevée, la 
 
 Les [actions](/lexique/action/) fluctuent beaucoup à court terme. L'AMF observe qu'en investissant sur un an seulement, un investisseur a presque autant de chances de connaître une perte qu'un gain, et présente les actions comme un placement à envisager sur au moins cinq ans, plus raisonnablement sur dix ans et plus[^1]. Une longue durée ne supprime pas pour autant le risque de perte en capital.
 
-La [diversification](/lexique/diversification/) atténue aussi la volatilité d'un portefeuille, sans l'annuler. Le guide [investir en bourse](/bourse/investir-en-bourse/) explique comment relier horizon, risque et choix des supports.
+La [diversification](/lexique/diversification/) atténue aussi la volatilité d'un portefeuille, sans l'annuler. Étaler ses achats dans le temps réduit l'effet du moment d'entrée, pas la volatilité du placement une fois acheté : c'est l'objet de notre article sur [l'investissement programmé](/bourse/investissement-programme/). Le guide [investir en bourse](/bourse/investir-en-bourse/) explique comment relier horizon, risque et choix des supports.
 
 [^1]: [Volatilité des placements : ce qu'il faut savoir](https://www.amf-france.org/fr/espace-epargnants/savoir-bien-investir/cadrer-son-projet/volatilite-des-placements-ce-quil-faut-savoir-0), Autorité des marchés financiers, mise à jour le 9 septembre 2016.
 [^2]: [Document d'informations clés : comprendre l'information sur le risque du placement](https://www.amf-france.org/fr/document-dinformations-cles-comprendre-linformation-sur-le-risque-du-placement), Autorité des marchés financiers, mise à jour le 2 février 2023.

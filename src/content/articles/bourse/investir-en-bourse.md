@@ -195,7 +195,7 @@ Ce qui se passe concrètement pour chacun, au fixing, au déclenchement d'un seu
 4. **Choisir l'enveloppe adaptée.** PEA, compte-titres, assurance-vie : selon ce que tu veux acheter, ton horizon et ta fiscalité.
 5. **Comparer les frais.** Courtage, garde, frais des fonds : sur vingt ans, l'écart se chiffre vite en milliers d'euros.
 6. **Comprendre ce que tu achètes.** Lis le DIC et, pour un ETF, regarde la composition de l'indice suivi[^3].
-7. **Choisir un rythme.** Investir en une fois ou étaler tes achats par des versements réguliers.
+7. **Choisir un rythme.** Investir en une fois ou étaler tes achats par des versements réguliers. Notre article sur [l'investissement programmé](/bourse/investissement-programme/) compare les deux, exemples chiffrés à l'appui.
 
 > **Exemple.** Hypothèse : tu investis 100 € par mois sur un même ETF, dont la part vaut 50 €, puis 40 €, puis à nouveau 50 €. Étaler lisse le prix d'achat, sans supprimer le risque de perte.
 
