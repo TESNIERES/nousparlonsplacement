@@ -167,7 +167,7 @@ Trois calculs, du plus flatteur au plus réaliste :
 {"type":"barres","titre":"Dans l'exemple, il reste 1,6 % sur les 5,2 % de l'annonce","unite":"%","decimales":1,"items":[{"label":"Rendement brut","valeur":5.2,"note":"loyers sur prix d'achat"},{"label":"Rendement net","valeur":3.0,"note":"après charges, vacance et frais d'acquisition"},{"label":"Rendement net-net","valeur":1.6,"note":"après impôt et prélèvements sociaux"}],"accent":2,"source":"Exemple hypothétique ; barème Service-Public.fr F1419, prélèvements sociaux F2329"}
 ```
 
-Ce qui reste vraiment est trois fois plus faible que le rendement brut, celui qu'affichent les annonces. C'est ce dernier rendement qui se compare à d'autres placements, en gardant en tête que le prix du bien peut monter ou baisser.
+Ce qui reste vraiment est trois fois plus faible que le rendement brut, celui qu'affichent les annonces. C'est ce dernier rendement qui se compare à d'autres placements, en gardant en tête que le prix du bien peut monter ou baisser. Le détail de chaque charge et la comparaison entre micro-foncier et régime réel sont dans notre article sur le [calcul du rendement locatif](/immobilier/rendement-locatif/).
 
 ## Comment est imposée la revente d'un bien ?
 

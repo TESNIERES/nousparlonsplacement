@@ -5,7 +5,7 @@ definition: "Régime d'imposition simplifié des bénéfices industriels et comm
 description: "Définition du micro-BIC en location meublée : abattement de 50 % ou 30 %, plafonds de recettes 2026, déclaration et différence avec le régime réel."
 categorie: immobilier
 misAJour: 2026-11-12
-voirAussi: [plus-value, prelevements-sociaux, tranche-marginale-d-imposition]
+voirAussi: [plus-value, prelevements-sociaux, tranche-marginale-d-imposition, micro-foncier]
 guide: /immobilier/lmnp/
 ---
 
