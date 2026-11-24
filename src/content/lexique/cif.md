@@ -4,8 +4,8 @@ nomComplet: "Conseiller en investissements financiers"
 definition: "Professionnel habilité à fournir des conseils en investissement, membre d'une association agréée par l'AMF et immatriculé à l'ORIAS, le registre des intermédiaires financiers."
 description: "Définition du CIF, conseiller en investissements financiers : statut réglementé, obligations, ce qui lui est interdit et comment vérifier un conseiller."
 categorie: protection
-misAJour: 2026-11-01
-voirAussi: [amf, dic, indicateur-de-risque]
+misAJour: 2026-11-24
+voirAussi: [amf, orias, dic, indicateur-de-risque]
 guide: /protection/arnaques-financieres/
 ---
 
@@ -24,7 +24,7 @@ Selon l'[AMF](/lexique/amf/), un CIF doit notamment[^1] :
 
 ## Comment vérifier un conseiller ?
 
-Son immatriculation figure au registre de l'ORIAS, et tu peux lui demander à quelle association professionnelle il adhère[^1]. Un conseiller en gestion de patrimoine (CGP) peut exercer sous ce statut, parfois cumulé avec d'autres, comme celui de courtier en assurance.
+Son immatriculation figure au registre de l'[ORIAS](/lexique/orias/), et tu peux lui demander à quelle association professionnelle il adhère[^1]. Notre article pour [vérifier un conseiller ou une plateforme](/protection/verifier-un-intermediaire/) détaille la méthode, registre par registre. Un conseiller en gestion de patrimoine (CGP) peut exercer sous ce statut, parfois cumulé avec d'autres, comme celui de courtier en assurance.
 
 Un CIF t'aide à relier tes objectifs, ton horizon et ta tolérance au risque, par exemple à travers l'[indicateur de risque](/lexique/indicateur-de-risque/) des produits envisagés et leur [document d'informations clés](/lexique/dic/). Son conseil ne supprime pas le risque des placements recommandés. Le guide [arnaques financières](/protection/arnaques-financieres/) détaille les signaux d'alerte.
 

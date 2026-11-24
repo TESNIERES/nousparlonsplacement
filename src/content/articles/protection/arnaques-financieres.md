@@ -5,7 +5,7 @@ description: "Faux conseillers, faux livrets, cryptos, réseaux sociaux : les ar
 categorie: protection
 type: guide
 publie: 2026-11-01
-misAJour: 2026-11-03
+misAJour: 2026-11-24
 motCle: "arnaques financières"
 chiffre:
   valeur: "62 %"
@@ -137,13 +137,13 @@ Un seul de ces signaux justifie de tout suspendre et de vérifier.
 
 ## Comment vérifier qu'un acteur financier est autorisé ?
 
-Avant de confier de l'argent, le bon réflexe consiste à identifier le type d'acteur, puis à consulter le registre correspondant.
+Avant de confier de l'argent, le bon réflexe consiste à identifier le type d'acteur, puis à consulter le registre correspondant. La méthode pas à pas, registre par registre, est détaillée dans notre article pour [vérifier un conseiller ou une plateforme](/protection/verifier-un-intermediaire/).
 
 | Ce qu'on te propose | Où vérifier |
 |---|---|
-| Livret, crédit, service de paiement (banque, établissement de paiement) | REGAFI, le registre des agents financiers (regafi.fr)[^4] |
+| Livret, crédit, service de paiement (banque, établissement de paiement) | REGAFI.FR, le registre unique de la banque et de l'assurance (regafi.fr)[^4][^14] |
 | Conseil ou intermédiation : courtier, conseiller en investissements financiers, intermédiaire en crédit ou en assurance | ORIAS, le registre des intermédiaires (orias.fr)[^4][^5] |
-| Contrat d'assurance | REFASSU, le registre des organismes d'assurance[^2] |
+| Contrat d'assurance | REGAFI.FR, qui a remplacé le registre des organismes d'assurance (REFASSU) le 1er juillet 2026[^14] |
 | Placement en biens divers (vin, forêt, etc.) | Liste blanche de l'AMF des biens divers[^6] |
 | Crypto-actifs | Liste blanche de l'AMF des prestataires agréés (CASP), et registre de l'ESMA[^6][^7] |
 | Financement participatif | Liste blanche de l'AMF des prestataires de financement participatif[^6] |
@@ -152,7 +152,7 @@ Avant de confier de l'argent, le bon réflexe consiste à identifier le type d'a
 > **À savoir.** Les listes noires ne peuvent pas être exhaustives : qu'un acteur n'y figure pas ne prouve pas qu'il est autorisé[^9]. Les listes blanches ne sont pas mises à jour en temps réel[^6]. Et une inscription sur un registre ne suffit pas, car l'escroc peut usurper un nom réel[^2][^5].
 
 ```graphique
-{"type":"frise","titre":"Du premier contact au virement, cinq vérifications évitent la plupart des pièges","etapes":[{"quand":"Au premier contact","titre":"Qui a fait la démarche ?","texte":"Un contact que tu n'as pas sollicité est un signal d'alerte.","ton":"alerte"},{"quand":"Avant de répondre","titre":"Cherche l'acteur dans le bon registre","texte":"REGAFI, ORIAS, REFASSU ou listes blanches de l'AMF."},{"quand":"Avant de signer","titre":"Compare les coordonnées","texte":"Adresse du site, mail, téléphone : à la lettre près."},{"quand":"Avant de verser","titre":"Rappelle toi-même l'établissement","texte":"Avec un numéro trouvé par tes propres moyens."},{"quand":"Au moment du virement","titre":"Lis la vérification du bénéficiaire","texte":"Le nom affiché doit être celui de l'établissement.","ton":"ok"}],"source":"AMF ; ACPR et Banque de France ; CNMP"}
+{"type":"frise","titre":"Du premier contact au virement, cinq vérifications évitent la plupart des pièges","etapes":[{"quand":"Au premier contact","titre":"Qui a fait la démarche ?","texte":"Un contact que tu n'as pas sollicité est un signal d'alerte.","ton":"alerte"},{"quand":"Avant de répondre","titre":"Cherche l'acteur dans le bon registre","texte":"REGAFI.FR, ORIAS ou listes blanches de l'AMF."},{"quand":"Avant de signer","titre":"Compare les coordonnées","texte":"Adresse du site, mail, téléphone : à la lettre près."},{"quand":"Avant de verser","titre":"Rappelle toi-même l'établissement","texte":"Avec un numéro trouvé par tes propres moyens."},{"quand":"Au moment du virement","titre":"Lis la vérification du bénéficiaire","texte":"Le nom affiché doit être celui de l'établissement.","ton":"ok"}],"source":"AMF ; ACPR et Banque de France ; CNMP"}
 ```
 
 ### La vérification du bénéficiaire avant un virement
@@ -217,3 +217,4 @@ Investir comporte des risques réels, même chez des acteurs autorisés : notre 
 [^11]: [Qu'est-ce que « Epargne Info Service » ?](https://www.amf-france.org/sites/institutionnel/files/pdf/59204/fr/Qu%27est-ce_que_%3C%3C_Epargne_Info_Service_%3E%3E_.pdf), Autorité des marchés financiers, mise à jour le 25 août 2026.
 [^12]: [Escroquerie](https://www.service-public.gouv.fr/particuliers/vosdroits/F1520), Service-Public.fr (DILA), mise à jour le 28 mai 2025.
 [^13]: [Arnaque en ligne : la banque doit-elle vous rembourser si vous avez transmis vos coordonnées bancaires ?](https://www.service-public.gouv.fr/particuliers/actualites/A19102), Service-Public.fr (DILA), publiée le 2 novembre 2026.
+[^14]: [Lancement du nouveau registre public unique banque et assurance : REGAFI.FR](https://acpr.banque-france.fr/fr/actualites/lancement-du-nouveau-registre-public-unique-banque-et-assurance-regafifr), Autorité de contrôle prudentiel et de résolution, mise en ligne le 1er juillet 2026, mise à jour le 24 septembre 2026.
