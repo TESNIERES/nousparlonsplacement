@@ -77,6 +77,8 @@ Selon Service-Public.fr, le barème est en général plus favorable si tu n'es p
 
 > **À savoir.** L'acompte de 12,8 % n'est pas obligatoire pour tout le monde. Si le revenu fiscal de référence de l'avant-dernière année est inférieur à 50 000 € pour une personne seule, ou à 75 000 € pour un couple marié ou pacsé, tu peux en être dispensé[^6][^3]. Pour les dividendes versés en 2027, c'est le revenu de 2025 qui compte, et l'attestation sur l'honneur doit parvenir à ton établissement au plus tard le **30 novembre 2026**[^3][^6]. Les prélèvements sociaux restent prélevés[^6]. La dispense allège ta trésorerie, pas ton impôt, qui reste calculé sur ta déclaration[^2].
 
+Pour un ETF, ce prélèvement ne touche que la version qui distribue ses revenus : notre article [ETF capitalisant ou distribuant](/bourse/etf-capitalisant-ou-distribuant/) compare les deux versions sur un compte-titres, exemple chiffré à l'appui.
+
 ## Comment sont imposées les plus-values ?
 
 Tant que tu ne vends pas, rien n'est imposé. À la vente, la plus-value est la différence entre ton prix de vente et ton prix d'achat[^7]. Les frais de vente, comme le courtage, viennent en déduction du prix de cession, et les frais d'achat s'ajoutent au prix d'acquisition[^5]. La plus-value se déclare avec les revenus de l'année de la vente, et l'impôt se paie l'année suivante. Ton établissement t'adresse en général un récapitulatif pour t'aider à remplir ta déclaration[^7].

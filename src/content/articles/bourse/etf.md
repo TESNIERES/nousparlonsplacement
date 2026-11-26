@@ -96,6 +96,8 @@ Le choix dépend de ton besoin : percevoir un revenu, ou faire croître ton capi
 
 > **Exemple.** Hypothèse : tu détiens 10 000 € d'un ETF distribuant sur un compte-titres, et il te verse 200 € dans l'année. Au taux de 31,4 %, tu paies 62,80 € d'impôt et de prélèvements sociaux sur ces 200 €. Avec la version capitalisante du même ETF, ces 200 € restent investis, et l'impôt n'est dû qu'à la vente, sur la plus-value.
 
+Le cas de chaque enveloppe, PEA, assurance-vie et compte-titres, et l'effet de ce report de l'impôt sur 10, 20 ou 30 ans sont détaillés dans notre article [ETF capitalisant ou distribuant](/bourse/etf-capitalisant-ou-distribuant/).
+
 ## Combien coûte un ETF ?
 
 Trois couches de frais s'additionnent[^1] :

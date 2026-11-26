@@ -5,7 +5,7 @@ definition: "Imposition forfaitaire des revenus du capital : 12,8 % d'impôt sur
 description: "Définition du PFU ou flat tax : 12,8 % d'impôt plus 18,6 % de prélèvements sociaux en 2026, revenus concernés, acompte, option pour le barème progressif."
 categorie: fiscalite
 misAJour: 2026-11-01
-voirAussi: [prelevements-sociaux, dividende, plus-value, compte-titres]
+voirAussi: [prelevements-sociaux, prelevement-forfaitaire-non-liberatoire, dividende, plus-value, compte-titres]
 guide: /fiscalite/fiscalite-des-placements/
 ---
 
