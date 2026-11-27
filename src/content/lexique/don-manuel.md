@@ -4,7 +4,7 @@ definition: "Donation d'un bien meuble, comme une somme d'argent, des actions ou
 description: "Définition du don manuel : biens concernés, différence avec un présent d'usage, abattements et déclaration en ligne par le bénéficiaire, même sans droits."
 categorie: fiscalite
 misAJour: 2026-11-19
-voirAussi: [demembrement, nue-propriete, clause-beneficiaire]
+voirAussi: [demembrement, nue-propriete, clause-beneficiaire, rappel-fiscal]
 guide: /fiscalite/donation-abattement/
 ---
 

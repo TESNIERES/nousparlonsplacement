@@ -111,7 +111,7 @@ Après ton décès, l'acceptation est libre, et l'assureur informé du décès d
 La taxation dépend du lien du bénéficiaire avec toi et de ton âge lors des versements. Le conjoint marié et le partenaire de Pacs sont exonérés[^10][^11][^12], comme les frères et sœurs qui remplissent les conditions d'exonération des droits de succession[^11]. Pour les autres :
 
 - sur les sommes issues des primes versées avant 70 ans, chaque bénéficiaire a un abattement de 152 500 €, tous contrats confondus, puis un prélèvement de 20 % jusqu'à 700 000 € de part taxable et de 31,25 % au-delà[^10][^11] ;
-- sur les primes versées après 70 ans, un abattement global de 30 500 € est partagé entre tous les bénéficiaires et tous les contrats sur ta tête. Le surplus des primes est soumis aux droits de succession, pas les intérêts[^13].
+- sur les primes versées après 70 ans, un abattement global de 30 500 € est partagé entre tous les bénéficiaires et tous les contrats sur ta tête. Le surplus des primes est soumis aux [droits de succession](/fiscalite/droits-de-succession/), pas les intérêts[^13].
 
 ```graphique
 {"type":"chiffres","titre":"Le conjoint et le partenaire de Pacs ne paient rien, les autres bénéficiaires ont un abattement","items":[{"valeur":"0 €","legende":"Pour le conjoint marié ou le partenaire de Pacs"},{"valeur":"152 500 €","legende":"Abattement par bénéficiaire, primes versées avant 70 ans"},{"valeur":"30 500 €","legende":"Abattement global, primes versées après 70 ans"}],"source":"CGI, art. 990 I et 757 B ; BOFiP, BOI-TCAS-AUT-60 ; Service-Public.fr, fiche F35794"}

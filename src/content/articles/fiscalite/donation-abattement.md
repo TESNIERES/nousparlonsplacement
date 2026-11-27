@@ -97,7 +97,7 @@ Entre époux ou partenaires de Pacs, le barème va aussi de 5 % à 45 %, avec de
 
 L'abattement couvre l'ensemble des donations faites par une même personne à un même bénéficiaire sur quinze ans[^1] : tout ce qui a été donné pendant cette période vient en déduction. Une donation de 100 000 € faite en 2015 permet ainsi une nouvelle donation de 100 000 € sans droits en 2030[^3]. Les tranches basses du barème suivent la même logique[^1].
 
-La règle joue aussi au décès : les donations de moins de quinze ans sont prises en compte pour calculer les droits de succession[^1]. Pour transmettre hors succession, l'[assurance-vie](/epargne/assurance-vie/) obéit à des règles fiscales propres, et c'est la [clause bénéficiaire](/epargne/clause-beneficiaire-assurance-vie/) qui désigne qui reçoit le capital.
+La règle joue aussi au décès : les donations de moins de quinze ans sont prises en compte pour calculer les [droits de succession](/fiscalite/droits-de-succession/)[^1]. Pour transmettre hors succession, l'[assurance-vie](/epargne/assurance-vie/) obéit à des règles fiscales propres, et c'est la [clause bénéficiaire](/epargne/clause-beneficiaire-assurance-vie/) qui désigne qui reçoit le capital.
 
 ## Faut-il déclarer une donation ?
 
