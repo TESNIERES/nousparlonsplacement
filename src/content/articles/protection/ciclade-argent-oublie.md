@@ -37,7 +37,7 @@ Ciclade est le service gratuit de la Caisse des dépôts qui permet de retrouver
 
 ## Comment un compte devient-il inactif ?
 
-Un livret ouvert par tes grands-parents quand tu étais enfant, le compte d'une banque quittée sans le clôturer, l'épargne salariale laissée chez un ancien employeur, les comptes d'un parent décédé : l'argent oublié a souvent une histoire très ordinaire.
+Un livret ouvert par tes grands-parents quand tu étais enfant, le compte d'une banque quittée sans le clôturer, l'[épargne salariale](/epargne/plan-epargne-entreprise/) laissée chez un ancien employeur, les comptes d'un parent décédé : l'argent oublié a souvent une histoire très ordinaire.
 
 La loi fixe deux délais selon le type de compte[^1][^3] :
 

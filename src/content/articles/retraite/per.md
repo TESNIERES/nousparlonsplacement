@@ -51,7 +51,7 @@ L'épargne est rangée dans trois compartiments selon son origine, avec des règ
 | Compartiment | Ce qu'il reçoit |
 |---|---|
 | N° 1 (individuel) | Tes versements volontaires, déduits ou non de ton revenu |
-| N° 2 (collectif) | L'épargne salariale : intéressement, participation, abondement de l'employeur |
+| N° 2 (collectif) | L'épargne salariale : intéressement, participation, abondement de l'employeur (voir [le fonctionnement du PEE](/epargne/plan-epargne-entreprise/)) |
 | N° 3 (catégoriel) | Les cotisations obligatoires versées dans le cadre de l'entreprise |
 
 Dans un PER individuel, seul le compartiment n° 1 est alimenté par défaut. Les deux autres ne le sont qu'en cas de transfert d'une épargne déjà constituée[^1].
